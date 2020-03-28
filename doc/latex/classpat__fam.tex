@@ -1,0 +1,47 @@
+\section{pat\_\-fam$<$ P, ST $>$ Class Template Reference}
+\label{classpat__fam}\index{pat_fam@{pat\_\-fam}}
+Pattern Family class, denotes a collection of patterns. No constraint is imposed on the comprising patterns.  
+
+
+{\tt \#include $<$pat\_\-fam.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef ST$<$ P $\ast$ $>$::iterator \bf{IT}
+\item 
+typedef ST$<$ P $\ast$ $>$::const\_\-iterator \bf{CONST\_\-IT}
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+std::ostream \& \textbf{operator$<$$<$} (std::ostream \&, const \bf{pat\_\-fam}$<$ P, ST $>$ \&)\label{classpat__fam_f6f4b78da6b3a1dace1eb683f32bde9c}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename P, template$<$ typename T $>$ class ST = std::vector$>$ class pat\_\-fam$<$ P, ST $>$}
+
+Pattern Family class, denotes a collection of patterns. No constraint is imposed on the comprising patterns. 
+
+P is the pattern class, ST is the storage container type e.g. P=pattern$<$itemset$<$int$>$ $>$, ST=vector 
+
+
+
+\subsection{Member Typedef Documentation}
+\index{pat_fam@{pat\_\-fam}!CONST_IT@{CONST\_\-IT}}
+\index{CONST_IT@{CONST\_\-IT}!pat_fam@{pat\_\-fam}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P, template$<$ typename T $>$ class ST = std::vector$>$ typedef ST$<$P$\ast$$>$::const\_\-iterator \bf{pat\_\-fam}$<$ P, ST $>$::\bf{CONST\_\-IT}}\label{classpat__fam_67dacba8345d6bc79cd6fc27dded687e}
+
+
+constant iterator over the pattern family \index{pat_fam@{pat\_\-fam}!IT@{IT}}
+\index{IT@{IT}!pat_fam@{pat\_\-fam}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename P, template$<$ typename T $>$ class ST = std::vector$>$ typedef ST$<$P$\ast$$>$::iterator \bf{pat\_\-fam}$<$ P, ST $>$::\bf{IT}}\label{classpat__fam_f42739377391af385987f0316766b19a}
+
+
+iterator over the pattern family 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+\bf{pat\_\-fam.h}\end{CompactItemize}

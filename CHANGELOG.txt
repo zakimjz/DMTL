@@ -1,0 +1,37 @@
+1.0 release - 07/26/2006
+------------------------
+
+ - Added a new back end - file_storage_manager. Now the VATs can be
+   stored in a persistent storage. The file "outfile.dat" is used to
+   house the temporary file cache. 
+   IMPORTANT NOTE: The storage manager scales beyond 2 Gigabytes limit
+   only when compiled with gcc 4.0 (this is because in gcc4.0 the
+   fstream class can handle > 2GB files).
+
+ - Added another set of properties - Tokenizer property. These
+   properties control the tokenizer that would be invoked. For
+   different input file formats new tokenizers can be defined. As an
+   example, a FASTA format tokenizer has been added for biosequences.
+
+ - Improved the sequence mining implementation of induced and embedded
+   sequences.
+
+ - Fixed bug in embedded/induced sequence mining which occurred because the
+   gap between consecutive items in a sequence was hard-coded.
+
+ - Changed the command line inputs. -i, -s and -p are added for input
+   file, support and print patterns, respectively.
+
+ - Includes support for multi-set pattern.  NOTE: Right now the
+   multi-set pattern does not have a file_storage_manager as a back
+   end.
+
+ - Added LINE_SZ in tokenizer_utils.h so that long input lines can be
+   parsed from the input files.
+
+
+Alpha 0.1 - 11/30/2005
+----------------------
+
+ - Initial alpha release.
+

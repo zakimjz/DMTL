@@ -1,0 +1,514 @@
+This directory contains 4 test files. They test itemset, sequence, tree and graph mining.
+For sequence test, two variation exists (embedded, induced) and for tree, four variations
+exists(ordered/unordered, embedded/induced). User can choose any of the variation from the
+command line parameter.
+
+SOURCE TEST FILES:
+==================
+
+itemset_test.cpp: Testing itemset mining over string dataset.
+sequence_test.cpp: Testing embedded/induced sequence mining over string dataset.
+tree_test.cpp: Testing embedded/induced and ordered/unordeded tree mining over string dataset.
+graph_test.cpp: Testing undirected graph mining over string dataset.
+multiset_test.cpp: Testing multiset mining over string dataset.
+
+EXECUTABLE: (How to Run the Programs)
+=====================================
+
+Here we show, how to run the programs. Parameter name are enclosed in < ... >. User must 
+replace those name with actual values. Choice parameter names are given in [ ...] and the actual 
+choice values are given here. User must choose any parameters out of the following which
+are separated by '|'. The parameter '-p' should be used if the user wants to print the frequent
+patterns to stdout, otherwise only the count of total frequent patterns will be displayed.
+
+To perform Itemset Mining:
+$ ./itemset_test  -i <input_data_file> -s <support> [-p]
+
+To perform Sequence Mining:
+$ ./sequence_test -i <input_data_File> -s <support> [-I|-E] [-p]
+choose '-I' if you want induced mining, or '-E' for embedded mining
+
+To perform Tree Mining:
+$ ./tree_test -i <input_data_file> -s <support> [-I|-E] [-O|-U] [-p]
+choose -I if you want induced mining, or -E for embedded mining
+choose -O if you want ordered tree mining, or -U for unordered tree mining
+
+To perform Graph Mining:
+$ ./graph_test -i <input_data_file> -s <support> [-p]
+
+To perform Multiset Mining:
+$ ./multiset_test -i <input_data_file> -s <support> [-p]
+
+For using file based back end storage, compile a different set of binaries
+by running 'make file-based' in the test directory. The binaries generated
+would be - itemset_test_file, sequence_test_file, tree_test_file and 
+graph_test_file. NOTE: There is no file based backend support for multisets
+currently.
+
+The command line parameters to execute the above binaries are are quite similar 
+to the binaries for memory-based back end.
+For example, the command line for itemsets with memory based back end (as shown 
+above) is
+$ ./itemset_test  -i <input_data_file> -s <support> [-p]
+whereas, the command line for itemsets with file-based back end.
+$ ./itemset_test_file  -i <input_data_file> -s <support> [-p] [-f file buffer in MB]
+The additional parameter -f specifies the size of the memory buffer in MB. The 
+default is 512 MB.
+
+
+INPUT DATA FILE FORMAT:
+=======================
+
+In the data directory, example input files are given. 
+
+* For itemset, each row is a transaction:
+
+<transaction_id> <timestamp> <# of elements> <element 1> <element 2> ... <element n> 
+(NOTE: The timestamp is ignored for itemset, you can just duplicate transaction id in that column)
+
+
+* For sequence (set of itemsets with total ordering), each row is a single transaction in the sequence:
+
+<sequence_id> <timestamp> <# of elements> <element 1> <element 2> ... <element n> 
+For example, let us consider the sequence (2,3)->(0,1,2), where the itemset (2,3) has
+timestamp 10 and itemset (0,1,2) has timestamp 15. Let us assume that the sequence has an identifier 1.
+This sequence will be represented as follows:
+1 10 2 2 3
+1 15 3 0 1 2
+
+* For tree, each row is a tree:
+
+<transaction_number> <transaction_number> <# of elements> <element 1> <element 2> ... <elementn> 
+(NOTE: For tree elements are listed in a pre-order traversal order, for leaf node a -1 is used)
+
+For graph, multiple rows makes up a graph:
+
+* A graph starts with a row like below:
+t # <graph_id>
+Followed by the listing of vertices, each vertex in a row. Each vertex row is like:
+v <vertex_id> <vertex_label>
+Followed by the listing of edges, each edge in a row. Each edge(v1, v2) is like:
+e <vertex id of v1> <vertex id of v2> <edge label>
+(NOTE: If the edges does not have any label, use same number for all the edge-label)
+
+
+* For multiset, each row is a transaction. The format is exactly like itemsets with 
+  the exception that items can repeat in the same transaction (from the definition of
+  multisets).
+
+INPUT DATA TYPE
+===============
+
+Before running DMTL user needs to define the input data type, as
+DMTL is templated on input data type. Template argument PAT_ST (check any of .cpp files
+in test directory, to see examples on how PAT_ST is being used) defines the data types and storage 
+data structure for the pattern. Our generic mining algorithm assumes a adjacency list data structure 
+for this, but users are free to choose any alternative data structure as long as the interface remains 
+the same. PAT_ST data structure should be templated with the type of vertex_label and edge_label.
+Current test program are written with std::string as vertex_label type and int as edge_labe_type.
+So, our PAT_ST definition is like beloe:
+
+typedef adj_list<std::string, int>      PAT_ST;
+
+But, if the vertex would have been labeled by say, integer, the declaration would looks like below:
+
+typedef adj_list<int, int>      PAT_ST;
+
+
+SNAPSHOT OF RUN WITH FILES IN data DIRECTORY
+=============================================
+ITEMSET RUN:
+------------
+data$ cat ../data/IS_str_toy.data
+1 1 4 A C T W
+2 2 3 C D W
+3 3 4 A C T W
+4 4 4 A C D W
+5 5 5 A C D T W
+6 6 3 C D T
+
+test$./itemset_test -i ../data/IS_str_toy.data -s 4 -p
+Command line parameters given were -
+infile=../data/IS_str_toy.data
+minsup=4
+print flag=1
+Size of length one patterns = 5
+Size of level-1 = 5
+FREQUENT PATTERNS -
+A -- Support: 4
+
+C -- Support: 6
+
+T -- Support: 4
+
+W -- Support: 5
+
+D -- Support: 4
+
+A C -- Support: 4
+
+A W -- Support: 4
+
+A C W -- Support: 4
+
+C T -- Support: 4
+
+C W -- Support: 5
+
+C D -- Support: 4
+
+
+The following statistics are purely for performance measurement
+Wall clock time taken to read db in:0.000187159
+
+TOTAL wall clock time taken:0.000746012
+11 patterns found
+
+Output Help for Itemset:
+------------------------
+In the above itemset mining, we got 11 frequent patterns, each frequent pattern is printed with the pattern and
+its support count on the same line. For example the pattern {C, W} has a support 5, i.e. {C, W} appeared in 5
+transaction of the above datasets given in file IS_str_toy.data
+
+
+SEQUENCE RUN:
+------------
+Consider the following file as input to the sequence miner.
+data$ cat ../data/SEQ_str_toy.data
+1 10 5 V D I I W
+1 15 6 L L G T F D
+1 20 4 D L G V
+1 25 2 K E
+2 15 3 V P P 
+2 20 4 L G S G
+3 10 3 D I V
+4 10 4 K E A K
+4 20 3 D E K
+4 25 4 I E F V
+
+The file contains 4 sequences which can be better visualized as:
+
+Timestamp         10                    15                 20             25
+            (V, D, I, I, W) --> (L, L, G, T, F, D) --> (D, L, G, V) --> (K, E)
+                                                       (V, P, P) -----> (L, G, S, G)
+            (D, I, V)
+            (K, E, A, K) ----------------------------> (D, E, K) -----> (I, E, F, V)
+
+The command line and output are as follows:
+
+test$./sequence_test -i ../data/SEQ_str_toy.data -s 2 -I -p
+infile=../data/SEQ_str_toy.data
+minsup=2
+print flag=1
+Induced flag=1
+SIZE OF LEN 1 VATS = 8
+Wall clock time taken to read db in:0.000519991
+FREQUENT PATTERNS -
+V -- Support: 4
+
+D -- Support: 3
+
+I -- Support: 3
+
+L -- Support: 2
+
+G -- Support: 2
+
+F -- Support: 2
+
+K -- Support: 2
+
+E -- Support: 2
+
+D -> V -- Support: 2
+
+V -> L -- Support: 2
+
+V -> G -- Support: 2
+
+D -> F -- Support: 2
+
+D -> E -- Support: 2
+
+13 patterns found
+The following statistics are purely for performance measurement
+Wall clock time taken to read db in:0.000519991
+
+TOTAL wall clock time taken:0.0017581
+
+Interpreting Sequence Output :
+-----------------------------
+The command line parameters indicated that we are performing induced mining with an absolute minimum support of 2.
+We got 13 frequent patterns. Each frequent pattern is printed with its support count on the same line. 
+For example the pattern 'D -> E'  has a support 2, i.e. 'D -> E' appears (without any other element in between)
+in 2 transactions in the above dataset.
+
+TREE RUN:
+------------
+Consider the following file as input to the tree miner.
+data$ cat ../data/TREE_int_toy.data
+1 1 5 1 2 -1 3 -1
+2 2 9 3 2 -1 1 2 -1 3 -1 -1
+3 3 3 2 1 -1
+4 4 1 1
+5 5 5 3 1 -1 2 -1
+6 6 1 2
+7 7 7 3 1 2 1 -1 -1 -1
+8 8 3 1 3 -1
+
+NOTE: In order to explain the example better, unlike the previous examples, here we are using ints as the pattern element type.
+The tree miner runs with strings as well.
+
+The above trees can be visualized as follows:
+
+1.      1
+       /\
+      2  3 
+
+2.      3
+       /\
+      2  1
+        /\
+       2  3
+
+3.      2
+       /
+      1
+
+4.     1
+
+5.     3
+      /\
+     1  2
+
+6.     2
+
+7.      3
+       /
+      1
+     /
+    2
+   /
+  1
+
+8.    1
+     /
+    3
+
+The command line and output is as follows:
+
+test$ ./tree_test -i ../data/TREE_int_toy.data -s 2 -I -O -p
+Command line parameters given were -
+infile=../data/TREE_int_toy.data
+minsup=2
+print flag=1
+induced flag=1
+ordered flag=1
+3 level-1 patterns found
+FREQUENT PATTERNS -
+2 -- Support: 6
+
+3 -- Support: 5
+
+1 -- Support: 7
+
+2  ---  1 -- Support: 2
+
+3  ---  2 -- Support: 2
+
+3  ---  1 -- Support: 3
+
+3  ---  1  ---  2 -- Support: 2
+
+1  ---  2 -- Support: 3
+
+1  ---  3 -- Support: 3
+
+1  ---  2  <--  3 -- Support: 2
+
+10 patterns found
+Timing Data =================:
+Wall clock time to read db in:0.00113702
+TOTAL wall clock time taken:0.00346684
+
+Interpreting Tree Output:
+-------------------------
+In the above test, we ran the tree miner to mine induced and ordered trees from the above dataset.
+The minimum support was set to 2. 
+10 frequent patterns were found. The last pattern '1  ---  2  <--  3' is found in 2 of the above trees.
+This pattern can be visualized as:
+          1
+         /\
+        2  3
+The '---' between two nodes indicates a forward edge, whereas '<--' between 2 nodes indicates that
+you need to go one level towards the root to add the following node.
+
+GRAPH RUN:
+----------
+test$./graph_test -i ../data/Graph_str_toy2.data -s 2 -p
+3 frequent single-edged patterns found
+
+FREQUENT PATTERNS
+Canonical code: 
+0 1 B 2 B
+Support: 2
+
+Canonical code: 
+0 1 B 3 C
+Support: 2
+
+Canonical code: 
+0 1 A 1 B
+Support: 2
+
+Canonical code: 
+0 1 B 2 B
+1 2 B 3 C
+Support: 2
+
+Canonical code: 
+0 1 A 1 B
+1 2 B 2 B
+Support: 2
+
+Canonical code: 
+0 1 A 1 B
+1 2 B 2 B
+1 3 B 3 C
+Support: 2
+
+Canonical code: 
+0 1 A 1 B
+1 2 B 3 C
+Support: 2
+
+TIMING STATISTICS
+Time taken to read db in: 6.69956e-05sec
+Time taken in isomorphism checks: 0.00236869sec
+Time taken in VAT intersection: 0.000332355sec
+Total time taken: 0.006253sec
+
+7 total frequent graphs found
+
+Output help for Graph:
+---------------------
+In the above graph mining, we got 7 frequent graph, of which 3 of them are single-edge graph.
+Our library prints a graph by printing its minimal canonical code. This code lists the edges
+of the graph in such an order that the code is minimal. Note that, minimal canonical code of 
+a graph is always unique. DMTL representation of canonical code is identical to gspan graph
+mining algorithm. Each edge is the code is represented by a 5-tuple. For instance, canonical 
+code of an edge(v1, v2) is: <dfs_id_v1, dfs_id_v2, label_v1, label_edge, label_v2>
+
+dfs_id_v1 : Depth-first order of the vertex v1 in the minimal canonical labeling
+dfs_id_v2 : Depth-first order of the vertex v2 in the minimal canonical labeling
+label_v1: Label of vertex v1
+label_v2: label of vertex v2
+label_ede: Label of the edge (v1, v2)
+
+For example, the following canonical code(left) represent the following graph (right)
+
+                                                   1              3
+0 1 A 1 B	                           A -------------- B ---------- C
+1 2 B 3 C    --------------------->         \  			        / 
+1 3 B 3 C                                     \ _ _ _ _ _ _ _ _ _ _ __ / 
+                                                          3
+
+MULTISET RUN:
+------------
+test$ cat ../data/MS_str_toy.data 
+1 1 8 AC CA AB BC CC CA AA AA
+2 2 6 CB BC CA AC CC CA
+3 3 4 CB BC CA AC
+4 4 3 CA AC CB
+
+test$ ./multiset_test -i ../data/MS_str_toy.data -s 2 -p
+Command line parameters given were -
+infile=../data/MS_str_toy.data
+minsup=2
+print flag=1
+Size of length one patterns = 5
+AC CA -- Support: 4
+AC BC -- Support: 3
+AC CC -- Support: 2
+AC CB -- Support: 3
+AC CA CA -- Support: 2
+AC CA BC -- Support: 3
+AC CA CC -- Support: 2
+AC CA CB -- Support: 3
+AC CA CA BC -- Support: 2
+AC CA CA CC -- Support: 2
+AC CA CA BC CC -- Support: 2
+AC CA BC CC -- Support: 2
+AC CA BC CB -- Support: 2
+AC BC CC -- Support: 2
+AC BC CB -- Support: 2
+CA CA -- Support: 2
+CA BC -- Support: 3
+CA CC -- Support: 2
+CA CB -- Support: 3
+CA CA BC -- Support: 2
+CA CA CC -- Support: 2
+CA CA BC CC -- Support: 2
+CA BC CC -- Support: 2
+CA BC CB -- Support: 2
+BC CC -- Support: 2
+BC CB -- Support: 2
+AC -- Support: 4
+CA -- Support: 4
+BC -- Support: 3
+CC -- Support: 2
+CB -- Support: 3
+
+The following statistics are purely for performance measurement
+Wall clock time taken to read db in:0.00028491
+
+TOTAL wall clock time taken:0.00306416
+31 patterns found
+
+Interpreting Output for Multiset:
+--------------------------------
+The output of multiset mining is similar as that of itemset mining. The only difference being that items
+can reapeat in a single transaction. For example the pattern {CA, CA} has a support 2, i.e. {CA, CA} appeared in 2
+transaction of the above datasets given in file MS_str_toy.data
+
+
+NOTES FOR DEVELOPERS:
+=====================
+
+DMTL is a generic pattern mining algorithm. It uses template arguments to dispatch right algorithm
+to mine a specific pattern. User need to specify through templates, what kind of pattern they
+like to mine and what kind of mining approach they like to use.
+
+Each pattern in represented as a collection of relational properties, like directed, no_edges,
+undirected, cyclic, indegree_lte_one (indegree <= 1), outdegree_lte_one (outdegree <= 1), etc.
+A list of property is passed as template argument to instantiate a pattern. See the test files
+in the test directory, to see how the properties were passed for common pattern mining. Note that,
+a proplist data structure is used that recursively define the list of properties for a pattern.
+To keep the code clean, we used #define to shorthand the long recursive definition of this 
+pattern template arguments.  Similarly we defined the variation of mining algorithms 
+by a list of mining properties. We specified these also through proplist and again used the
+#define directive. 
+
+Available properties are listed in the file called properties.h in the src/common directory. 
+Note that properties in a proplist data structure should be ordered according to a property 
+hierarchy. The hierarchy is shown in a file called 'prop_hierarchy.eps' in the 'doc' directory.
+
+Please read the doxygen documentation to learn more about different templated class and how to instantiate
+those. For any further question, please email to: zaki@cs.rpi.edu
+
+EXTENDING DMTL:
+===============
+
+The objective of DMTL is to employ the generic programming idea to develop a mining library that is highly
+flexible to future extension. One obvious extension is to mine some other complex pattern.
+If your pattern can be defined by the properties that we already defined, it's  great. Otherwise, just
+add new properties in properties.h file. Now any mining algorithm needs to have three major operation:
+
+1. Candidate generation
+2. Isomorphism checking
+3. Support Counting
+
+Our current library provides these algorithm for four different patterns. If your pattern can share
+any of the above four, you can use them right away, otherwise provide code for that operation only.
+For a detail discussion, see our paper (lcsd05.pdf) in doc directory. For any further question, please
+email to the authors (emails are available in AUTHORS file).

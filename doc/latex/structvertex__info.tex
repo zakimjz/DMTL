@@ -1,0 +1,111 @@
+\section{vertex\_\-info$<$ VERTEX\_\-T, EDGE\_\-T, ALLOC $>$ Struct Template Reference}
+\label{structvertex__info}\index{vertex_info@{vertex\_\-info}}
+class to store all info associated with a vertex.  
+
+
+{\tt \#include $<$adj\_\-list.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef pair$<$ int, EDGE\_\-T $>$ \textbf{EDGE\_\-P}\label{structvertex__info_37406547b26902164354577fb7c9fed8}
+
+\item 
+typedef vector$<$ EDGE\_\-P, ALLOC$<$ EDGE\_\-P $>$ $>$ \textbf{EDGES}\label{structvertex__info_7900c6e5e48cb66321efdf8525d490a5}
+
+\item 
+typedef EDGES::iterator \textbf{EIT}\label{structvertex__info_a0cce411107c3ba280082da90f48810d}
+
+\item 
+typedef EDGES::const\_\-iterator \textbf{CONST\_\-EIT}\label{structvertex__info_07c04349c19831dfbc5d572622c7e81e}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\textbf{vertex\_\-info} (const VERTEX\_\-T \&vert, const int \&idval)\label{structvertex__info_2d3dee9ea5e9798440e46d4c6b67d69e}
+
+\item 
+EIT \bf{out\_\-begin} ()\label{structvertex__info_941543799d811878576348b498c9dde7}
+
+\begin{CompactList}\small\item\em Returns an iterator pointing to the begining of the list of out\_\-edges. \item\end{CompactList}\item 
+CONST\_\-EIT \bf{out\_\-begin} () const \label{structvertex__info_0069d9a39a97ae7d778ad1365d46c80c}
+
+\begin{CompactList}\small\item\em Returns a const\_\-iterator pointing to the begining of the list of out\_\-edges. \item\end{CompactList}\item 
+EIT \bf{out\_\-end} ()\label{structvertex__info_21b2bc555c6dcfda047a29195ae88f0f}
+
+\begin{CompactList}\small\item\em Returns an iterator pointing to the end of the list of out\_\-edges. \item\end{CompactList}\item 
+CONST\_\-EIT \bf{out\_\-end} () const \label{structvertex__info_556689d5abf2223e18d84987e2c15e4a}
+
+\begin{CompactList}\small\item\em Returns a const\_\-iterator pointing to the end of the list of out\_\-edges. \item\end{CompactList}\item 
+EIT \bf{in\_\-begin} ()\label{structvertex__info_1241e0ec56565800476b10f535dff31c}
+
+\begin{CompactList}\small\item\em Returns an iterator pointing to the begining of the list of in\_\-edges. \item\end{CompactList}\item 
+CONST\_\-EIT \bf{in\_\-begin} () const \label{structvertex__info_700c089f31b8be52e880c42b208d94ef}
+
+\begin{CompactList}\small\item\em Returns a cont\_\-iterator pointing to the begining of the list of in\_\-edges. \item\end{CompactList}\item 
+EIT \bf{in\_\-end} ()\label{structvertex__info_ce98965517fd288800f040083104c952}
+
+\begin{CompactList}\small\item\em Returns an iterator pointing to the end of the list of in\_\-edges. \item\end{CompactList}\item 
+CONST\_\-EIT \bf{in\_\-end} () const \label{structvertex__info_da7df0e170e50ee65e3a52d95b10cc9f}
+
+\begin{CompactList}\small\item\em Returns a const\_\-iterator pointing to the end of the list of in\_\-edges. \item\end{CompactList}\item 
+void \bf{add\_\-out\_\-edge} (const int \&dest, const EDGE\_\-T \&e)\label{structvertex__info_0c2ffeafef1c0ac4edfbb40e17012ce8}
+
+\begin{CompactList}\small\item\em Adds an out\_\-edge to the list of the out\_\-edges. \item\end{CompactList}\item 
+void \bf{add\_\-in\_\-edge} (const int \&src, const EDGE\_\-T \&e)\label{structvertex__info_8a6a269a00fc8b59c28aa76d8f70bdc2}
+
+\begin{CompactList}\small\item\em Adds an out\_\-edge to the list of the out\_\-edges. \item\end{CompactList}\item 
+bool \bf{out\_\-edge} (const int \&dest, EDGE\_\-T \&e) const 
+\item 
+bool \bf{in\_\-edge} (const int \&src, EDGE\_\-T \&e) const 
+\item 
+bool \bf{operator$<$} (const \bf{vertex\_\-info}$<$ VERTEX\_\-T, EDGE\_\-T, ALLOC $>$ \&vertex2) const \label{structvertex__info_715d4cac16eeec7402149ac6b1bbd572}
+
+\begin{CompactList}\small\item\em Returns true if this vertex is less than vertex2. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+VERTEX\_\-T \bf{v}\label{structvertex__info_487be5ba6c64222a987df9935b35a7e3}
+
+\begin{CompactList}\small\item\em data members /// \item\end{CompactList}\item 
+int \textbf{id}\label{structvertex__info_ddfcde9d01238e5e202cd1f155f3ba93}
+
+\item 
+EDGES \textbf{out\_\-edges}\label{structvertex__info_456a80e68ff3333597c6ac1c5bd909b0}
+
+\item 
+EDGES \textbf{in\_\-edges}\label{structvertex__info_d3aed6ffadea4fbbbc5782b48671505a}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& \bf{operator$<$$<$} (ostream \&, const \bf{vertex\_\-info}$<$ VERTEX\_\-T, EDGE\_\-T, ALLOC $>$ \&)\label{structvertex__info_96b9fa301169d90525cce553f22cc965}
+
+\begin{CompactList}\small\item\em Outputs a \doxyref{vertex\_\-info}{p.}{structvertex__info} object to the stream. This is a global function, not a member function. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename VERTEX\_\-T, typename EDGE\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ struct vertex\_\-info$<$ VERTEX\_\-T, EDGE\_\-T, ALLOC $>$}
+
+class to store all info associated with a vertex. 
+
+
+
+\subsection{Member Function Documentation}
+\index{vertex_info@{vertex\_\-info}!in_edge@{in\_\-edge}}
+\index{in_edge@{in\_\-edge}!vertex_info@{vertex\_\-info}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename VERTEX\_\-T, typename EDGE\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ bool \bf{vertex\_\-info}$<$ VERTEX\_\-T, EDGE\_\-T, ALLOC $>$::in\_\-edge (const int \& {\em src}, EDGE\_\-T \& {\em e}) const\hspace{0.3cm}{\tt  [inline]}}\label{structvertex__info_6257bc363dd9b634b969cd80b521e428}
+
+
+Returns true if there exists an in-edge from src to this vertex and populates edge label in e \index{vertex_info@{vertex\_\-info}!out_edge@{out\_\-edge}}
+\index{out_edge@{out\_\-edge}!vertex_info@{vertex\_\-info}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename VERTEX\_\-T, typename EDGE\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ bool \bf{vertex\_\-info}$<$ VERTEX\_\-T, EDGE\_\-T, ALLOC $>$::out\_\-edge (const int \& {\em dest}, EDGE\_\-T \& {\em e}) const\hspace{0.3cm}{\tt  [inline]}}\label{structvertex__info_e7b64741f0cd85da0dd2117c4ee2e13e}
+
+
+Returns true if there exists an out-edge from this vertex to dest and populates edge label in e 
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+adj\_\-list.h\end{CompactItemize}

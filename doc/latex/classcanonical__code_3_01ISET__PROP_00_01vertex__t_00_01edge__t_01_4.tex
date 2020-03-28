@@ -1,0 +1,80 @@
+\section{canonical\_\-code$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$ Class Template Reference}
+\label{classcanonical__code_3_01ISET__PROP_00_01vertex__t_00_01edge__t_01_4}\index{canonical_code< ISET_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$}}
+Itemset canonical Code class by partial specialization of generic {\bf canonical\_\-code}{\rm (p.\,\pageref{classcanonical__code})} class.  
+
+
+{\tt \#include $<$iset\_\-can\_\-code.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef int {\bf STORAGE\_\-TYPE}\label{classcanonical__code_3_01ISET__PROP_00_01vertex__t_00_01edge__t_01_4_w0}
+
+\item 
+typedef vertex\_\-t {\bf INIT\_\-TYPE}\label{classcanonical__code_3_01ISET__PROP_00_01vertex__t_00_01edge__t_01_4_w1}
+
+\item 
+typedef {\bf eqint} {\bf COMPARISON\_\-FUNC}\label{classcanonical__code_3_01ISET__PROP_00_01vertex__t_00_01edge__t_01_4_w2}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf canonical\_\-code} ()\label{classcanonical__code_3_01ISET__PROP_00_01vertex__t_00_01edge__t_01_4_a0}
+
+\item 
+template$<$class PAT$>$ void {\bf init} (INIT\_\-TYPE v, PAT $\ast$pat)
+\item 
+void {\bf insert\_\-vertex} (const  vertex\_\-t \&v)
+\item 
+STORAGE\_\-TYPE {\bf get\-Code} () const 
+\item 
+void {\bf update\_\-code} ()\label{classcanonical__code_3_01ISET__PROP_00_01vertex__t_00_01edge__t_01_4_a4}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, typename vertex\_\-t, typename edge\_\-t$>$ class canonical\_\-code$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$}
+
+Itemset canonical Code class by partial specialization of generic {\bf canonical\_\-code}{\rm (p.\,\pageref{classcanonical__code})} class. 
+
+pattern\_\-prop is set to no\_\-edges(itemset property) 
+
+
+
+\subsection{Member Function Documentation}
+\index{canonical_code< ISET_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$}!getCode@{getCode}}
+\index{getCode@{getCode}!canonical_code< ISET_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename vertex\_\-t, typename edge\_\-t$>$ STORAGE\_\-TYPE {\bf canonical\_\-code}$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$::get\-Code () const\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01ISET__PROP_00_01vertex__t_00_01edge__t_01_4_a3}
+
+
+Return the canonical code. \index{canonical_code< ISET_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$}!init@{init}}
+\index{init@{init}!canonical_code< ISET_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename vertex\_\-t, typename edge\_\-t$>$ template$<$class PAT$>$ void {\bf canonical\_\-code}$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$::init (INIT\_\-TYPE {\em v}, PAT $\ast$ {\em pat})\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01ISET__PROP_00_01vertex__t_00_01edge__t_01_4_a1}
+
+
+Used to initialize the canonical code. Called from {\bf db\_\-reader}{\rm (p.\,\pageref{classdb__reader})} so that the pattern's canonical code can be initialized. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em in\mbox{]}}]v It is the vertex for which the code is generated \item[{\em in\mbox{]}}]pat The associated pattern \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\index{canonical_code< ISET_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$}!insert_vertex@{insert\_\-vertex}}
+\index{insert_vertex@{insert\_\-vertex}!canonical_code< ISET_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename vertex\_\-t, typename edge\_\-t$>$ void {\bf canonical\_\-code}$<$ ISET\_\-PROP, vertex\_\-t, edge\_\-t $>$::insert\_\-vertex (const vertex\_\-t \& {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01ISET__PROP_00_01vertex__t_00_01edge__t_01_4_a2}
+
+
+Generate canonical code for each length-1 pattern from static-id \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em in\mbox{]}}]v Input vertex of vertex\_\-t datatype. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+iset\_\-can\_\-code.h\end{CompactItemize}

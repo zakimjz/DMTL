@@ -1,0 +1,48 @@
+\section{pattern\_\-support$<$ MP $>$ Class Template Reference}
+\label{classpattern__support}\index{pattern_support@{pattern\_\-support}}
+Generic Pattern Support Class that takes care of support counting of a pattern.  
+
+
+{\tt \#include $<$pat\_\-support.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\textbf{pattern\_\-support} (const int \&s=0, bool v=0)\label{classpattern__support_f461d3ee3a4d8a2999a164e266b32971}
+
+\item 
+bool \textbf{is\_\-valid} (const int \&minsup) const \label{classpattern__support_5ff596f63780bc6e7a5ebbbf4a17c791}
+
+\item 
+bool \textbf{is\_\-freq} (const int \&ms) const \label{classpattern__support_46d0c7ce607ea9a387099dce7629772e}
+
+\item 
+int \textbf{get\_\-sup} () const \label{classpattern__support_80615fabcc0c5e4043531c90dd2b2a64}
+
+\item 
+void \textbf{set\_\-vals} (const \bf{pattern\_\-support}$<$ MP $>$ $\ast$s)\label{classpattern__support_a54cccfd00ce22f6dae6ebc03af412da}
+
+\item 
+void \textbf{set\_\-sup} (const std::pair$<$ int, int $>$ \&s)\label{classpattern__support_ceb8296801b8f94ae5ec5e00f0867b9d}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+std::ostream \& \textbf{operator$<$$<$} (std::ostream \&, const \bf{pattern\_\-support}$<$ MP $>$ \&)\label{classpattern__support_1d08420b42e143fd53b33192971c79e6}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class MP$>$ class pattern\_\-support$<$ MP $>$}
+
+Generic Pattern Support Class that takes care of support counting of a pattern. 
+
+Templated with Mining property, since support counting depends on different mining properties. 
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+pat\_\-support.h\end{CompactItemize}

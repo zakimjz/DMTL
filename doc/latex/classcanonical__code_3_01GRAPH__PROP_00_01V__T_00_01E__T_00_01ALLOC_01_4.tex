@@ -1,0 +1,136 @@
+\section{canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$ Class Template Reference}
+\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4}\index{canonical_code< GRAPH_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}}
+Graph canonical Code class by partial specialization of generic \doxyref{canonical\_\-code}{p.}{classcanonical__code} class.  
+
+
+{\tt \#include $<$graph\_\-can\_\-code.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef int \textbf{STORAGE\_\-TYPE}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_e7003156dccbbbdad77eeafbd98fdc87}
+
+\item 
+typedef \bf{five\_\-tuple}$<$ V\_\-T, E\_\-T $>$ \textbf{FIVE\_\-TUPLE}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_8e52b8781f907b1bab7aa85f3ae48464}
+
+\item 
+typedef \bf{FIVE\_\-TUPLE} \textbf{INIT\_\-TYPE}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_15cf686dbc2de5a1b1d301738067bbb9}
+
+\item 
+typedef \bf{eqint} \textbf{COMPARISON\_\-FUNC}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_0607354ee909339242d1984427276d0f}
+
+\item 
+typedef vector$<$ \bf{FIVE\_\-TUPLE}, ALLOC$<$ \bf{FIVE\_\-TUPLE} $>$ $>$ \textbf{TUPLES}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_7eb3f78a07afe4c3ccf2ec527d0cc23e}
+
+\item 
+typedef TUPLES::const\_\-iterator \textbf{CONST\_\-IT}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_ec089e00d5460a91c94ebbccd6ba6d6f}
+
+\item 
+typedef TUPLES::iterator \textbf{IT}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_3999f8883ad02833d18d46a22e34633f}
+
+\item 
+typedef \bf{canonical\_\-code}$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$ \textbf{CAN\_\-CODE}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_ae032c2deb1c906dcc201448ac37ed78}
+
+\item 
+typedef HASHNS::hash\_\-map$<$ int, int, HASHNS::hash$<$ int $>$, std::equal\_\-to$<$ int $>$, ALLOC$<$ int $>$ $>$ \textbf{VID\_\-HMAP}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_7c4ae8ffb1542970a8580b4e18518bed}
+
+\item 
+typedef VID\_\-HMAP::const\_\-iterator \textbf{VM\_\-CONST\_\-IT}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_c7baffea18f3f33d1062a702faf2f3a1}
+
+\item 
+typedef vector$<$ int, ALLOC$<$ int $>$ $>$ \textbf{RMP\_\-T}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_e37842fc37e1444f84f6b0892ae71473}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{canonical\_\-code} (const \bf{FIVE\_\-TUPLE} \&ft, const int \&gi, const int \&gj)
+\item 
+IT \textbf{begin} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_5b41e6eeff328fe95e12b21913841e18}
+
+\item 
+CONST\_\-IT \textbf{begin} () const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_5026be7f07fcc30f1d217f9315185471}
+
+\item 
+IT \textbf{end} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_8f94cc3ad6f037ef307fe32244ce3d42}
+
+\item 
+CONST\_\-IT \textbf{end} () const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_a44b6540b12c1960c5c5b07d1b44dbba}
+
+\item 
+int \textbf{size} () const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_36628fa1dd008a2a2a394e6cc2425b16}
+
+\item 
+void \textbf{clear} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_5568b432897ff832cd90fe2fe966877d}
+
+\item 
+const \bf{FIVE\_\-TUPLE} \& \textbf{operator[$\,$]} (const int \&index) const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_9a8b13c3c2481824c2cf23b4e9504b6b}
+
+\item 
+void \textbf{init\_\-rmp} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_f07009aa53dfc77037d183a97179cb5d}
+
+\item 
+void \textbf{update\_\-rmp} (const \bf{FIVE\_\-TUPLE} \&tuple)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_4da0d2fb824728a06cec6ccad86897b1}
+
+\item 
+template$<$class PAT$>$ void \textbf{init} (const \bf{INIT\_\-TYPE} \&tuple, PAT $\ast$\bf{pattern})\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_319c6f0b30ee04dfc2ded0b8a670acfc}
+
+\item 
+void \textbf{push\_\-back} (const \bf{FIVE\_\-TUPLE} \&tuple)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_d21ba4b8bc8f9fdb20324d05296f9d2d}
+
+\item 
+void \textbf{append} (const \bf{FIVE\_\-TUPLE} \&tuple)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_4e366868d1fc279cc503d08cd013f573}
+
+\item 
+void \textbf{append} (const \bf{FIVE\_\-TUPLE} \&tuple, const int \&gi, const int \&gj)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_29f2d930bb305b3288e56371a047af09}
+
+\item 
+void \textbf{update\_\-code} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_9bb0a83536890f9f0e191ae267334ef0}
+
+\item 
+STORAGE\_\-TYPE \textbf{get\-Code} () const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_cd08fc02aeecee0a9e3a043449ec9cc2}
+
+\item 
+bool \textbf{operator$<$} (const \bf{CAN\_\-CODE} \&rhs) const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_f0748c52e8b8acbaf6741e3a198b8aeb}
+
+\item 
+int \textbf{cid} (const int \&gi) const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_d7229a3b73450564d14274a54629f8da}
+
+\item 
+int \textbf{gid} (const int \&ci) const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_d0c37928ec730722d5b88ad8744db94f}
+
+\item 
+RMP\_\-T \& \textbf{rmost\_\-path} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_1ac9d45cfd162181a677feb09971082b}
+
+\item 
+void \textbf{append\_\-rmp} (const int \&id)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_0850976d27b2ad979305c81647ebc589}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& \textbf{operator$<$$<$} (ostream \&, const \bf{canonical\_\-code}$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$ \&)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_44463f1a2b5ec4d5c68f9fc7a51e08ff}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PP, typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ class canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}
+
+Graph canonical Code class by partial specialization of generic \doxyref{canonical\_\-code}{p.}{classcanonical__code} class. 
+
+pattern\_\-prop is set to undirected (graph property) 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{canonical_code< GRAPH_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}!canonical_code@{canonical\_\-code}}
+\index{canonical_code@{canonical\_\-code}!canonical_code< GRAPH_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ \bf{canonical\_\-code}$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$::\bf{canonical\_\-code} (const \bf{FIVE\_\-TUPLE} \& {\em ft}, const int \& {\em gi}, const int \& {\em gj})\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_7b8401cc684faa17f6aaf33dae46d614}
+
+
+Parameterized constructor that inserts ft as first tuple into DFS code 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+graph\_\-can\_\-code.h\end{CompactItemize}

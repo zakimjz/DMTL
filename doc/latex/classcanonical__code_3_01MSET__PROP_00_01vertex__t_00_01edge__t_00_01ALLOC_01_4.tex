@@ -1,0 +1,77 @@
+\section{canonical\_\-code$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$ Class Template Reference}
+\label{classcanonical__code_3_01MSET__PROP_00_01vertex__t_00_01edge__t_00_01ALLOC_01_4}\index{canonical_code< MSET_PROP, vertex_t, edge_t, ALLOC >@{canonical\_\-code$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$}}
+Itemset canonical Code class by partial specialization of generic \doxyref{canonical\_\-code}{p.}{classcanonical__code} class.  
+
+
+{\tt \#include $<$mset\_\-can\_\-code.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef int \textbf{STORAGE\_\-TYPE}\label{classcanonical__code_3_01MSET__PROP_00_01vertex__t_00_01edge__t_00_01ALLOC_01_4_63044c98e6c09ea923eb0ab9356a7657}
+
+\item 
+typedef vertex\_\-t \textbf{INIT\_\-TYPE}\label{classcanonical__code_3_01MSET__PROP_00_01vertex__t_00_01edge__t_00_01ALLOC_01_4_fd4b9e45b466258c203a079be11fe005}
+
+\item 
+typedef \bf{eqint} \textbf{COMPARISON\_\-FUNC}\label{classcanonical__code_3_01MSET__PROP_00_01vertex__t_00_01edge__t_00_01ALLOC_01_4_7ff8fe499232f043d594806c03a7efe9}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$class PAT$>$ void \bf{init} (INIT\_\-TYPE v, PAT $\ast$pat)
+\item 
+void \bf{insert\_\-vertex} (const vertex\_\-t \&v)
+\item 
+STORAGE\_\-TYPE \bf{get\-Code} () const 
+\item 
+void \textbf{update\_\-code} ()\label{classcanonical__code_3_01MSET__PROP_00_01vertex__t_00_01edge__t_00_01ALLOC_01_4_da6ba6bb5a1b6dac661b5b72eab33a01}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, typename vertex\_\-t, typename edge\_\-t, template$<$ typename $>$ class ALLOC$>$ class canonical\_\-code$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$}
+
+Itemset canonical Code class by partial specialization of generic \doxyref{canonical\_\-code}{p.}{classcanonical__code} class. 
+
+pattern\_\-prop is set to no\_\-edges(itemset property) 
+
+
+
+\subsection{Member Function Documentation}
+\index{canonical_code< MSET_PROP, vertex_t, edge_t, ALLOC >@{canonical\_\-code$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$}!getCode@{getCode}}
+\index{getCode@{getCode}!canonical_code< MSET_PROP, vertex_t, edge_t, ALLOC >@{canonical\_\-code$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename vertex\_\-t, typename edge\_\-t, template$<$ typename $>$ class ALLOC$>$ STORAGE\_\-TYPE \bf{canonical\_\-code}$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$::get\-Code () const\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01MSET__PROP_00_01vertex__t_00_01edge__t_00_01ALLOC_01_4_3f3d2cb03197fedf0b5223681515b89d}
+
+
+Return the canonical code. \index{canonical_code< MSET_PROP, vertex_t, edge_t, ALLOC >@{canonical\_\-code$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$}!init@{init}}
+\index{init@{init}!canonical_code< MSET_PROP, vertex_t, edge_t, ALLOC >@{canonical\_\-code$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename vertex\_\-t, typename edge\_\-t, template$<$ typename $>$ class ALLOC$>$ template$<$class PAT$>$ void \bf{canonical\_\-code}$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$::init (INIT\_\-TYPE {\em v}, PAT $\ast$ {\em pat})\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01MSET__PROP_00_01vertex__t_00_01edge__t_00_01ALLOC_01_4_72c37259ee6532b991787bbaf6609833}
+
+
+Used to initialize the canonical code. Called from \doxyref{db\_\-reader}{p.}{classdb__reader} so that the pattern's canonical code can be initialized. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em v}]It is the vertex for which the code is generated \item[\mbox{$\leftarrow$} {\em pat}]The associated pattern \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+\index{canonical_code< MSET_PROP, vertex_t, edge_t, ALLOC >@{canonical\_\-code$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$}!insert_vertex@{insert\_\-vertex}}
+\index{insert_vertex@{insert\_\-vertex}!canonical_code< MSET_PROP, vertex_t, edge_t, ALLOC >@{canonical\_\-code$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename vertex\_\-t, typename edge\_\-t, template$<$ typename $>$ class ALLOC$>$ void \bf{canonical\_\-code}$<$ MSET\_\-PROP, vertex\_\-t, edge\_\-t, ALLOC $>$::insert\_\-vertex (const vertex\_\-t \& {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01MSET__PROP_00_01vertex__t_00_01edge__t_00_01ALLOC_01_4_7cd5c047b8b28fede323f038a76f6cb0}
+
+
+Generate canonical code for each length-1 pattern from static-id \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em v}]Input vertex of vertex\_\-t datatype. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]void \end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+mset\_\-can\_\-code.h\end{CompactItemize}

@@ -1,0 +1,50 @@
+\section{tokenizer$<$ GRAPH\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$ Class Template Reference}
+\label{classtokenizer_3_01GRAPH__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4}\index{tokenizer< GRAPH_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ GRAPH\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+Graph tokenizer class by partial specialization of the generic tokenizer class.  
+
+
+{\tt \#include $<$graph\_\-tokenizer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{vat}$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, std::vector $>$ \textbf{VAT}\label{classtokenizer_3_01GRAPH__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_56e6ff0ab0e2c59c8a38225350199449}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{tokenizer} (const int max=LINE\_\-SZ)
+\item 
+template$<$class SM\_\-T$>$ int \bf{parse\_\-next\_\-trans} (ifstream \&infile, \bf{pat\_\-fam}$<$ GRAPH\_\-PATTERN $>$ \&freq\_\-pats, \bf{storage\_\-manager}$<$ GRAPH\_\-PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \&vat\_\-hmap)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ class tokenizer$<$ GRAPH\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}
+
+Graph tokenizer class by partial specialization of the generic tokenizer class. 
+
+the template argument is instantiated with a pattern that has undirected pattern property(graph), MINING\_\-PROPS type of mining property, ST type of pattern storage and CC type of canocial code. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tokenizer< GRAPH_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ GRAPH\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!tokenizer< GRAPH_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ GRAPH\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ \bf{tokenizer}$<$ GRAPH\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$::\bf{tokenizer} (const int {\em max} = {\tt LINE\_\-SZ})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01GRAPH__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_6b534e815d9b7bc6db390545b83f9ed5}
+
+
+constructor for tokenizer 
+
+\subsection{Member Function Documentation}
+\index{tokenizer< GRAPH_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ GRAPH\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}!parse_next_trans@{parse\_\-next\_\-trans}}
+\index{parse_next_trans@{parse\_\-next\_\-trans}!tokenizer< GRAPH_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ GRAPH\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ template$<$class SM\_\-T$>$ int \bf{tokenizer}$<$ GRAPH\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$::parse\_\-next\_\-trans (ifstream \& {\em infile}, \bf{pat\_\-fam}$<$ GRAPH\_\-PATTERN $>$ \& {\em freq\_\-pats}, \bf{storage\_\-manager}$<$ GRAPH\_\-PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \& {\em vat\_\-hmap})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01GRAPH__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_d0518f28456a0e7448ea7a54a108a2d4}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+graph\_\-tokenizer.h\end{CompactItemize}

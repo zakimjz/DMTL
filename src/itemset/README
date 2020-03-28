@@ -1,0 +1,68 @@
+This directory contains pattern specific source files. Here is a short description
+what each file contains:
+
+1. iset_can_code.h: canocnical_code class specialized for itemset. This class provides
+a unique code for each patterns. For itemset, the coding is really simple. For every
+itemset, an integer is used as its code. For a length-1 pattern, the vertex-id is its
+code. For higher length, a negative integer number is used as the code. Code is generated
+incrementally from a static integer(variable id_generator), set to -1.
+
+2. iset_cand_gen.h: This file contains two important functions for itemset mining: cand_gen
+and join.
+
+cand_gen: After finding all level-1 candidates, recursive mining to the higher level pattern
+is initiated throuth this routine. In this way, this routine is a driver program for the
+mining process. It takes a set of patterns that belongs to the same equivalence class, and
+join all possible pairs of patterns in that equivalence class family. In any equivalence class
+all patterns have exactly same size k and they share a same (k-1)-length prefix. In every
+iteration, cand_gen produces a new equivalence class family and proceed recursively to get higher
+length pattern, until it reaches to a equivalence class for which there is no patterns. The
+search in always depth-first, which makes is possible to get a equivalence class in each 
+iteration.
+
+example: Say, from the level 1, we have {A, B, C, D, E} as frequent pattern.
+They belongs to an equivalence class with a prefix = NULL and length 1. Through the first
+iteration of cand_gen() we get new equivalence class {AB, AC, AD, AE} with a prefix = A
+and length = 2. Then cand_gen is recursively called on this family to get new equivalence
+class {ABC, ABD, ABE} that has a prefix = AB and length = 3. The process continue until
+we reach a equivalence class {ABCDE} for which the prefix = ABCD and length = 5. Recursion
+returns at this point and starts with the equivalence class {BC, BD, BE} and proceed so on.
+
+Note that, Fk_one holds the patterns that belongs to an equivalence class, hence named pat_fam.
+In each iteration frequent patterns are stored in freq_pats, and the frequency is determined
+from the back-end through the count_support class. That's the reason, an instance of count_support
+class cnt_sup is passed also as parameter. Minsup is user-defined. 
+
+At this time, you may noticed that the second parameter Fk_two is passed but never used. 
+This is passed to maintain the generic behavior of cand_gen routine throughout all different 
+patterns. It has no use as long as we join in Fk X Fk fashion since this kind of join joins patterns 
+from exactly one family. But, in Fk X F1 mining, like what is used in graph mining implementation, 
+this parameter will be used.
+
+join: It is simple, it takes two candidate patterns that belongs to the same equivalence class
+and produce a new candidate pattern. For the simple itemset cases, only one pattern is produced
+from the join, but we still retruns an array of candidate patterns, again to maintain the 
+generic behavior of this routine since other patterns like sequence, tree, etc. may generate
+more than one pattern from a join operations. Note that, we always work with a pointer to
+the pattern instead of pattern itself for efficiency reason.
+
+3. iset_iso_check.h: This file contains a routine that is called check_isomorphism().
+Isomorphism checking is important to get rid of duplicate patterns, for the case where different 
+join operation produces the same candidate pattern. Canonical code of a pattern becomes useful
+in this case. If we find a pattern, for which the canonical_code is not a minimal code,
+we consider this pattern to be duplicate and discard them. The return type for this function
+is boolean(true if the pattern is valid, false if it is a duplicate). You must have noticed
+that it always return true in the case of itemset, because all candidates are valid for itemset.
+In other word, candidate generation process was easy enough NOT to produce any duplicate candidates.
+But it is not an easy task for more complex patterns and check_isomporphism is not a trivial
+routine for those.
+
+4. iset_operators.h: It implements some operators for itemset patterns. Like '<' and '<<'
+
+5. iset_tokenizer.h: Tokenizer class specialized for itemset. It provides routines to tokenize
+the input data file. These routine are called by db_reader.h class to populate all level-1 patterns.
+
+6. iset_vat.h: VAT class specialized for itemset pattern. It implements the vertical database
+representation for a pattern and stores the VAT for a pattern. For itemset, VAT is really simple,
+it just stores the set of transaction-id's that has this pattern, typically in a std::vector.
+For, complex pattern VAT are more intrigued.

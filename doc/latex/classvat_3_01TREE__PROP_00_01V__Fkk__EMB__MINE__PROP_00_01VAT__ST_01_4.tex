@@ -1,0 +1,104 @@
+\section{vat$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$ Class Template Reference}
+\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4}\index{vat< TREE_PROP, V_Fkk_EMB_MINE_PROP, VAT_ST >@{vat$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$}}
+TREE VAT calss for embedded mining by partial specialization of the generic VAT class.  
+
+
+{\tt \#include $<$tree\_\-vat.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef {\bf pattern\_\-support}$<$ V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP $>$ {\bf PAT\_\-SUP}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w0}
+
+\item 
+typedef {\bf vat}$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$ {\bf VAT}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w1}
+
+\item 
+typedef {\bf tree\_\-instance}$<$ std::vector, PP $>$ {\bf INSTANCE}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w2}
+
+\item 
+typedef VAT\_\-ST$<$ pair$<$ int, VAT\_\-ST$<$ {\bf INSTANCE} $>$ $>$ $>$ {\bf IDLIST\_\-T}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w3}
+
+\item 
+typedef IDLIST\_\-T::const\_\-iterator {\bf CONST\_\-IT}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w4}
+
+\item 
+typedef IDLIST\_\-T::iterator {\bf IT}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w5}
+
+\item 
+typedef VAT\_\-ST$<$ {\bf INSTANCE} $>$::const\_\-iterator {\bf CONST\_\-INST\_\-IT}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w6}
+
+\item 
+typedef VAT\_\-ST$<$ {\bf INSTANCE} $>$ {\bf INSTANCES}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w7}
+
+\item 
+typedef VAT\_\-ST$<$ {\bf INSTANCE} $>$::iterator {\bf INST\_\-IT}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w8}
+
+\item 
+typedef std::vector$<$ int $>$::const\_\-iterator {\bf CONST\_\-STORE\_\-IT}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w9}
+
+\item 
+typedef std::vector$<$ int $>$::iterator {\bf STORE\_\-IT}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_w10}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+IT {\bf begin} ()\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_a0}
+
+\item 
+CONST\_\-IT {\bf begin} () const \label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_a1}
+
+\item 
+IT {\bf end} ()\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_a2}
+
+\item 
+CONST\_\-IT {\bf end} () const \label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_a3}
+
+\item 
+bool {\bf empty} () const \label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_a4}
+
+\item 
+int {\bf size} ()\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_a5}
+
+\item 
+void {\bf push\_\-back} (const  pair$<$ int, VAT\_\-ST$<$ {\bf INSTANCE} $>$ $>$ \&val)
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$class PAT$>$ {\bf VAT} $\ast$$\ast$ {\bf intersection} (const  {\bf VAT} $\ast$const \&v1, const  {\bf VAT} $\ast$const \&v2, {\bf PAT\_\-SUP} $\ast$$\ast$cand\_\-sups, PAT $\ast$$\ast$, bool)
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& {\bf operator$<$$<$} (ostream \&, const  {\bf VAT} $\ast$)\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_n0}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PP, typename MP, template$<$ typename $>$ class VAT\_\-ST$>$ class vat$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$}
+
+TREE VAT calss for embedded mining by partial specialization of the generic VAT class. 
+
+In this partial specialization, PP is fixed to directed, acyclic, indegree\_\-lte\_\-one (Tree property), MP is fixed to Fk X Fk, vert\_\-mine, embedded (Vertical mining with Fk X Fk for embedded patterns), ST is the VAT storage type. 
+
+
+
+\subsection{Member Function Documentation}
+\index{vat< TREE_PROP, V_Fkk_EMB_MINE_PROP, VAT_ST >@{vat$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$}!intersection@{intersection}}
+\index{intersection@{intersection}!vat< TREE_PROP, V_Fkk_EMB_MINE_PROP, VAT_ST >@{vat$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, template$<$ typename $>$ class VAT\_\-ST$>$ template$<$class PAT$>$ {\bf VAT}$\ast$$\ast$ {\bf vat}$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$::intersection (const {\bf VAT} $\ast$const \& {\em v1}, const {\bf VAT} $\ast$const \& {\em v2}, {\bf PAT\_\-SUP} $\ast$$\ast$ {\em cand\_\-sups}, PAT $\ast$$\ast$, bool)\hspace{0.3cm}{\tt  [inline, static]}}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_e0}
+
+
+Main VAT intersection function, returns constructed VATs; also populates the {\bf pattern\_\-support}{\rm (p.\,\pageref{classpattern__support})} arguments passed \index{vat< TREE_PROP, V_Fkk_EMB_MINE_PROP, VAT_ST >@{vat$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$}!push_back@{push\_\-back}}
+\index{push_back@{push\_\-back}!vat< TREE_PROP, V_Fkk_EMB_MINE_PROP, VAT_ST >@{vat$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, template$<$ typename $>$ class VAT\_\-ST$>$ void {\bf vat}$<$ TREE\_\-PROP, V\_\-Fkk\_\-EMB\_\-MINE\_\-PROP, VAT\_\-ST $>$::push\_\-back (const pair$<$ int, VAT\_\-ST$<$ {\bf INSTANCE} $>$ $>$ \& {\em val})\hspace{0.3cm}{\tt  [inline]}}\label{classvat_3_01TREE__PROP_00_01V__Fkk__EMB__MINE__PROP_00_01VAT__ST_01_4_a6}
+
+
+Appends new entry into vat 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+tree\_\-vat.h\end{CompactItemize}

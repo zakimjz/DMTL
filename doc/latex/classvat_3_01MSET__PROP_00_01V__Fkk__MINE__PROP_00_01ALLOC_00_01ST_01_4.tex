@@ -1,0 +1,160 @@
+\section{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$ Class Template Reference}
+\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4}\index{vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+Itemset VAT class by partial specialization of the generic VAT class.  
+
+
+{\tt \#include $<$mset\_\-vat.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{pattern\_\-support}$<$ V\_\-Fkk\_\-MINE\_\-PROP $>$ \textbf{PAT\_\-SUP}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_c60a8106610bf1016ba02a4d2193359d}
+
+\item 
+typedef \bf{vat}$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$ \textbf{VAT}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_346d7d0a04f0d525902b1ce7856d2e07}
+
+\item 
+typedef ST$<$ pair$<$ int, int $>$, ALLOC$<$ pair$<$ int, int $>$ $>$ $>$ \textbf{IDLIST\_\-T}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_3afa1d0055bd1410188a4af2d72053e7}
+
+\item 
+typedef IDLIST\_\-T::const\_\-iterator \textbf{CONST\_\-IT}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_fc95bf6b81b08d2a7f60d01557a7e230}
+
+\item 
+typedef IDLIST\_\-T::iterator \textbf{IT}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_388ae745799987572ca34ec31aa360b2}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void $\ast$ \textbf{operator new} (size\_\-t size)\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_8d43e39623225f73822556d448b1cc9d}
+
+\item 
+void \textbf{operator delete} (void $\ast$p, size\_\-t size)\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_6b753230518775458f0047e9b0036f18}
+
+\item 
+IT \textbf{begin} ()\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_9f5573d29f7209f260e55dcaddf79892}
+
+\item 
+CONST\_\-IT \textbf{begin} () const \label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_68ad908f66e9cd356c63c7a8261043a5}
+
+\item 
+IT \textbf{end} ()\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_e4491bc411d45d8df0a29c35755a9131}
+
+\item 
+CONST\_\-IT \textbf{end} () const \label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_3cdfc678ce1a8272bb2515b3d5a32028}
+
+\item 
+bool \textbf{empty} () const \label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_d9fb8b65de52573071deda7e7d92cbb7}
+
+\item 
+int \textbf{size} ()\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_9de5878903d23b64f268b3b947317d9f}
+
+\item 
+void \textbf{make\_\-empty} ()\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_0a43f4d1bcfaf5b5e46e76ea13075659}
+
+\item 
+void \bf{push\_\-back} (const pair$<$ int, int $>$ \&val)
+\item 
+pair$<$ int, int $>$ \& \bf{operator[$\,$]} (int n)
+\item 
+void \bf{resize} (int x)
+\item 
+void \textbf{clear} ()\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_a8a6205b57ac665e29fdd4a66a773e8d}
+
+\item 
+unsigned long \bf{size} () const \label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_a20458f207e21bd8acbf502eed2f442e}
+
+\begin{CompactList}\small\item\em Return Vat length. \item\end{CompactList}\item 
+\bf{vat} (const \bf{VAT} \&orig)
+\item 
+const \bf{VAT} \& \bf{operator=} (const \bf{VAT} \&right)
+\item 
+unsigned long int \textbf{byte\_\-size} () const \label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_174f02eab4c607f845a58b2da5240046}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$class PAT$>$ static \bf{VAT} $\ast$$\ast$ \bf{intersection} (const \bf{VAT} $\ast$const \&vat\_\-i, const \bf{VAT} $\ast$const \&vat\_\-j, \bf{PAT\_\-SUP} $\ast$$\ast$cand\_\-sups, PAT $\ast$$\ast$, bool \&is\_\-l2)
+\begin{CompactList}\small\item\em Vat Intersection for Itemset patterns. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& \bf{operator$<$$<$} (ostream \&, const \bf{VAT} \&)
+\item 
+istream \& \textbf{operator$>$$>$} (istream \&, \bf{VAT} \&)\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_03bf6c0ab0eae6edf687dc0ea2ac3bbb}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, class MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ class vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}
+
+Itemset VAT class by partial specialization of the generic VAT class. 
+
+In this partial specialization, PP is fixed to no\_\-edges (itemset property), MP is fixed to Fk X Fk and vert\_\-mine (vertical mining with Fk X Fk), ST is the storage type, what needs a base type information, here templatized with P 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}!vat@{vat}}
+\index{vat@{vat}!vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ \bf{vat}$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$::\bf{vat} (const \bf{VAT} \& {\em orig})\hspace{0.3cm}{\tt  [inline]}}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_337da4fb9a0d6e491ccae87b8eaed2e7}
+
+
+read from a file 
+
+\subsection{Member Function Documentation}
+\index{vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}!intersection@{intersection}}
+\index{intersection@{intersection}!vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ template$<$class PAT$>$ static \bf{VAT}$\ast$$\ast$ \bf{vat}$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$::intersection (const \bf{VAT} $\ast$const \& {\em vat\_\-i}, const \bf{VAT} $\ast$const \& {\em vat\_\-j}, \bf{PAT\_\-SUP} $\ast$$\ast$ {\em cand\_\-sups}, PAT $\ast$$\ast$, bool \& {\em is\_\-l2})\hspace{0.3cm}{\tt  [inline, static]}}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_09f52714e2a9935d3aa9ad502d3266de}
+
+
+Vat Intersection for Itemset patterns. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em vat\_\-i}]A pointer to the VAT corresponding to the first pattern. \item[\mbox{$\leftarrow$} {\em vat\_\-j}]A pointer to the VAT corresponding to the second pattern. \item[\mbox{$\rightarrow$} {\em cand\_\-sup}]An array of pointers to \doxyref{pattern\_\-support}{p.}{classpattern__support} class instances that is modified in this routine to hold actual support value. \item[\mbox{$\leftarrow$} {\em is\_\-l2}]A boolean to designate whether current VAT intersection is a Level 2 vat\_\-join. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]A static array of VAT$\ast$ to hold the pointer to the new VATs generated through the intersection. \end{Desc}
+\begin{Desc}
+\item[Precondition:]cand\_\-sups array holds pointer to \doxyref{pattern\_\-support}{p.}{classpattern__support} instances with NO actual support value associated to it. \end{Desc}
+\begin{Desc}
+\item[Postcondition:]cand\_\-sups array holding \doxyref{pattern\_\-support}{p.}{classpattern__support} instances HAS acutal support value associated to it. \end{Desc}
+\index{vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ const \bf{VAT}\& \bf{vat}$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$::operator= (const \bf{VAT} \& {\em right})\hspace{0.3cm}{\tt  [inline]}}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_f7c46f53c2c928abdfb6e0fbc6dcae31}
+
+
+Overloaded = operator; avoids self assignment. \index{vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}!operator[]@{operator[]}}
+\index{operator[]@{operator[]}!vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ pair$<$int, int$>$\& \bf{vat}$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$::operator[$\,$] (int {\em n})\hspace{0.3cm}{\tt  [inline]}}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_bf9a8bc019f1c79c088ff45240bc6802}
+
+
+Creating an array operator to work over VAT \index{vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}!push_back@{push\_\-back}}
+\index{push_back@{push\_\-back}!vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ void \bf{vat}$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$::push\_\-back (const pair$<$ int, int $>$ \& {\em val})\hspace{0.3cm}{\tt  [inline]}}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_96707cab123a7e507bbc79c7f686d85f}
+
+
+Appends new entry into vat \index{vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}!resize@{resize}}
+\index{resize@{resize}!vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ void \bf{vat}$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$::resize (int {\em x})\hspace{0.3cm}{\tt  [inline]}}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_f2bea128177118c522d7da2d0b3d475a}
+
+
+Resizes the vector 
+
+\subsection{Friends And Related Function Documentation}
+\index{vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}!operator<<@{operator$<$$<$}}
+\index{operator<<@{operator$<$$<$}!vat< MSET_PROP, V_Fkk_MINE_PROP, ALLOC, ST >@{vat$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ ostream\& operator$<$$<$ (ostream \&, const \bf{VAT} \&)\hspace{0.3cm}{\tt  [friend]}}\label{classvat_3_01MSET__PROP_00_01V__Fkk__MINE__PROP_00_01ALLOC_00_01ST_01_4_d49d82415e012c92b69671338b69b4a4}
+
+
+Serialize an Itemset Vat to an Output stream void write\_\-file(ostream \& output) const \{ cout$<$$<$\char`\"{}writing this:\char`\"{}$<$$<$$\ast$this; CONST\_\-IT iter; iter =\_\-idlist.begin(); for (;iter!=\_\-idlist.end();iter++)\{ output.write( reinterpret\_\-cast$<$const char $\ast$$>$( \& ($\ast$iter) ), sizeof(T)); output.write( reinterpret\_\-cast$<$const char $\ast$$>$( \& ($\ast$iter) ), sizeof(int)); \} \} // //end write\_\-file
+
+De-Serialize an Itemset Vat from an Input stream void read\_\-file (istream \& input, unsigned long int size) \{ TODO: This should be the element type in the vat. int temp; unsigned long int i; unsigned long int j=size/sizeof(T); unsigned long int j=size/sizeof(int); \_\-idlist.clear(); for ( i=0;i$<$j;i++)\{ input.read(reinterpret\_\-cast$<$char $\ast$$>$( \& (temp) ), sizeof(T)); input.read(reinterpret\_\-cast$<$char $\ast$$>$( \& (temp) ), sizeof(int)); \_\-idlist.push\_\-back(temp); \} \} 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+mset\_\-vat.h\end{CompactItemize}

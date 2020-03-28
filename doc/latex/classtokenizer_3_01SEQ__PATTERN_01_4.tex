@@ -1,0 +1,56 @@
+\section{tokenizer$<$ SEQ\_\-PATTERN $>$ Class Template Reference}
+\label{classtokenizer_3_01SEQ__PATTERN_01_4}\index{tokenizer< SEQ_PATTERN >@{tokenizer$<$ SEQ\_\-PATTERN $>$}}
+Sequence tokenizer class by partial specialization of the generic tokenizer class.  
+
+
+{\tt \#include $<$seq\_\-tokenizer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef {\bf pattern\_\-support}$<$ V\_\-Fkk\_\-MINE\_\-PROP $>$ {\bf PAT\_\-SUP}\label{classtokenizer_3_01SEQ__PATTERN_01_4_w0}
+
+\item 
+typedef {\bf vat}$<$ SEQ\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, std::vector $>$ {\bf VAT}\label{classtokenizer_3_01SEQ__PATTERN_01_4_w1}
+
+\item 
+typedef SEQ\_\-PATTERN::VERTEX\_\-T {\bf V\_\-T}\label{classtokenizer_3_01SEQ__PATTERN_01_4_w2}
+
+\item 
+typedef SEQ\_\-PATTERN::EDGE\_\-T {\bf E\_\-T}\label{classtokenizer_3_01SEQ__PATTERN_01_4_w3}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf tokenizer} (int max=100)
+\item 
+template$<$class SM\_\-T$>$ int {\bf parse\_\-next\_\-trans} (ifstream \&infile, {\bf pat\_\-fam}$<$ SEQ\_\-PATTERN $>$ \&freq\_\-pats, {\bf storage\_\-manager}$<$ SEQ\_\-PATTERN, {\bf VAT}, SM\_\-T $>$ \&vat\_\-hmap)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ class tokenizer$<$ SEQ\_\-PATTERN $>$}
+
+Sequence tokenizer class by partial specialization of the generic tokenizer class. 
+
+the template argument is instantiated with a pattern that has directed, acyclic, indegree\_\-lte\_\-one, outdegree\_\-lte\_\-one pattern property(tree), MINING\_\-PROPS type of mining property, ST type of pattern storage and CC type of canocial code. 
+
+
+
+\subsection{Member Function Documentation}
+\index{tokenizer< SEQ_PATTERN >@{tokenizer$<$ SEQ\_\-PATTERN $>$}!parse_next_trans@{parse\_\-next\_\-trans}}
+\index{parse_next_trans@{parse\_\-next\_\-trans}!tokenizer< SEQ_PATTERN >@{tokenizer$<$ SEQ\_\-PATTERN $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ template$<$class SM\_\-T$>$ int {\bf tokenizer}$<$ SEQ\_\-PATTERN $>$::parse\_\-next\_\-trans (ifstream \& {\em infile}, {\bf pat\_\-fam}$<$ SEQ\_\-PATTERN $>$ \& {\em freq\_\-pats}, {\bf storage\_\-manager}$<$ SEQ\_\-PATTERN, {\bf VAT}, SM\_\-T $>$ \& {\em vat\_\-hmap})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01SEQ__PATTERN_01_4_a1}
+
+
+returns the TID of transaction read; parses one transaction from input database, and collects VATS in vat\_\-hmap return value is -1 on end of stream \index{tokenizer< SEQ_PATTERN >@{tokenizer$<$ SEQ\_\-PATTERN $>$}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!tokenizer< SEQ_PATTERN >@{tokenizer$<$ SEQ\_\-PATTERN $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ {\bf tokenizer}$<$ SEQ\_\-PATTERN $>$::{\bf tokenizer} (int {\em max} = 100)\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01SEQ__PATTERN_01_4_a0}
+
+
+default constructor 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+seq\_\-tokenizer.h\end{CompactItemize}

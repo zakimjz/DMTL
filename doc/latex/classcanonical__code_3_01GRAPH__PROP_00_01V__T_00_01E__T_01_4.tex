@@ -1,0 +1,139 @@
+\section{canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T $>$ Class Template Reference}
+\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4}\index{canonical_code< GRAPH_PROP, V_T, E_T >@{canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T $>$}}
+Graph canonical Code class by partial specialization of generic {\bf canonical\_\-code}{\rm (p.\,\pageref{classcanonical__code})} class.  
+
+
+{\tt \#include $<$graph\_\-can\_\-code.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef int {\bf STORAGE\_\-TYPE}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w0}
+
+\item 
+typedef {\bf five\_\-tuple}$<$ V\_\-T, E\_\-T $>$ {\bf FIVE\_\-TUPLE}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w1}
+
+\item 
+typedef {\bf FIVE\_\-TUPLE} {\bf INIT\_\-TYPE}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w2}
+
+\item 
+typedef {\bf eqint} {\bf COMPARISON\_\-FUNC}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w3}
+
+\item 
+typedef vector$<$ {\bf FIVE\_\-TUPLE} $>$ {\bf TUPLES}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w4}
+
+\item 
+typedef TUPLES::const\_\-iterator {\bf CONST\_\-IT}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w5}
+
+\item 
+typedef TUPLES::iterator {\bf IT}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w6}
+
+\item 
+typedef {\bf canonical\_\-code}$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T $>$ {\bf CAN\_\-CODE}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w7}
+
+\item 
+typedef HASHNS::hash\_\-map$<$ int, int $>$ {\bf VID\_\-HMAP}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w8}
+
+\item 
+typedef VID\_\-HMAP::const\_\-iterator {\bf VM\_\-CONST\_\-IT}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w9}
+
+\item 
+typedef vector$<$ int $>$ {\bf RMP\_\-T}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_w10}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf canonical\_\-code} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a0}
+
+\item 
+{\bf canonical\_\-code} (const  {\bf FIVE\_\-TUPLE} \&ft, const  int \&gi, const  int \&gj)
+\item 
+IT {\bf begin} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a2}
+
+\item 
+CONST\_\-IT {\bf begin} () const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a3}
+
+\item 
+IT {\bf end} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a4}
+
+\item 
+CONST\_\-IT {\bf end} () const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a5}
+
+\item 
+int {\bf size} () const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a6}
+
+\item 
+void {\bf clear} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a7}
+
+\item 
+const  {\bf FIVE\_\-TUPLE} \& {\bf operator[$\,$]} (const  int \&index) const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a8}
+
+\item 
+void {\bf init\_\-rmp} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a9}
+
+\item 
+void {\bf update\_\-rmp} (const  {\bf FIVE\_\-TUPLE} \&tuple)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a10}
+
+\item 
+template$<$class PAT$>$ void {\bf init} (const  {\bf INIT\_\-TYPE} \&tuple, PAT $\ast${\bf pattern})\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a11}
+
+\item 
+void {\bf push\_\-back} (const  {\bf FIVE\_\-TUPLE} \&tuple)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a12}
+
+\item 
+void {\bf append} (const  {\bf FIVE\_\-TUPLE} \&tuple)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a13}
+
+\item 
+void {\bf append} (const  {\bf FIVE\_\-TUPLE} \&tuple, const  int \&gi, const  int \&gj)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a14}
+
+\item 
+void {\bf update\_\-code} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a15}
+
+\item 
+STORAGE\_\-TYPE {\bf get\-Code} () const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a16}
+
+\item 
+bool {\bf operator$<$} (const  {\bf CAN\_\-CODE} \&rhs) const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a17}
+
+\item 
+int {\bf cid} (const  int \&gi) const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a18}
+
+\item 
+int {\bf gid} (const  int \&ci) const \label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a19}
+
+\item 
+RMP\_\-T \& {\bf rmost\_\-path} ()\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a20}
+
+\item 
+void {\bf append\_\-rmp} (const  int \&id)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a21}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& {\bf operator$<$$<$} (ostream \&, const  {\bf canonical\_\-code}$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T $>$ \&)\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_n0}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PP, typename V\_\-T, typename E\_\-T$>$ class canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T $>$}
+
+Graph canonical Code class by partial specialization of generic {\bf canonical\_\-code}{\rm (p.\,\pageref{classcanonical__code})} class. 
+
+pattern\_\-prop is set to undirected (graph property) 
+
+
+
+\subsection{Member Function Documentation}
+\index{canonical_code< GRAPH_PROP, V_T, E_T >@{canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T $>$}!canonical_code@{canonical\_\-code}}
+\index{canonical_code@{canonical\_\-code}!canonical_code< GRAPH_PROP, V_T, E_T >@{canonical\_\-code$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename V\_\-T, typename E\_\-T$>$ {\bf canonical\_\-code}$<$ GRAPH\_\-PROP, V\_\-T, E\_\-T $>$::{\bf canonical\_\-code} (const {\bf FIVE\_\-TUPLE} \& {\em ft}, const int \& {\em gi}, const int \& {\em gj})\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01GRAPH__PROP_00_01V__T_00_01E__T_01_4_a1}
+
+
+Parameterized constructor that inserts ft as first tuple into DFS code 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+graph\_\-can\_\-code.h\end{CompactItemize}

@@ -1,0 +1,189 @@
+\section{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$ Class Template Reference}
+\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4}\index{vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+Graph VAT class by partial specialization of the generic VAT class.  
+
+
+{\tt \#include $<$graph\_\-vat.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{evat}$<$ ALLOC $>$ \textbf{EVAT}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_73929bd1bb81aa4ef7e70c484c76b8e5}
+
+\item 
+typedef \bf{vat}$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$ \textbf{VAT}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_30f7581749c43ea7b527c98732df4259}
+
+\item 
+typedef ST$<$ \bf{EVAT}, ALLOC$<$ \bf{EVAT} $>$ $>$ \textbf{RMP\_\-VATS}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_7a05441ea912967a86c2cd98a58e7e15}
+
+\item 
+typedef ST$<$ pair$<$ int, RMP\_\-VATS $>$, ALLOC$<$ pair$<$ int, RMP\_\-VATS $>$ $>$ $>$ \bf{GVAT}
+\item 
+typedef HASHNS::hash\_\-set$<$ int, HASHNS::hash$<$ int $>$, std::equal\_\-to$<$ int $>$, ALLOC$<$ int $>$ $>$ \bf{VSET}
+\item 
+typedef vector$<$ vector$<$ \bf{VSET}, ALLOC$<$ \bf{VSET} $>$ $>$, ALLOC$<$ vector$<$ \bf{VSET}, ALLOC$<$ \bf{VSET} $>$ $>$ $>$ $>$ \bf{VSETS}
+\item 
+typedef GVAT::const\_\-iterator \textbf{CONST\_\-IT}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_40bfc15f2c811986dd907ea4ca1d0e58}
+
+\item 
+typedef GVAT::iterator \textbf{IT}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_d1446c9352a32b087d7dd66bef4c19c4}
+
+\item 
+typedef ST$<$ \bf{EVAT}, ALLOC$<$ \bf{EVAT} $>$ $>$::const\_\-iterator \textbf{CONST\_\-EIT}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_5c44c257ac05bf6f1edd46ae0946b22f}
+
+\item 
+typedef VSETS::iterator \textbf{VS\_\-IT}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_9ffa4f497bf7117d6034a60a47d20e9f}
+
+\item 
+typedef VSETS::const\_\-iterator \textbf{CONST\_\-VS\_\-IT}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_f13a018784b5febd8743033792675a7a}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void $\ast$ \textbf{operator new} (size\_\-t size)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_3de081ad2af38cf37b6468f424e08033}
+
+\item 
+void \textbf{operator delete} (void $\ast$p, size\_\-t size)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_b087e2541e5976d7bfe4dddcfdfdcc2b}
+
+\item 
+IT \textbf{begin} ()\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_db2545a0ad047574652a385f4a08dadc}
+
+\item 
+CONST\_\-IT \textbf{begin} () const \label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_fdb812087beb7a663dda17c0b2c6cfb1}
+
+\item 
+IT \textbf{end} ()\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_e1dd5b827ca87bbe87c5b8e661e633d4}
+
+\item 
+CONST\_\-IT \textbf{end} () const \label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_ef863217480f739b8cb06b7ce486de1d}
+
+\item 
+VS\_\-IT \textbf{begin\_\-v} ()\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_cbdcbe775f06c90acc48b25a36f2f70e}
+
+\item 
+CONST\_\-VS\_\-IT \textbf{begin\_\-v} () const \label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_8ca31e6b6247459d6c3d3ec16f3a3084}
+
+\item 
+VS\_\-IT \textbf{end\_\-v} ()\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_e6771d98853e8d895122931e36763dd3}
+
+\item 
+CONST\_\-VS\_\-IT \textbf{end\_\-v} () const \label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_acad995e980fc41f6958d44afb3d6f93}
+
+\item 
+int \textbf{size} () const \label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_3e550143b5e64bca4d8f89aa5778e097}
+
+\item 
+bool \textbf{empty} () const \label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_12cb106bc01f77106e35965ef99c05ca}
+
+\item 
+const pair$<$ int, ST$<$ \bf{EVAT}, ALLOC$<$ \bf{EVAT} $>$ $>$ $>$ \& \textbf{back} () const \label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_bef632223fa55801b1313877a3897150}
+
+\item 
+void \textbf{insert\_\-occurrence\_\-tid} (const int \&tid, const pair$<$ int, int $>$ \&new\_\-occurrence)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_81c607c51d95a30b2ad336c05f4530dc}
+
+\item 
+void \textbf{insert\_\-occurrence\_\-evat} (const pair$<$ int, int $>$ \&new\_\-occurrence)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_149d11785a8125938b239b0bbacedecd}
+
+\item 
+void \textbf{insert\_\-occurrence} (const pair$<$ int, int $>$ \&new\_\-occurrence)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_a788a4acfbeef2675a0e2555ba4ee2c4}
+
+\item 
+void \textbf{insert\_\-vid\_\-hs} (const int \&vid)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_4d6f57b35377ed73b20ec9a36dfe20d8}
+
+\item 
+void \textbf{insert\_\-vid} (const int \&vid)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_e95e65b8a54f6b869259cdb22f455eab}
+
+\item 
+void \textbf{insert\_\-vid\_\-tid} (const int \&vid)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_7a4765b8833d1a7ecdca57b1aa29d4ac}
+
+\item 
+void \textbf{copy\_\-vats} (const pair$<$ int, ST$<$ \bf{evat}$<$ ALLOC $>$, ALLOC$<$ \bf{evat}$<$ ALLOC $>$ $>$ $>$ $>$ \&v1, const int \&offset, const int \&sz, bool swap=0)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_c38563a0df7af5bd5bb617bf16d0014f}
+
+\item 
+void \textbf{copy\_\-vats\_\-tid} (const pair$<$ int, ST$<$ \bf{evat}$<$ ALLOC $>$, ALLOC$<$ \bf{evat}$<$ ALLOC $>$ $>$ $>$ $>$ \&v1, const int \&offset, const int \&sz, bool swap=0)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_eed616e0e7f53bfcff9b0246946ff44e}
+
+\item 
+void \textbf{copy\_\-vids\_\-hs} (const \bf{VSET} \&v1\_\-vids)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_4c4e502c026f2c2127a3ce75bd3f19ad}
+
+\item 
+void \textbf{copy\_\-vids\_\-tid} (const \bf{VSET} \&v1\_\-vids)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_5afc853d9101b42ff752a8cbc313fd59}
+
+\item 
+unsigned long int \textbf{byte\_\-size} () const \label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_a1cbaa1b2c6a2943fd1d9fd1d020b570}
+
+\item 
+void \textbf{print} ()\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_8acb1de21b8f8e454b767c20a5cebd50}
+
+\item 
+void \textbf{write\_\-file} (ostream \&output) const \label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_68a538ecf863c71727c35057b7562271}
+
+\item 
+void \textbf{read\_\-file} (istream \&input, unsigned long int size)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_e980c72e8f18c657be8ab5068db4281d}
+
+\item 
+bool \bf{is\_\-new\_\-vertex} (const int \&vid, const int \&tid, const int \&offset) const 
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$typename PATTERN, typename PAT\_\-SUP$>$ static \bf{VAT} $\ast$$\ast$ \bf{intersection} (const \bf{VAT} $\ast$v1, const \bf{VAT} $\ast$v2, PAT\_\-SUP $\ast$$\ast$cand\_\-sups, PATTERN $\ast$$\ast$cand\_\-pats, bool)
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \bf{evat$<$ ALLOC $>$}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_cc22506aa0348d52d0fc3cde32cfb7ca}
+
+\item 
+ostream \& \textbf{operator$<$$<$} (ostream \&, const \bf{VAT} $\ast$)\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_f1de00c5ba463d2cf1d08d1b212c46e0}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PP, typename MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ class vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}
+
+Graph VAT class by partial specialization of the generic VAT class. 
+
+In this partial specialization, PP is fixed to undirected (undirected graph property), MP is fixed to Fk X F1 and vert\_\-mine (vertical mining with FK X F1), ST is the VAT storage type. For graph, ST should model a vector, else this shall not compile. 
+
+
+
+\subsection{Member Typedef Documentation}
+\index{vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}!GVAT@{GVAT}}
+\index{GVAT@{GVAT}!vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ typedef ST$<$pair$<$int, RMP\_\-VATS$>$, ALLOC$<$pair$<$int, RMP\_\-VATS$>$ $>$ $>$ \bf{vat}$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$::\bf{GVAT}}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_a7791a2ed8c66de000e607d83f541c6b}
+
+
+a graph-vat is a collection of evats for each vertex, where each evat must have same size. This collection of evats is organized itself as ST$<$EVAT$>$ evats, and it holds evats of all edges on right most path of cand\_\-pat \index{vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}!VSET@{VSET}}
+\index{VSET@{VSET}!vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ typedef HASHNS::hash\_\-set$<$int, HASHNS::hash$<$int$>$, std::equal\_\-to$<$int$>$, ALLOC$<$int$>$ $>$ \bf{vat}$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$::\bf{VSET}}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_ff0176a2b4ec69537f5dcb9e50c82318}
+
+
+Set of vertex ids denoting exactly one of this graph's occurence in the dataset \index{vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}!VSETS@{VSETS}}
+\index{VSETS@{VSETS}!vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ typedef vector$<$vector$<$\bf{VSET}, ALLOC$<$\bf{VSET}$>$ $>$, ALLOC$<$vector$<$\bf{VSET}, ALLOC$<$\bf{VSET}$>$ $>$ $>$ $>$ \bf{vat}$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$::\bf{VSETS}}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_526a66d42ea4aab941d30c8bf37e6c16}
+
+
+This graph can occur several times in one graph in the dataset, and in several graphs (tids) as well 
+
+\subsection{Member Function Documentation}
+\index{vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}!intersection@{intersection}}
+\index{intersection@{intersection}!vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ template$<$typename PATTERN, typename PAT\_\-SUP$>$ static \bf{VAT}$\ast$$\ast$ \bf{vat}$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$::intersection (const \bf{VAT} $\ast$ {\em v1}, const \bf{VAT} $\ast$ {\em v2}, PAT\_\-SUP $\ast$$\ast$ {\em cand\_\-sups}, PATTERN $\ast$$\ast$ {\em cand\_\-pats}, bool)\hspace{0.3cm}{\tt  [inline, static]}}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_867248a3e91c6b8d64b30fd3e5988ef7}
+
+
+Main vat intersection function; It also populates support argument passed 
+
+now determine the index of edge\_\-vid on rmp of candidate. This is used by back\_\-intersect.
+
+we now have both evats, intersect them /// \index{vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}!is_new_vertex@{is\_\-new\_\-vertex}}
+\index{is_new_vertex@{is\_\-new\_\-vertex}!vat< GRAPH_PROP, V_Fk1_MINE_PROP, ALLOC, ST >@{vat$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, template$<$ typename $>$ class ALLOC, template$<$ typename, typename $>$ class ST$>$ bool \bf{vat}$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, ALLOC, ST $>$::is\_\-new\_\-vertex (const int \& {\em vid}, const int \& {\em tid}, const int \& {\em offset}) const\hspace{0.3cm}{\tt  [inline]}}\label{classvat_3_01GRAPH__PROP_00_01V__Fk1__MINE__PROP_00_01ALLOC_00_01ST_01_4_18c4caa2a2d7fa6f171367a35c9ebe52}
+
+
+Returns true if vid occurs in any of the offset-th vids in tid-th vat 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+graph\_\-vat.h\end{CompactItemize}

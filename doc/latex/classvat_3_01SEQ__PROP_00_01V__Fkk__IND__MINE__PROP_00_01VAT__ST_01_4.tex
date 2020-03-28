@@ -1,0 +1,98 @@
+\section{vat$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$ Class Template Reference}
+\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4}\index{vat< SEQ_PROP, V_Fkk_IND_MINE_PROP, VAT_ST >@{vat$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$}}
+SEQUENCE VAT calss for induced mining by partial specialization of the generic VAT class.  
+
+
+{\tt \#include $<$seq\_\-vat.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef {\bf pattern\_\-support}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$ {\bf PAT\_\-SUP}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_w0}
+
+\item 
+typedef {\bf vat}$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$ {\bf VAT}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_w1}
+
+\item 
+typedef {\bf seq\_\-instance} {\bf INSTANCE}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_w2}
+
+\item 
+typedef VAT\_\-ST$<$ pair$<$ int, VAT\_\-ST$<$ {\bf INSTANCE} $>$ $>$ $>$ {\bf IDLIST\_\-T}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_w3}
+
+\item 
+typedef IDLIST\_\-T::const\_\-iterator {\bf CONST\_\-IT}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_w4}
+
+\item 
+typedef IDLIST\_\-T::iterator {\bf IT}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_w5}
+
+\item 
+typedef IDLIST\_\-T::reverse\_\-iterator {\bf RIT}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_w6}
+
+\item 
+typedef VAT\_\-ST$<$ {\bf seq\_\-instance} $>$ {\bf INSTANCES}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_w7}
+
+\item 
+typedef INSTANCES::const\_\-iterator {\bf CONST\_\-INST\_\-IT}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+IT {\bf begin} ()\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_a0}
+
+\item 
+CONST\_\-IT {\bf begin} () const \label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_a1}
+
+\item 
+IT {\bf end} ()\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_a2}
+
+\item 
+CONST\_\-IT {\bf end} () const \label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_a3}
+
+\item 
+bool {\bf empty} () const \label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_a4}
+
+\item 
+int {\bf size} () const \label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_a5}
+
+\item 
+void {\bf clear} ()\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_a6}
+
+\item 
+void {\bf push\_\-back} (pair$<$ int, VAT\_\-ST$<$ {\bf INSTANCE} $>$ $>$ const \&inst)\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_a7}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$typename PATTERN$>$ {\bf VAT} $\ast$$\ast$ {\bf intersection} (const  {\bf VAT} $\ast$const \&vat\_\-i, const  {\bf VAT} $\ast$const \&vat\_\-j, {\bf PAT\_\-SUP} $\ast$$\ast$cand\_\-sups, PATTERN $\ast$$\ast$, bool \&is\_\-l2)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, class MP, template$<$ typename $>$ class VAT\_\-ST$>$ class vat$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$}
+
+SEQUENCE VAT calss for induced mining by partial specialization of the generic VAT class. 
+
+In this partial specialization, PP is fixed to directed, acyclic, indegree\_\-lte\_\-one, outdegree\_\-lte\_\-one (Tree property), MP is fixed to Fk X Fk, vert\_\-mine, induced(Vertical mining with Fk X Fk for induced patterns), ST is the VAT storage type. 
+
+
+
+\subsection{Member Typedef Documentation}
+\index{vat< SEQ_PROP, V_Fkk_IND_MINE_PROP, VAT_ST >@{vat$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$}!CONST_INST_IT@{CONST\_\-INST\_\-IT}}
+\index{CONST_INST_IT@{CONST\_\-INST\_\-IT}!vat< SEQ_PROP, V_Fkk_IND_MINE_PROP, VAT_ST >@{vat$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class VAT\_\-ST$>$ typedef INSTANCES::const\_\-iterator {\bf vat}$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$::{\bf CONST\_\-INST\_\-IT}}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_w8}
+
+
+constant iterator over instances in a tid 
+
+\subsection{Member Function Documentation}
+\index{vat< SEQ_PROP, V_Fkk_IND_MINE_PROP, VAT_ST >@{vat$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$}!intersection@{intersection}}
+\index{intersection@{intersection}!vat< SEQ_PROP, V_Fkk_IND_MINE_PROP, VAT_ST >@{vat$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class VAT\_\-ST$>$ template$<$typename PATTERN$>$ {\bf VAT}$\ast$$\ast$ {\bf vat}$<$ SEQ\_\-PROP, V\_\-Fkk\_\-IND\_\-MINE\_\-PROP, VAT\_\-ST $>$::intersection (const {\bf VAT} $\ast$const \& {\em vat\_\-i}, const {\bf VAT} $\ast$const \& {\em vat\_\-j}, {\bf PAT\_\-SUP} $\ast$$\ast$ {\em cand\_\-sups}, PATTERN $\ast$$\ast$, bool \& {\em is\_\-l2})\hspace{0.3cm}{\tt  [inline, static]}}\label{classvat_3_01SEQ__PROP_00_01V__Fkk__IND__MINE__PROP_00_01VAT__ST_01_4_e0}
+
+
+Method performs intersection of two VATs. Returns the new candidate VATs. Like the join of the patterns, a VAT intersection can result in more than one new candidate VAT. But for itemsets, just one candidate VAT is generated. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+seq\_\-vat.h\end{CompactItemize}

@@ -1,0 +1,116 @@
+\section{db\_\-reader$<$ PATTERN, TOKENIZER, ALLOC $>$ Class Template Reference}
+\label{classdb__reader}\index{db_reader@{db\_\-reader}}
+Database Reader class, to read the input file.  
+
+
+{\tt \#include $<$db\_\-reader.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{vat}$<$ typename PATTERN::PAT\_\-PROPS, typename PATTERN::MINE\_\-PROPS, ALLOC, std::vector $>$ \textbf{VAT}\label{classdb__reader_960e8f68fd71048803d991f20c7c9d90}
+
+\item 
+typedef \bf{tokenizer}$<$ PATTERN, TOKENIZER, ALLOC $>$ \bf{TKNZ}\label{classdb__reader_393fc1277eddb4f5eed3e6def882bba1}
+
+\begin{CompactList}\small\item\em vat typedef \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{db\_\-reader} (const char $\ast$infile\_\-name)
+\begin{CompactList}\small\item\em tokenizer class for this pattern-type, its method parse\_\-next\_\-line() is invoked by \doxyref{db\_\-reader}{p.}{classdb__reader} Constructor \item\end{CompactList}\item 
+\bf{db\_\-reader} (const char $\ast$infile\_\-name, int mem\_\-size)
+\begin{CompactList}\small\item\em Constructor\_\-for\_\-gigabase. \item\end{CompactList}\item 
+\bf{$\sim$db\_\-reader} ()\label{classdb__reader_201907ca71dcdfee1afcb5a0f4276459}
+
+\begin{CompactList}\small\item\em destructor \item\end{CompactList}\item 
+void \bf{open} (const char $\ast$infile\_\-name)
+\begin{CompactList}\small\item\em Opens the specified input file. This is an alternative to the parameterized constructor. \item\end{CompactList}\item 
+void \bf{close} ()
+\begin{CompactList}\small\item\em Closes the file associated with this class. \item\end{CompactList}\item 
+bool \bf{is\_\-open} ()
+\begin{CompactList}\small\item\em returns whether file associated with this object is open \item\end{CompactList}\item 
+template$<$class SM\_\-T$>$ void \bf{get\_\-length\_\-one} (\bf{pat\_\-fam}$<$ PATTERN $>$ \&freq\_\-pats, \bf{storage\_\-manager}$<$ PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \&vat\_\-hmap, const int \&minsup)
+\begin{CompactList}\small\item\em obtain length one frequent patterns in sorted order, and populate vat\_\-db with their vats \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PATTERN, typename TOKENIZER, template$<$ typename $>$ class ALLOC$>$ class db\_\-reader$<$ PATTERN, TOKENIZER, ALLOC $>$}
+
+Database Reader class, to read the input file. 
+
+This class reads the database, using the tokenizer class and populate the level-1 VAT. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{db_reader@{db\_\-reader}!db_reader@{db\_\-reader}}
+\index{db_reader@{db\_\-reader}!db_reader@{db\_\-reader}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PATTERN, typename TOKENIZER, template$<$ typename $>$ class ALLOC$>$ \bf{db\_\-reader}$<$ PATTERN, TOKENIZER, ALLOC $>$::\bf{db\_\-reader} (const char $\ast$ {\em infile\_\-name})\hspace{0.3cm}{\tt  [inline]}}\label{classdb__reader_c5876ce13b101064cf6490330d14b680}
+
+
+tokenizer class for this pattern-type, its method parse\_\-next\_\-line() is invoked by \doxyref{db\_\-reader}{p.}{classdb__reader} Constructor 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em infile\_\-name}]Name of the input database (flat) file \end{description}
+\end{Desc}
+\index{db_reader@{db\_\-reader}!db_reader@{db\_\-reader}}
+\index{db_reader@{db\_\-reader}!db_reader@{db\_\-reader}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PATTERN, typename TOKENIZER, template$<$ typename $>$ class ALLOC$>$ \bf{db\_\-reader}$<$ PATTERN, TOKENIZER, ALLOC $>$::\bf{db\_\-reader} (const char $\ast$ {\em infile\_\-name}, int {\em mem\_\-size})\hspace{0.3cm}{\tt  [inline]}}\label{classdb__reader_c427ac90e7291c45c9062c1342b489b7}
+
+
+Constructor\_\-for\_\-gigabase. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em infile\_\-name}]Name of the input database (flat) file. \item[{\em mem\_\-size}]Maximum size of memory vat for gigabase backend. \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{db_reader@{db\_\-reader}!close@{close}}
+\index{close@{close}!db_reader@{db\_\-reader}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PATTERN, typename TOKENIZER, template$<$ typename $>$ class ALLOC$>$ void \bf{db\_\-reader}$<$ PATTERN, TOKENIZER, ALLOC $>$::close ()\hspace{0.3cm}{\tt  [inline]}}\label{classdb__reader_fbd8800d3623a8f60e1840e5ea7c4437}
+
+
+Closes the file associated with this class. 
+
+void \doxyref{close()}{p.}{classdb__reader_fbd8800d3623a8f60e1840e5ea7c4437} \index{db_reader@{db\_\-reader}!get_length_one@{get\_\-length\_\-one}}
+\index{get_length_one@{get\_\-length\_\-one}!db_reader@{db\_\-reader}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PATTERN, typename TOKENIZER, template$<$ typename $>$ class ALLOC$>$ template$<$class SM\_\-T$>$ void \bf{db\_\-reader}$<$ PATTERN, TOKENIZER, ALLOC $>$::get\_\-length\_\-one (\bf{pat\_\-fam}$<$ PATTERN $>$ \& {\em freq\_\-pats}, \bf{storage\_\-manager}$<$ PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \& {\em vat\_\-hmap}, const int \& {\em minsup})\hspace{0.3cm}{\tt  [inline]}}\label{classdb__reader_dd4e70279ee1916eddf117fbcfb97c24}
+
+
+obtain length one frequent patterns in sorted order, and populate vat\_\-db with their vats 
+
+void get\_\-length\_\-one(pat\_\-fam$<$PATTERN$>$\& freq\_\-pats, vat\_\-db$<$PATTERN, VAT,0$>$\& vat\_\-hmap, int minsup) \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em freq\_\-pats}]Pattern Family which is populated with the frequent patterns \item[{\em vat\_\-hmap}]The hashmap used to store pattern-to-VAT mappings \item[{\em minsup}]Minimum support threshold \end{description}
+\end{Desc}
+\index{db_reader@{db\_\-reader}!is_open@{is\_\-open}}
+\index{is_open@{is\_\-open}!db_reader@{db\_\-reader}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PATTERN, typename TOKENIZER, template$<$ typename $>$ class ALLOC$>$ bool \bf{db\_\-reader}$<$ PATTERN, TOKENIZER, ALLOC $>$::is\_\-open ()\hspace{0.3cm}{\tt  [inline]}}\label{classdb__reader_f90258967407ef7cfb7b049f73492bf1}
+
+
+returns whether file associated with this object is open 
+
+bool is\_\-open \index{db_reader@{db\_\-reader}!open@{open}}
+\index{open@{open}!db_reader@{db\_\-reader}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PATTERN, typename TOKENIZER, template$<$ typename $>$ class ALLOC$>$ void \bf{db\_\-reader}$<$ PATTERN, TOKENIZER, ALLOC $>$::open (const char $\ast$ {\em infile\_\-name})\hspace{0.3cm}{\tt  [inline]}}\label{classdb__reader_5a1817812743ce54e2bd1d3792205be2}
+
+
+Opens the specified input file. This is an alternative to the parameterized constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em infile\_\-name}]Name of the input file \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+\bf{db\_\-reader.h}\end{CompactItemize}

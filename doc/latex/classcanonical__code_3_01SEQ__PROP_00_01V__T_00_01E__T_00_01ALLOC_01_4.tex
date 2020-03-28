@@ -1,0 +1,63 @@
+\section{canonical\_\-code$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$ Class Template Reference}
+\label{classcanonical__code_3_01SEQ__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4}\index{canonical_code< SEQ_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}}
+Sequence canonical Code class by partial specialization of generic \doxyref{canonical\_\-code}{p.}{classcanonical__code} class.  
+
+
+{\tt \#include $<$seq\_\-can\_\-code.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef int \textbf{STORAGE\_\-TYPE}\label{classcanonical__code_3_01SEQ__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_923648526b5dba9ed510f92dcba6c8fb}
+
+\item 
+typedef V\_\-T \textbf{INIT\_\-TYPE}\label{classcanonical__code_3_01SEQ__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_f2abf659835c32f1ccdf81fa61f74afc}
+
+\item 
+typedef \bf{eqint} \textbf{COMPARISON\_\-FUNC}\label{classcanonical__code_3_01SEQ__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_0b2c598e9064b48aa241e7fdb946efca}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$typename PAT$>$ void \bf{init} (V\_\-T v, PAT $\ast$)
+\item 
+void \bf{insert\_\-vertex} (const V\_\-T \&v)
+\item 
+void \textbf{update\_\-code} ()\label{classcanonical__code_3_01SEQ__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_03d52727c5b7dfb9f79faf34fc3ae93b}
+
+\item 
+STORAGE\_\-TYPE \bf{get\-Code} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC$>$ class canonical\_\-code$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}
+
+Sequence canonical Code class by partial specialization of generic \doxyref{canonical\_\-code}{p.}{classcanonical__code} class. 
+
+pattern\_\-prop is set to directed, acyclic, indegree\_\-lte\_\-one, outdegree\_\-lte\_\-one(sequence property) 
+
+
+
+\subsection{Member Function Documentation}
+\index{canonical_code< SEQ_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}!getCode@{getCode}}
+\index{getCode@{getCode}!canonical_code< SEQ_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC$>$ STORAGE\_\-TYPE \bf{canonical\_\-code}$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$::get\-Code () const\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01SEQ__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_7a34f6286fe7abd4604f7fb1efb2b5c2}
+
+
+Return the canonical code. \index{canonical_code< SEQ_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}!init@{init}}
+\index{init@{init}!canonical_code< SEQ_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC$>$ template$<$typename PAT$>$ void \bf{canonical\_\-code}$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$::init (V\_\-T {\em v}, PAT $\ast$)\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01SEQ__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_82a7503a4fb19ab6def59f4e640e093a}
+
+
+Used to initialize the canonical code. Called from \doxyref{db\_\-reader}{p.}{classdb__reader} so that the pattern's canonical code can be initialized. \index{canonical_code< SEQ_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}!insert_vertex@{insert\_\-vertex}}
+\index{insert_vertex@{insert\_\-vertex}!canonical_code< SEQ_PROP, V_T, E_T, ALLOC >@{canonical\_\-code$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC$>$ void \bf{canonical\_\-code}$<$ SEQ\_\-PROP, V\_\-T, E\_\-T, ALLOC $>$::insert\_\-vertex (const V\_\-T \& {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01SEQ__PROP_00_01V__T_00_01E__T_00_01ALLOC_01_4_1c173ca2f2b1dd498469e35940642eea}
+
+
+Update the canonical code when a node is added. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+seq\_\-can\_\-code.h\end{CompactItemize}

@@ -1,0 +1,205 @@
+t # 0
+v 0 GLU
+v 1 GLU
+v 2 GLU
+v 3 GLU
+v 4 GLU
+v 5 GLU
+v 6 VAL
+v 7 VAL
+v 8 VAL
+v 9 VAL
+v 10 LEU
+v 11 GLU
+v 12 GLU
+v 13 LEU
+v 14 GLU
+v 15 GLU
+v 16 GLU
+v 17 GLU
+v 18 VAL
+v 19 VAL
+v 20 VAL
+v 21 PHE
+v 22 PHE
+v 23 SER
+v 24 HIS
+v 25 HIS
+e 0 1 3
+e 1 2 3
+e 2 3 3
+e 3 4 3
+e 4 5 3
+e 5 0 3
+e 0 6 0
+e 1 7 0
+e 4 8 0
+e 5 9 0
+e 2 10 0
+e 10 11 0
+e 11 12 3
+e 12 13 0
+e 13 3 0
+e 11 14 3
+e 14 15 3
+e 15 16 3
+e 16 17 3
+e 17 12 3
+e 14 18 0
+e 15 19 0
+e 17 20 0
+e 13 21 1
+e 10 22 1
+e 16 23 0
+e 23 24 0
+e 23 25 0
+t # 1
+v 0 GLU
+v 1 GLU
+v 2 GLU
+v 3 GLU
+v 4 GLU
+v 5 GLU
+v 6 VAL
+v 7 VAL
+v 8 VAL
+v 9 VAL
+v 10 VAL
+v 11 SER
+v 12 SER
+v 13 LYS
+v 14 HIS
+v 15 PHE
+e 0 1 3
+e 1 2 3
+e 2 3 3
+e 3 4 3
+e 4 5 3
+e 5 0 3
+e 0 6 0
+e 1 7 0
+e 2 8 0
+e 3 9 0
+e 5 10 0
+e 4 11 0
+e 11 12 0
+e 11 13 0
+e 13 14 0
+e 12 15 1
+t # 2
+v 0 GLU
+v 1 GLU
+v 2 GLU
+v 3 GLU
+v 4 GLU
+v 5 GLU
+v 6 VAL
+v 7 VAL
+v 8 VAL
+v 9 VAL
+v 10 GLU
+v 11 GLU
+v 12 GLU
+v 13 GLU
+v 14 GLU
+v 15 GLU
+v 16 VAL
+v 17 VAL
+v 18 VAL
+v 19 VAL
+v 20 TYR
+v 21 TYR
+v 22 THR
+v 23 THR
+v 24 THR
+v 25 THR
+e 0 1 3
+e 1 2 3
+e 2 3 3
+e 3 4 3
+e 4 5 3
+e 5 0 3
+e 1 6 0
+e 2 7 0
+e 4 8 0
+e 5 9 0
+e 10 11 3
+e 11 12 3
+e 12 13 3
+e 13 14 3
+e 14 15 3
+e 15 10 3
+e 10 16 0
+e 11 17 0
+e 13 18 0
+e 14 19 0
+e 3 20 0
+e 20 15 0
+e 20 21 1
+e 21 22 0
+e 21 23 0
+e 0 24 0
+e 12 25 0
+t # 3
+v 0 PRO
+v 1 PRO
+v 2 TYR
+v 3 TYR
+v 4 PRO
+v 5 PRO
+v 6 PRO
+v 7 TYR
+v 8 TYR
+v 9 VAL
+v 10 VAL
+v 11 VAL
+v 12 VAL
+v 13 PRO
+v 14 THR
+v 15 THR
+v 16 THR
+v 17 VAL
+v 18 THR
+v 19 THR
+v 20 THR
+v 21 THR
+e 0 1 0
+e 1 2 0
+e 2 3 1
+e 3 4 0
+e 4 5 0
+e 5 0 0
+e 5 6 0
+e 6 7 0
+e 7 8 1
+e 8 0 0
+e 0 9 0
+e 5 10 0
+e 7 11 0
+e 8 12 0
+e 4 13 0
+e 13 1 0
+e 13 14 0
+e 13 15 0
+e 6 16 0
+e 6 17 0
+e 4 18 0
+e 3 19 0
+e 2 20 0
+e 1 21 0
+t # 4
+v 0 PRO
+v 1 PRO
+v 2 THR
+v 3 THR
+v 4 THR
+v 5 THR
+v 6 THR
+v 7 VAL
+e 0 1 0
+e 0 2 0
+e 0 3 0
+e 0 4 0
+e 1 5 0
+e 1 6 0
+e 1 7 0

@@ -1,0 +1,8 @@
+Core DMTL is a collection of templated header files only. So, you do not need to install dmtl.
+
+To build an executable for the test programs, perform the following:
+cd test
+make
+
+To clean, do:
+make clean

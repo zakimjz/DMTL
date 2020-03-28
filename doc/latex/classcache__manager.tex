@@ -1,0 +1,184 @@
+\section{cache\_\-manager$<$ Key, Data $>$ Class Template Reference}
+\label{classcache__manager}\index{cache_manager@{cache\_\-manager}}
+Class manages the memory cache for the file-based storage manager. \doxyref{cache\_\-manager}{p.}{classcache__manager} is responsible for bringing objects into memory and implementing eviction algorithm when the cache is full and a new object needs to be brought in.  
+
+
+{\tt \#include $<$file\_\-cache\_\-manager.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef Key \textbf{key\_\-type}\label{classcache__manager_86db8de6242952aae4344bb9a6fbea16}
+
+\item 
+typedef Data \textbf{data\_\-type}\label{classcache__manager_abe1fb4258af8d05b9b0db62af989f15}
+
+\item 
+typedef std::map$<$ Key, std::pair$<$ bool, data\_\-type $\ast$ $>$ $>$ \textbf{storage\_\-type}\label{classcache__manager_427384cb7f2af392720e249301a97aa6}
+
+\item 
+typedef unsigned long long \textbf{size\_\-type}\label{classcache__manager_34d3ee546784f0c55b4bec6c3afed722}
+
+\item 
+typedef std::map$<$ key\_\-type, std::pair$<$ unsigned long long, unsigned long long $>$, std::less$<$ key\_\-type $>$ $>$ \textbf{File\-Map}\label{classcache__manager_c5f5c118015a920b848294b69e34a281}
+
+\item 
+typedef File\-Map::iterator \textbf{File\_\-Map\_\-iter}\label{classcache__manager_f24b8bbbda98a4ed1d6ce9914cabf488}
+
+\item 
+typedef storage\_\-type::iterator \textbf{storage\_\-iterator}\label{classcache__manager_7f638f6f1dfb778b7efb5219687aeffb}
+
+\item 
+typedef storage\_\-type::const\_\-iterator \textbf{storage\_\-const\_\-iterator}\label{classcache__manager_ad55c62d1152987cc612e3f852048db9}
+
+\item 
+typedef storage\_\-type::value\_\-type \textbf{storage\_\-entry\_\-type}\label{classcache__manager_42e4c7b04aeeb006529382ac4115c0e3}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+storage\_\-iterator \bf{begin} ()
+\item 
+storage\_\-iterator \bf{end} ()
+\item 
+storage\_\-const\_\-iterator \bf{begin} () const 
+\item 
+storage\_\-const\_\-iterator \bf{end} () const 
+\item 
+\bf{cache\_\-manager} (size\_\-type C=0, const char $\ast$filename)
+\item 
+void \bf{clear} ()
+\item 
+size\_\-type \bf{size} () const 
+\item 
+size\_\-type \bf{capacity} () const 
+\item 
+size\_\-type \bf{mem\_\-entries} () const 
+\item 
+void \bf{print\_\-stats} () const 
+\item 
+size\_\-type \bf{file\_\-entries} () const 
+\item 
+storage\_\-const\_\-iterator \bf{find} (const key\_\-type \&k) const 
+\item 
+void \textbf{lock\_\-vat} (const key\_\-type \&k)\label{classcache__manager_4ab7df0b34b2c927ee6c463d68e54c2d}
+
+\item 
+void \textbf{unlock\_\-vat} (const key\_\-type \&k)\label{classcache__manager_a0220d9bb9d02f9e84de374e95e5c913}
+
+\item 
+void \bf{delete\_\-vat} (const key\_\-type \&k)
+\item 
+bool \bf{find\_\-vat} (const key\_\-type \&k)
+\item 
+data\_\-type $\ast$ \bf{get\_\-vat\_\-point} (const key\_\-type \&k)
+\item 
+bool \bf{insert} (const key\_\-type \&k, data\_\-type $\ast$e)
+\item 
+bool \textbf{update} (size\_\-type req\_\-size=0, int levelone=1)\label{classcache__manager_31cd00e1c5e75260cae9c264f7e4da3b}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Key, typename Data$>$ class cache\_\-manager$<$ Key, Data $>$}
+
+Class manages the memory cache for the file-based storage manager. \doxyref{cache\_\-manager}{p.}{classcache__manager} is responsible for bringing objects into memory and implementing eviction algorithm when the cache is full and a new object needs to be brought in. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cache_manager@{cache\_\-manager}!cache_manager@{cache\_\-manager}}
+\index{cache_manager@{cache\_\-manager}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ \bf{cache\_\-manager}$<$ Key, Data $>$::\bf{cache\_\-manager} (size\_\-type {\em C} = {\tt 0}, const char $\ast$ {\em filename})\hspace{0.3cm}{\tt  [inline, explicit]}}\label{classcache__manager_be67aba05b7c6d9a2024c8f9319ad93c}
+
+
+Constructs \doxyref{cache\_\-manager}{p.}{classcache__manager} with capacity C and sets policies and statistics object. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em C}]is cache capacity. \item[{\em filename}]is the file name that will keep objects in case of their eviction \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{cache_manager@{cache\_\-manager}!begin@{begin}}
+\index{begin@{begin}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ storage\_\-const\_\-iterator \bf{cache\_\-manager}$<$ Key, Data $>$::begin () const\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_e7ed7c050adaca879923abac6f5d6047}
+
+
+Returns const iterator to the beginning of the entries storage. \index{cache_manager@{cache\_\-manager}!begin@{begin}}
+\index{begin@{begin}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ storage\_\-iterator \bf{cache\_\-manager}$<$ Key, Data $>$::begin ()\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_ba5fa16961f39c468e34b300d1fb9cb3}
+
+
+Returns iterator to the beginning of the entries storage. \index{cache_manager@{cache\_\-manager}!capacity@{capacity}}
+\index{capacity@{capacity}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ size\_\-type \bf{cache\_\-manager}$<$ Key, Data $>$::capacity () const\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_61c2072deb860993db961f8685f9ec72}
+
+
+Returns capacity of the cache. \index{cache_manager@{cache\_\-manager}!clear@{clear}}
+\index{clear@{clear}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ void \bf{cache\_\-manager}$<$ Key, Data $>$::clear ()\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_ca8d59b60212e78e85ee2cbc2e5b9870}
+
+
+Clears the memory map and the file map \index{cache_manager@{cache\_\-manager}!delete_vat@{delete\_\-vat}}
+\index{delete_vat@{delete\_\-vat}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ void \bf{cache\_\-manager}$<$ Key, Data $>$::delete\_\-vat (const key\_\-type \& {\em k})\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_0c77b60bc1e2d57cf14f92a5e23473da}
+
+
+Finds if there is an entry associated with a given key. If such exists , delete it from both the memory map and the file map. \index{cache_manager@{cache\_\-manager}!end@{end}}
+\index{end@{end}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ storage\_\-const\_\-iterator \bf{cache\_\-manager}$<$ Key, Data $>$::end () const\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_922983d3c3abd4a4e7a3cdb79c89da1e}
+
+
+Returns const iterator to the end of the internal storage. \index{cache_manager@{cache\_\-manager}!end@{end}}
+\index{end@{end}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ storage\_\-iterator \bf{cache\_\-manager}$<$ Key, Data $>$::end ()\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_8be2cfbdd55541f9062ccc44ea3bfdfe}
+
+
+Returns iterator to the end of the internal storage. \index{cache_manager@{cache\_\-manager}!file_entries@{file\_\-entries}}
+\index{file_entries@{file\_\-entries}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ size\_\-type \bf{cache\_\-manager}$<$ Key, Data $>$::file\_\-entries () const\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_6eab4f430d20ff3317edee79d42e2c80}
+
+
+Returns number of the entries in the file \index{cache_manager@{cache\_\-manager}!find@{find}}
+\index{find@{find}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ storage\_\-const\_\-iterator \bf{cache\_\-manager}$<$ Key, Data $>$::find (const key\_\-type \& {\em k}) const\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_c4d9cdc385af51659f3f4c8b72f3c2fc}
+
+
+Finds entry associated with a given key. \index{cache_manager@{cache\_\-manager}!find_vat@{find\_\-vat}}
+\index{find_vat@{find\_\-vat}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ bool \bf{cache\_\-manager}$<$ Key, Data $>$::find\_\-vat (const key\_\-type \& {\em k})\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_157e0c4b7d760c51a3f04cde42799f6d}
+
+
+Finds if there is an entry associated with a given key. If such exists it returns true. Please note, we are looking in the memory map and in the file map. \index{cache_manager@{cache\_\-manager}!get_vat_point@{get\_\-vat\_\-point}}
+\index{get_vat_point@{get\_\-vat\_\-point}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ data\_\-type$\ast$ \bf{cache\_\-manager}$<$ Key, Data $>$::get\_\-vat\_\-point (const key\_\-type \& {\em k})\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_ee3211e0498a682316487a5666e23e02}
+
+
+Return a pointer to the vat that corresponds to the pattern \index{cache_manager@{cache\_\-manager}!insert@{insert}}
+\index{insert@{insert}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ bool \bf{cache\_\-manager}$<$ Key, Data $>$::insert (const key\_\-type \& {\em k}, data\_\-type $\ast$ {\em e})\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_01660a153bc53d146e9b9ba3a8873ae4}
+
+
+Inserts a new entry to the cache. Entry is associated with a given key. k is a key associated with inserted entry. e is an entry inserted to the cache. return true on success and false otherwise. \index{cache_manager@{cache\_\-manager}!mem_entries@{mem\_\-entries}}
+\index{mem_entries@{mem\_\-entries}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ size\_\-type \bf{cache\_\-manager}$<$ Key, Data $>$::mem\_\-entries () const\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_a5e33bc1a76a8abda917a8bd4b16c185}
+
+
+Returns number of the entries in the cache. \index{cache_manager@{cache\_\-manager}!print_stats@{print\_\-stats}}
+\index{print_stats@{print\_\-stats}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ void \bf{cache\_\-manager}$<$ Key, Data $>$::print\_\-stats () const\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_f55b3cf64d1a78bfb559de89e3bb387b}
+
+
+Prints some statistics about the map \index{cache_manager@{cache\_\-manager}!size@{size}}
+\index{size@{size}!cache_manager@{cache\_\-manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Key, typename Data$>$ size\_\-type \bf{cache\_\-manager}$<$ Key, Data $>$::size () const\hspace{0.3cm}{\tt  [inline]}}\label{classcache__manager_9f7d02fe495568a8e16048ab00828422}
+
+
+Returns current size of the cache. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+file\_\-cache\_\-manager.h\end{CompactItemize}

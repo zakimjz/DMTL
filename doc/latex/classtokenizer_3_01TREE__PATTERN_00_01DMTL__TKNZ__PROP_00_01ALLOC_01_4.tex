@@ -1,0 +1,48 @@
+\section{tokenizer$<$ TREE\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$ Class Template Reference}
+\label{classtokenizer_3_01TREE__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4}\index{tokenizer< TREE_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ TREE\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+Tree tokenizer class by partial specialization of the generic tokenizer class.  
+
+
+{\tt \#include $<$tree\_\-tokenizer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{vat}$<$ TREE\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, std::vector $>$ \textbf{VAT}\label{classtokenizer_3_01TREE__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_2545f4704b4bcfa54d5a261a9bb951d1}
+
+\item 
+typedef \bf{tree\_\-instance}$<$ std::vector, PP $>$ \textbf{TREE\_\-INSTANCE}\label{classtokenizer_3_01TREE__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_abef37dda41359954557ee3b6743aa66}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\textbf{tokenizer} (const int max=LINE\_\-SZ)\label{classtokenizer_3_01TREE__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_adb68cd593c30907e09ce14b354c495b}
+
+\item 
+template$<$class SM\_\-T$>$ int \bf{parse\_\-next\_\-trans} (ifstream \&infile, \bf{pat\_\-fam}$<$ TREE\_\-PATTERN $>$ \&freq\_\-pats, \bf{storage\_\-manager}$<$ TREE\_\-PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \&vat\_\-hmap)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ typename, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ class tokenizer$<$ TREE\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}
+
+Tree tokenizer class by partial specialization of the generic tokenizer class. 
+
+the template argument is instantiated with a pattern that has directed, acyclic, indegree\_\-lte\_\-one pattern property(tree), MINING\_\-PROPS type of mining property, ST type of pattern storage and CC type of canocial code. 
+
+
+
+\subsection{Member Function Documentation}
+\index{tokenizer< TREE_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ TREE\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}!parse_next_trans@{parse\_\-next\_\-trans}}
+\index{parse_next_trans@{parse\_\-next\_\-trans}!tokenizer< TREE_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ TREE\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ typename, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ template$<$class SM\_\-T$>$ int \bf{tokenizer}$<$ TREE\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$::parse\_\-next\_\-trans (ifstream \& {\em infile}, \bf{pat\_\-fam}$<$ TREE\_\-PATTERN $>$ \& {\em freq\_\-pats}, \bf{storage\_\-manager}$<$ TREE\_\-PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \& {\em vat\_\-hmap})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01TREE__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_308c934284dafab3e033ad9eab1f4dc5}
+
+
+returns the TID of transaction read;
+
+parses one transaction from input database, and collects VATS in vat\_\-hmap return value is -1 on end of stream 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+tree\_\-tokenizer.h\end{CompactItemize}

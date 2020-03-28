@@ -1,0 +1,119 @@
+\section{evat$<$ ALLOC\_\- $>$ Class Template Reference}
+\label{classevat}\index{evat@{evat}}
+Edge VAT class to store an occurrence of an edge within a graph.  
+
+
+{\tt \#include $<$graph\_\-evat.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef pair$<$ int, int $>$ \bf{VID\_\-PAIR}
+\item 
+typedef vector$<$ \bf{VID\_\-PAIR}, ALLOC\_\-$<$ \bf{VID\_\-PAIR} $>$ $>$ \bf{EVAT}
+\item 
+typedef EVAT::const\_\-iterator \textbf{CONST\_\-IT}\label{classevat_62ddfae1b666abe2d249f77b4178e750}
+
+\item 
+typedef EVAT::iterator \textbf{IT}\label{classevat_d16b3e4754b4f556288b288bd953f260}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+IT \textbf{begin} ()\label{classevat_576e837271071e10535be5b0276c06c6}
+
+\item 
+CONST\_\-IT \textbf{begin} () const \label{classevat_aec6a953834c8df278e84d7d0a76e62d}
+
+\item 
+IT \textbf{end} ()\label{classevat_eb2eff3b7a1e3a340731d33ecb472ebf}
+
+\item 
+CONST\_\-IT \textbf{end} () const \label{classevat_53b5428fa4e1bc8a87393ec006a4881b}
+
+\item 
+unsigned long int \textbf{byte\_\-size} () const \label{classevat_6a3eedbcb81a62843d797f9b1e84019e}
+
+\item 
+void \textbf{write\_\-file} (ostream \&output) const \label{classevat_d6f516e7129ff18a346448fc59b76b68}
+
+\item 
+void \textbf{print} ()\label{classevat_7e1a9484cee6cc29558cc4473f44917a}
+
+\item 
+void \textbf{read\_\-file} (istream \&input, unsigned long int size)\label{classevat_69492f88605136b53ee482a3d8d93c1a}
+
+\item 
+\bf{VID\_\-PAIR} \& \textbf{operator[$\,$]} (const int \&i)\label{classevat_c64c086071cdc335b9a1323a49ad131b}
+
+\item 
+const \bf{VID\_\-PAIR} \& \textbf{operator[$\,$]} (const int \&i) const \label{classevat_9b74bb00a85e13c702e1f27fd4f43b47}
+
+\item 
+void \textbf{push\_\-back} (const pair$<$ int, int $>$ \&ids)\label{classevat_32a3e3ee1a1a23bd65e7b33b854de201}
+
+\item 
+bool \textbf{empty} () const \label{classevat_9299ee5a0adc8bf1f1f0a338574afe80}
+
+\item 
+int \textbf{size} () const \label{classevat_55b6a33806d6b1c7523a69d5a046bd66}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$template$<$ typename, typename $>$ class VAT\_\-ST, typename VAT, template$<$ typename $>$ class ALLOC$>$ static void \bf{fwd\_\-intersect} (const VAT \&vat\_\-v1, const \bf{evat} \&evat\_\-v1, const \bf{evat} \&evat\_\-v2, VAT \&cand\_\-vat, bool is\_\-fwd\_\-chain, const int \&rmp\_\-index, const int \&new\_\-edge\_\-state, const int \&tid, bool l2\_\-eq)
+\item 
+template$<$template$<$ typename, typename $>$ class VAT\_\-ST, typename VAT, template$<$ typename $>$ class ALLOC$>$ static void \bf{back\_\-intersect} (const VAT \&vat\_\-v1, const \bf{evat} \&evat\_\-v1, const \bf{evat} \&evat\_\-v2, VAT \&cand\_\-vat, const int \&back\_\-idx, const int \&new\_\-edge\_\-state, const int \&tid)
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& \textbf{operator$<$$<$} (ostream \&, const \bf{evat}$<$ ALLOC\_\- $>$ \&)\label{classevat_f5b44c5fa629bb0bfac69e3f6e791f23}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$template$<$ typename $>$ class ALLOC\_\- = std::allocator$>$ class evat$<$ ALLOC\_\- $>$}
+
+Edge VAT class to store an occurrence of an edge within a graph. 
+
+
+
+\subsection{Member Typedef Documentation}
+\index{evat@{evat}!EVAT@{EVAT}}
+\index{EVAT@{EVAT}!evat@{evat}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ typename $>$ class ALLOC\_\- = std::allocator$>$ typedef vector$<$\bf{VID\_\-PAIR}, ALLOC\_\-$<$\bf{VID\_\-PAIR}$>$ $>$ \bf{evat}$<$ ALLOC\_\- $>$::\bf{EVAT}}\label{classevat_38c8ee4ef89ea8e9476013cabc7e217e}
+
+
+Each edge could occur multiple times in a graph \index{evat@{evat}!VID_PAIR@{VID\_\-PAIR}}
+\index{VID_PAIR@{VID\_\-PAIR}!evat@{evat}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ typename $>$ class ALLOC\_\- = std::allocator$>$ typedef pair$<$int, int$>$ \bf{evat}$<$ ALLOC\_\- $>$::\bf{VID\_\-PAIR}}\label{classevat_102a222aa84b7ae324271ffab7e27022}
+
+
+Vertex ids for the two endsod edge 
+
+\subsection{Member Function Documentation}
+\index{evat@{evat}!back_intersect@{back\_\-intersect}}
+\index{back_intersect@{back\_\-intersect}!evat@{evat}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ typename $>$ class ALLOC\_\- = std::allocator$>$ template$<$template$<$ typename, typename $>$ class VAT\_\-ST, typename VAT, template$<$ typename $>$ class ALLOC$>$ static void \bf{evat}$<$ ALLOC\_\- $>$::back\_\-intersect (const VAT \& {\em vat\_\-v1}, const \bf{evat}$<$ ALLOC\_\- $>$ \& {\em evat\_\-v1}, const \bf{evat}$<$ ALLOC\_\- $>$ \& {\em evat\_\-v2}, VAT \& {\em cand\_\-vat}, const int \& {\em back\_\-idx}, const int \& {\em new\_\-edge\_\-state}, const int \& {\em tid})\hspace{0.3cm}{\tt  [inline, static]}}\label{classevat_a1fea2d152697ef4dafab9bb9679a1cc}
+
+
+Performs back-intersection of v1\_\-evat and v2\_\-evat; populates cand\_\-vat with result 
+
+Similar to fwd\_\-intersect, first determine swap\_\-vids \index{evat@{evat}!fwd_intersect@{fwd\_\-intersect}}
+\index{fwd_intersect@{fwd\_\-intersect}!evat@{evat}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$template$<$ typename $>$ class ALLOC\_\- = std::allocator$>$ template$<$template$<$ typename, typename $>$ class VAT\_\-ST, typename VAT, template$<$ typename $>$ class ALLOC$>$ static void \bf{evat}$<$ ALLOC\_\- $>$::fwd\_\-intersect (const VAT \& {\em vat\_\-v1}, const \bf{evat}$<$ ALLOC\_\- $>$ \& {\em evat\_\-v1}, const \bf{evat}$<$ ALLOC\_\- $>$ \& {\em evat\_\-v2}, VAT \& {\em cand\_\-vat}, bool {\em is\_\-fwd\_\-chain}, const int \& {\em rmp\_\-index}, const int \& {\em new\_\-edge\_\-state}, const int \& {\em tid}, bool {\em l2\_\-eq})\hspace{0.3cm}{\tt  [inline, static]}}\label{classevat_bc5576e52b82773178fbb086d4513a6b}
+
+
+Performs forward-intersection of v1\_\-evat and v2\_\-evat; populates cand\_\-vat with result; v1 is of first pattern 
+
+The next few lines determine if the vids of evat\_\-v2 should be swapped. If the two v-lbls are distinct, then you can determine this based on new\_\-edge\_\-state. However, if the labels are same, then you need to check both for a match and accordingly set this flag
+
+this is a valid fwd extension /// 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+graph\_\-evat.h\end{CompactItemize}

@@ -1,0 +1,48 @@
+\section{tokenizer$<$ TREE\_\-PATTERN $>$ Class Template Reference}
+\label{classtokenizer_3_01TREE__PATTERN_01_4}\index{tokenizer< TREE_PATTERN >@{tokenizer$<$ TREE\_\-PATTERN $>$}}
+Tree tokenizer class by partial specialization of the generic tokenizer class.  
+
+
+{\tt \#include $<$tree\_\-tokenizer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef {\bf vat}$<$ TREE\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, std::vector $>$ {\bf VAT}\label{classtokenizer_3_01TREE__PATTERN_01_4_w0}
+
+\item 
+typedef {\bf tree\_\-instance}$<$ std::vector, PP $>$ {\bf TREE\_\-INSTANCE}\label{classtokenizer_3_01TREE__PATTERN_01_4_w1}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf tokenizer} (const  int \&max=500)\label{classtokenizer_3_01TREE__PATTERN_01_4_a0}
+
+\item 
+template$<$class SM\_\-T$>$ int {\bf parse\_\-next\_\-trans} (ifstream \&infile, {\bf pat\_\-fam}$<$ TREE\_\-PATTERN $>$ \&freq\_\-pats, {\bf storage\_\-manager}$<$ TREE\_\-PATTERN, {\bf VAT}, SM\_\-T $>$ \&vat\_\-hmap)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ class tokenizer$<$ TREE\_\-PATTERN $>$}
+
+Tree tokenizer class by partial specialization of the generic tokenizer class. 
+
+the template argument is instantiated with a pattern that has directed, acyclic, indegree\_\-lte\_\-one pattern property(tree), MINING\_\-PROPS type of mining property, ST type of pattern storage and CC type of canocial code. 
+
+
+
+\subsection{Member Function Documentation}
+\index{tokenizer< TREE_PATTERN >@{tokenizer$<$ TREE\_\-PATTERN $>$}!parse_next_trans@{parse\_\-next\_\-trans}}
+\index{parse_next_trans@{parse\_\-next\_\-trans}!tokenizer< TREE_PATTERN >@{tokenizer$<$ TREE\_\-PATTERN $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ template$<$class SM\_\-T$>$ int {\bf tokenizer}$<$ TREE\_\-PATTERN $>$::parse\_\-next\_\-trans (ifstream \& {\em infile}, {\bf pat\_\-fam}$<$ TREE\_\-PATTERN $>$ \& {\em freq\_\-pats}, {\bf storage\_\-manager}$<$ TREE\_\-PATTERN, {\bf VAT}, SM\_\-T $>$ \& {\em vat\_\-hmap})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01TREE__PATTERN_01_4_a1}
+
+
+returns the TID of transaction read;
+
+parses one transaction from input database, and collects VATS in vat\_\-hmap return value is -1 on end of stream 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+tree\_\-tokenizer.h\end{CompactItemize}

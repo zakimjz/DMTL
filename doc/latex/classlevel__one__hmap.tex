@@ -1,0 +1,79 @@
+\section{level\_\-one\_\-hmap$<$ V\_\-T, E\_\-T, ALLOC $>$ Class Template Reference}
+\label{classlevel__one__hmap}\index{level_one_hmap@{level\_\-one\_\-hmap}}
+Class to store edges i.e. level one patterns for graphs;.  
+
+
+{\tt \#include $<$level\_\-one\_\-hmap.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{element\_\-parser}$<$ V\_\-T $>$ \textbf{V\_\-EP}\label{classlevel__one__hmap_2486779a60e73d3287e09c2ce18db9cf}
+
+\item 
+typedef HASHNS::hash\_\-set$<$ E\_\-T, HASHNS::hash$<$ E\_\-T $>$, std::equal\_\-to$<$ E\_\-T $>$, ALLOC$<$ E\_\-T $>$ $>$ \textbf{LABELS}\label{classlevel__one__hmap_301b7945ad1371193f119d1a4c31763d}
+
+\item 
+typedef HASHNS::hash\_\-map$<$ typename V\_\-EP::HASH\_\-TYPE, LABELS, HASHNS::hash$<$ typename V\_\-EP::HASH\_\-TYPE $>$, typename V\_\-EP::COMP\_\-FUNC, ALLOC$<$ std::pair$<$ typename V\_\-EP::HASH\_\-TYPE, LABELS $>$ $>$ $>$ \textbf{NEIGHBORS}\label{classlevel__one__hmap_53615a39cb137a9840f1ac66c6090f45}
+
+\item 
+typedef HASHNS::hash\_\-map$<$ typename V\_\-EP::HASH\_\-TYPE, NEIGHBORS, HASHNS::hash$<$ typename V\_\-EP::HASH\_\-TYPE $>$, typename V\_\-EP::COMP\_\-FUNC, ALLOC$<$ std::pair$<$ typename V\_\-EP::HASH\_\-TYPE, NEIGHBORS $>$ $>$ $>$ \textbf{HMAP}\label{classlevel__one__hmap_21522a91089f0c0e8d6b1b29dfdc0257}
+
+\item 
+typedef HMAP::const\_\-iterator \textbf{CONST\_\-IT}\label{classlevel__one__hmap_a207752749c72dc839998fa0a70310b9}
+
+\item 
+typedef HMAP::iterator \textbf{IT}\label{classlevel__one__hmap_cc0609da994772b4daef8eef1e904ff3}
+
+\item 
+typedef NEIGHBORS::const\_\-iterator \textbf{CONST\_\-NIT}\label{classlevel__one__hmap_c80ca28c34a63a66c88a321be41e4719}
+
+\item 
+typedef NEIGHBORS::iterator \textbf{NIT}\label{classlevel__one__hmap_d86872fad6788611731fdd976d8a9f8b}
+
+\item 
+typedef LABELS::const\_\-iterator \textbf{CONST\_\-LIT}\label{classlevel__one__hmap_0d1b7103445170b87a68525313104fff}
+
+\item 
+typedef LABELS::iterator \textbf{LIT}\label{classlevel__one__hmap_f574b4df476a3fe80cf4972e55e6cd1c}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void \textbf{print} () const \label{classlevel__one__hmap_b6d559c67fa505b600bb63599443f32d}
+
+\item 
+int \textbf{size} () const \label{classlevel__one__hmap_b086901cb18e543ea38f67201a9c4cd1}
+
+\item 
+void \bf{insert} (const V\_\-T \&src, const V\_\-T \&dest, const E\_\-T \&lbl)
+\item 
+const LABELS \& \textbf{get\_\-labels} (const V\_\-T \&src, const V\_\-T \&dest) const \label{classlevel__one__hmap_050d16af752dae1ee34d0ba6dc6866cf}
+
+\item 
+const NEIGHBORS \& \textbf{get\_\-neighbors} (const V\_\-T \&src) const \label{classlevel__one__hmap_fc315ae329877b8625dd156542d4fecd}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ class level\_\-one\_\-hmap$<$ V\_\-T, E\_\-T, ALLOC $>$}
+
+Class to store edges i.e. level one patterns for graphs;. 
+
+This class is designed to provide a fast lookup of possible labels/vertices 
+
+
+
+\subsection{Member Function Documentation}
+\index{level_one_hmap@{level\_\-one\_\-hmap}!insert@{insert}}
+\index{insert@{insert}!level_one_hmap@{level\_\-one\_\-hmap}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ void \bf{level\_\-one\_\-hmap}$<$ V\_\-T, E\_\-T, ALLOC $>$::insert (const V\_\-T \& {\em src}, const V\_\-T \& {\em dest}, const E\_\-T \& {\em lbl})\hspace{0.3cm}{\tt  [inline]}}\label{classlevel__one__hmap_7e64416a293d932deb50f1e0e511d132}
+
+
+Inserts the edge from src to dest with label lbl in the hmap; If any of src/dest are not present in hmap, they are inserted as well; This hmap does not permit parallel edges between two nodes 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+level\_\-one\_\-hmap.h\end{CompactItemize}

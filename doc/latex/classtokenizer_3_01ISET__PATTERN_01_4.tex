@@ -1,0 +1,66 @@
+\section{tokenizer$<$ ISET\_\-PATTERN $>$ Class Template Reference}
+\label{classtokenizer_3_01ISET__PATTERN_01_4}\index{tokenizer< ISET_PATTERN >@{tokenizer$<$ ISET\_\-PATTERN $>$}}
+Itemset tokenizer class by partial specialization of the generic tokenizer class.  
+
+
+{\tt \#include $<$iset\_\-tokenizer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef {\bf pattern\_\-support}$<$ V\_\-Fkk\_\-MINE\_\-PROP $>$ {\bf PAT\_\-SUP}\label{classtokenizer_3_01ISET__PATTERN_01_4_w0}
+
+\item 
+typedef {\bf vat}$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, std::vector $>$ {\bf VAT}\label{classtokenizer_3_01ISET__PATTERN_01_4_w1}
+
+\item 
+typedef ISET\_\-PATTERN::VERTEX\_\-T {\bf V\_\-T}\label{classtokenizer_3_01ISET__PATTERN_01_4_w2}
+
+\item 
+typedef ISET\_\-PATTERN::EDGE\_\-T {\bf E\_\-T}\label{classtokenizer_3_01ISET__PATTERN_01_4_w3}
+
+\item 
+typedef int {\bf VAT\_\-T}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf tokenizer} (int max=1000)
+\item 
+template$<$class SM\_\-T$>$ int {\bf parse\_\-next\_\-trans} (std::ifstream \&infile, {\bf pat\_\-fam}$<$ ISET\_\-PATTERN $>$ \&freq\_\-pats, {\bf storage\_\-manager}$<$ ISET\_\-PATTERN, {\bf VAT}, SM\_\-T $>$ \&vat\_\-hmap)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ class tokenizer$<$ ISET\_\-PATTERN $>$}
+
+Itemset tokenizer class by partial specialization of the generic tokenizer class. 
+
+the template argument is instantiated with a pattern that has no\_\-edge pattern property, Fk X Fk and vert\_\-mine mining property, PAT\_\-ST type of pattern storage and CC type of canocial code. 
+
+
+
+\subsection{Member Typedef Documentation}
+\index{tokenizer< ISET_PATTERN >@{tokenizer$<$ ISET\_\-PATTERN $>$}!VAT_T@{VAT\_\-T}}
+\index{VAT_T@{VAT\_\-T}!tokenizer< ISET_PATTERN >@{tokenizer$<$ ISET\_\-PATTERN $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ typedef int {\bf tokenizer}$<$ ISET\_\-PATTERN $>$::{\bf VAT\_\-T}}\label{classtokenizer_3_01ISET__PATTERN_01_4_w4}
+
+
+VAT id-type for itemset 
+
+\subsection{Member Function Documentation}
+\index{tokenizer< ISET_PATTERN >@{tokenizer$<$ ISET\_\-PATTERN $>$}!parse_next_trans@{parse\_\-next\_\-trans}}
+\index{parse_next_trans@{parse\_\-next\_\-trans}!tokenizer< ISET_PATTERN >@{tokenizer$<$ ISET\_\-PATTERN $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ template$<$class SM\_\-T$>$ int {\bf tokenizer}$<$ ISET\_\-PATTERN $>$::parse\_\-next\_\-trans (std::ifstream \& {\em infile}, {\bf pat\_\-fam}$<$ ISET\_\-PATTERN $>$ \& {\em freq\_\-pats}, {\bf storage\_\-manager}$<$ ISET\_\-PATTERN, {\bf VAT}, SM\_\-T $>$ \& {\em vat\_\-hmap})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01ISET__PATTERN_01_4_a1}
+
+
+Returns the TID of transaction read; parses one transaction from input database, and collects VATS in vat\_\-hmap return value is -1 on end of stream \index{tokenizer< ISET_PATTERN >@{tokenizer$<$ ISET\_\-PATTERN $>$}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!tokenizer< ISET_PATTERN >@{tokenizer$<$ ISET\_\-PATTERN $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ {\bf tokenizer}$<$ ISET\_\-PATTERN $>$::{\bf tokenizer} (int {\em max} = 1000)\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01ISET__PATTERN_01_4_a0}
+
+
+default constructor 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+iset\_\-tokenizer.h\end{CompactItemize}

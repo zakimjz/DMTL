@@ -1,0 +1,66 @@
+\section{canonical\_\-code$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$ Class Template Reference}
+\label{classcanonical__code_3_01SEQ__PROP_00_01vertex__t_00_01edge__t_01_4}\index{canonical_code< SEQ_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$}}
+Sequence canonical Code class by partial specialization of generic {\bf canonical\_\-code}{\rm (p.\,\pageref{classcanonical__code})} class.  
+
+
+{\tt \#include $<$seq\_\-can\_\-code.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef int {\bf STORAGE\_\-TYPE}\label{classcanonical__code_3_01SEQ__PROP_00_01vertex__t_00_01edge__t_01_4_w0}
+
+\item 
+typedef vertex\_\-t {\bf INIT\_\-TYPE}\label{classcanonical__code_3_01SEQ__PROP_00_01vertex__t_00_01edge__t_01_4_w1}
+
+\item 
+typedef {\bf eqint} {\bf COMPARISON\_\-FUNC}\label{classcanonical__code_3_01SEQ__PROP_00_01vertex__t_00_01edge__t_01_4_w2}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf canonical\_\-code} ()\label{classcanonical__code_3_01SEQ__PROP_00_01vertex__t_00_01edge__t_01_4_a0}
+
+\item 
+template$<$typename PAT$>$ void {\bf init} (vertex\_\-t v, PAT $\ast$)
+\item 
+void {\bf insert\_\-vertex} (const  vertex\_\-t \&v)
+\item 
+void {\bf update\_\-code} ()\label{classcanonical__code_3_01SEQ__PROP_00_01vertex__t_00_01edge__t_01_4_a3}
+
+\item 
+STORAGE\_\-TYPE {\bf get\-Code} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, typename vertex\_\-t, typename edge\_\-t$>$ class canonical\_\-code$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$}
+
+Sequence canonical Code class by partial specialization of generic {\bf canonical\_\-code}{\rm (p.\,\pageref{classcanonical__code})} class. 
+
+pattern\_\-prop is set to directed, acyclic, indegree\_\-lte\_\-one, outdegree\_\-lte\_\-one(sequence property) 
+
+
+
+\subsection{Member Function Documentation}
+\index{canonical_code< SEQ_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$}!getCode@{getCode}}
+\index{getCode@{getCode}!canonical_code< SEQ_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename vertex\_\-t, typename edge\_\-t$>$ STORAGE\_\-TYPE {\bf canonical\_\-code}$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$::get\-Code () const\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01SEQ__PROP_00_01vertex__t_00_01edge__t_01_4_a4}
+
+
+Return the canonical code. \index{canonical_code< SEQ_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$}!init@{init}}
+\index{init@{init}!canonical_code< SEQ_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename vertex\_\-t, typename edge\_\-t$>$ template$<$typename PAT$>$ void {\bf canonical\_\-code}$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$::init (vertex\_\-t {\em v}, PAT $\ast$)\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01SEQ__PROP_00_01vertex__t_00_01edge__t_01_4_a1}
+
+
+Used to initialize the canonical code. Called from {\bf db\_\-reader}{\rm (p.\,\pageref{classdb__reader})} so that the pattern's canonical code can be initialized. \index{canonical_code< SEQ_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$}!insert_vertex@{insert\_\-vertex}}
+\index{insert_vertex@{insert\_\-vertex}!canonical_code< SEQ_PROP, vertex_t, edge_t >@{canonical\_\-code$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename vertex\_\-t, typename edge\_\-t$>$ void {\bf canonical\_\-code}$<$ SEQ\_\-PROP, vertex\_\-t, edge\_\-t $>$::insert\_\-vertex (const vertex\_\-t \& {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classcanonical__code_3_01SEQ__PROP_00_01vertex__t_00_01edge__t_01_4_a2}
+
+
+Update the canonical code when a node is added. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+seq\_\-can\_\-code.h\end{CompactItemize}

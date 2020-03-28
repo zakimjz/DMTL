@@ -1,0 +1,184 @@
+\section{adj\_\-list$<$ V\_\-T, E\_\-T, ALLOC $>$ Class Template Reference}
+\label{classadj__list}\index{adj_list@{adj\_\-list}}
+core adjacency list class to store the pattern.  
+
+
+{\tt \#include $<$adj\_\-list.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef V\_\-T \textbf{VERTEX\_\-T}\label{classadj__list_857b9e471802fef6b408f94bd8c3172b}
+
+\item 
+typedef E\_\-T \textbf{EDGE\_\-T}\label{classadj__list_b437b16e1f56e663b865733aa39aea48}
+
+\item 
+typedef \bf{vertex\_\-info}$<$ VERTEX\_\-T, EDGE\_\-T, ALLOC $>$ \textbf{VERTEX\_\-INFO}\label{classadj__list_ed8fe3219d3d0a4d9c5cec8bbfadded2}
+
+\item 
+typedef \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$ \textbf{ADJ\_\-L}\label{classadj__list_9641726e40aa02143b5e650e31e18396}
+
+\item 
+typedef VERTEX\_\-LIST$<$ \bf{VERTEX\_\-INFO} $>$ \textbf{ADJ\_\-LIST}\label{classadj__list_80e16fde02431080f218f4292d5e5710}
+
+\item 
+typedef ADJ\_\-LIST::iterator \textbf{IT}\label{classadj__list_361b6ad336e021a05e98a660e6b345f6}
+
+\item 
+typedef ADJ\_\-LIST::const\_\-iterator \textbf{CONST\_\-IT}\label{classadj__list_e0cc4c550fa07fdee8d151eae6921ae6}
+
+\item 
+typedef VERTEX\_\-INFO::EIT \textbf{EIT}\label{classadj__list_acdf05f119a4d88694ba4a3890aea5a8}
+
+\item 
+typedef VERTEX\_\-INFO::CONST\_\-EIT \textbf{CONST\_\-EIT}\label{classadj__list_0682ecda7c64328d18bcc46db9383845}
+
+\item 
+typedef std::pair$<$ EIT, EIT $>$ \textbf{EIT\_\-PAIR}\label{classadj__list_a11f5e85139411d34ae344ac0c9e29e8}
+
+\item 
+typedef std::pair$<$ CONST\_\-EIT, CONST\_\-EIT $>$ \textbf{CONST\_\-EIT\_\-PAIR}\label{classadj__list_f13e5e91a32350823fb00149f3782431}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void $\ast$ \textbf{operator new} (size\_\-t size)\label{classadj__list_52afb991ff8e5b1aa22f7727682ee07f}
+
+\item 
+void \textbf{operator delete} (void $\ast$p, size\_\-t size)\label{classadj__list_595df1df502015a601b126127c0ecd86}
+
+\item 
+IT \textbf{begin} ()\label{classadj__list_a9980893a65479d710f2d03e65d307b6}
+
+\item 
+CONST\_\-IT \textbf{begin} () const \label{classadj__list_ca6d2990ac7e5ac6baf535165c983e48}
+
+\item 
+IT \textbf{end} ()\label{classadj__list_6afb1398071514e17606e488aa4e6507}
+
+\item 
+CONST\_\-IT \textbf{end} () const \label{classadj__list_ba7e88f3f15f11fc1b4cd43e3a810090}
+
+\item 
+int \bf{size} () const 
+\item 
+void \textbf{clear} ()\label{classadj__list_a989ee9ff34488da894259dfc0b76a58}
+
+\item 
+void \textbf{push\_\-back} (const \bf{VERTEX\_\-INFO} \&vi)\label{classadj__list_9279c0cab973b0dcb3fe34396aaad37c}
+
+\item 
+IT \bf{vertex\_\-vals} (const int \&)
+\item 
+CONST\_\-IT \textbf{vertex\_\-vals} (const int \&idval) const \label{classadj__list_e6d2d2b9f3b6bdc3c835b86d92dd684c}
+
+\item 
+std::pair$<$ EIT, EIT $>$ \bf{out\_\-edges} (const int \&idval)
+\item 
+std::pair$<$ CONST\_\-EIT, CONST\_\-EIT $>$ \textbf{out\_\-edges} (const int \&idval) const \label{classadj__list_2c4b4b8e39060310f76f60bfb6fad4b1}
+
+\item 
+std::pair$<$ EIT, EIT $>$ \bf{in\_\-edges} (const int \&idval)
+\item 
+std::pair$<$ CONST\_\-EIT, CONST\_\-EIT $>$ \textbf{in\_\-edges} (const int \&idval) const \label{classadj__list_6acd5baf404be90ba4c9d6b673372f9c}
+
+\item 
+int \bf{out\_\-nbr\_\-size} (const int \&vid) const 
+\item 
+int \bf{in\_\-nbr\_\-size} (const int \&vid) const 
+\item 
+int \bf{add\_\-vertex} (const VERTEX\_\-T \&v)
+\item 
+void \bf{add\_\-out\_\-edge} (const int \&src, const int \&dest, const EDGE\_\-T \&e)
+\item 
+void \bf{add\_\-in\_\-edge} (const int \&dest, const int \&src, const EDGE\_\-T \&e)
+\item 
+bool \bf{get\_\-out\_\-edge} (const int \&src, const int \&dest, EDGE\_\-T \&e) const 
+\item 
+bool \bf{get\_\-in\_\-edge} (const int \&src, const int \&dest, EDGE\_\-T \&e) const 
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& \textbf{operator$<$$<$} (ostream \&, const \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$ \&)\label{classadj__list_ca042b26a937398a6750de56b63b4c9f}
+
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \textbf{VERTEX\_\-LIST}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ class adj\_\-list$<$ V\_\-T, E\_\-T, ALLOC $>$}
+
+core adjacency list class to store the pattern. 
+
+the template arguments are vertex\_\-type and edge\_\-type. 
+
+
+
+\subsection{Member Function Documentation}
+\index{adj_list@{adj\_\-list}!add_in_edge@{add\_\-in\_\-edge}}
+\index{add_in_edge@{add\_\-in\_\-edge}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ void \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::add\_\-in\_\-edge (const int \& {\em dest}, const int \& {\em src}, const EDGE\_\-T \& {\em e})\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_50e4107e17017be140845c56adf779a5}
+
+
+Adds in-edge FROM src TO dest \index{adj_list@{adj\_\-list}!add_out_edge@{add\_\-out\_\-edge}}
+\index{add_out_edge@{add\_\-out\_\-edge}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ void \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::add\_\-out\_\-edge (const int \& {\em src}, const int \& {\em dest}, const EDGE\_\-T \& {\em e})\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_62991c5d013874bf3b214557b35b3a41}
+
+
+Adds edge FROM src TO dest \index{adj_list@{adj\_\-list}!add_vertex@{add\_\-vertex}}
+\index{add_vertex@{add\_\-vertex}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ int \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::add\_\-vertex (const VERTEX\_\-T \& {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_a15c0364f96c84fdeed7338733678be1}
+
+
+Adds given vertex object and returns its id As is evident, these ids are generated in increasing order \index{adj_list@{adj\_\-list}!get_in_edge@{get\_\-in\_\-edge}}
+\index{get_in_edge@{get\_\-in\_\-edge}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ bool \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::get\_\-in\_\-edge (const int \& {\em src}, const int \& {\em dest}, EDGE\_\-T \& {\em e}) const\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_557198f0715d439769a12eaa778926b3}
+
+
+Returns true if there is an in-edge b/w specified vertices, populates e with edge label \index{adj_list@{adj\_\-list}!get_out_edge@{get\_\-out\_\-edge}}
+\index{get_out_edge@{get\_\-out\_\-edge}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ bool \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::get\_\-out\_\-edge (const int \& {\em src}, const int \& {\em dest}, EDGE\_\-T \& {\em e}) const\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_11a3657e714fb9a2377728ddecc18387}
+
+
+Returns true if there is an out-edge b/w specified vertices, populates e with edge label \index{adj_list@{adj\_\-list}!in_edges@{in\_\-edges}}
+\index{in_edges@{in\_\-edges}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ std::pair$<$EIT, EIT$>$ \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::in\_\-edges (const int \& {\em idval})\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_2f975ddeb1a5877382218339f761774e}
+
+
+Returns a pair of iterators, the first of the pair points to the first entity in the set of in-edges of idval, the second to the end of edges \index{adj_list@{adj\_\-list}!in_nbr_size@{in\_\-nbr\_\-size}}
+\index{in_nbr_size@{in\_\-nbr\_\-size}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ int \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::in\_\-nbr\_\-size (const int \& {\em vid}) const\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_4e7ddf5073ce4d1e79a8d3682e1560a6}
+
+
+Returns size of in-neighbors of vid \index{adj_list@{adj\_\-list}!out_edges@{out\_\-edges}}
+\index{out_edges@{out\_\-edges}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ std::pair$<$EIT, EIT$>$ \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::out\_\-edges (const int \& {\em idval})\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_528f1fe0f4e10a6627285be96bfbb2d1}
+
+
+Returns a pair of iterators, the first of the pair points to the first entity in the set of out-edges of idval, the second to the end of edges \index{adj_list@{adj\_\-list}!out_nbr_size@{out\_\-nbr\_\-size}}
+\index{out_nbr_size@{out\_\-nbr\_\-size}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ int \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::out\_\-nbr\_\-size (const int \& {\em vid}) const\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_f2fc5a797c830ed006ba7fba24ceaf11}
+
+
+Returns size of out-neighbors of vid \index{adj_list@{adj\_\-list}!size@{size}}
+\index{size@{size}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC = std::allocator$>$ int \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::size () const\hspace{0.3cm}{\tt  [inline]}}\label{classadj__list_82beab1a8b5d2aaf00b5ee265ab7f8b9}
+
+
+Returns number of vertices \index{adj_list@{adj\_\-list}!vertex_vals@{vertex\_\-vals}}
+\index{vertex_vals@{vertex\_\-vals}!adj_list@{adj\_\-list}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V\_\-T, typename E\_\-T, template$<$ typename $>$ class ALLOC$>$ \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::IT \bf{adj\_\-list}$<$ V\_\-T, E\_\-T, ALLOC $>$::vertex\_\-vals (const int \&)}\label{classadj__list_91205b35a8ce0ca20ce43aab5b39d87d}
+
+
+Returns the info associated with this vertex id 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+adj\_\-list.h\end{CompactItemize}

@@ -1,0 +1,86 @@
+\section{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$ Class Template Reference}
+\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4}\index{storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}}
+Storage Manager class partially specialized to Memory-based Storage manager to stores VAT in Memory.  
+
+
+{\tt \#include $<$mem\_\-storage\_\-manager.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef HASHNS::hash\_\-map$<$ C\_\-ST, VAT $\ast$, HASHNS::hash$<$ C\_\-ST $>$, C\_\-CF $>$ {\bf CC\_\-ST\_\-TO\_\-VATPTR}\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_w0}
+
+\item 
+typedef CC\_\-ST\_\-TO\_\-VATPTR::const\_\-iterator {\bf CONST\_\-IT}\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_w1}
+
+\item 
+typedef CC\_\-ST\_\-TO\_\-VATPTR::iterator {\bf IT}\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_w2}
+
+\item 
+typedef {\bf pattern\_\-support}$<$ typename PAT::MINE\_\-PROPS $>$ {\bf PAT\_\-SUP}\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_w3}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf storage\_\-manager} ()\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_a0}
+
+\item 
+{\bf storage\_\-manager} ({\bf pat\_\-fam}$<$ PAT $>$ freq\_\-one\_\-pats, vector$<$ VAT $\ast$ $>$ freq\_\-one\_\-vats)\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_a1}
+
+\item 
+bool {\bf find} (PAT $\ast$const \&p) const 
+\item 
+VAT $\ast$ {\bf get\_\-vat} (PAT $\ast$const \&p) const 
+\item 
+void {\bf delete\_\-vat} (PAT $\ast$const \&p)
+\item 
+bool {\bf add\_\-vat} (PAT $\ast$const \&p, VAT $\ast$v)
+\item 
+VAT $\ast$$\ast$ {\bf intersect} (PAT $\ast$const \&p1, PAT $\ast$const \&p2, {\bf PAT\_\-SUP} $\ast$$\ast$cand\_\-sups, PAT $\ast$$\ast$cand\_\-pats, bool is\_\-l2)
+\item 
+void {\bf print} () const \label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_a7}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PAT, class VAT$>$ class storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}
+
+Storage Manager class partially specialized to Memory-based Storage manager to stores VAT in Memory. 
+
+An object store. Specifically we want to store VATs and their associated patterns. It provides routines to find/access/store VATs with a pattern key. 
+
+
+
+\subsection{Member Function Documentation}
+\index{storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}!add_vat@{add\_\-vat}}
+\index{add_vat@{add\_\-vat}!storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PAT, class VAT$>$ bool {\bf storage\_\-manager}$<$ PAT, VAT, {\bf memory\_\-storage} $>$::add\_\-vat (PAT $\ast$const \& {\em p}, VAT $\ast$ {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_a5}
+
+
+Map the pattern to the VAT. \index{storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}!delete_vat@{delete\_\-vat}}
+\index{delete_vat@{delete\_\-vat}!storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PAT, class VAT$>$ void {\bf storage\_\-manager}$<$ PAT, VAT, {\bf memory\_\-storage} $>$::delete\_\-vat (PAT $\ast$const \& {\em p})\hspace{0.3cm}{\tt  [inline]}}\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_a4}
+
+
+Delete the vat. \index{storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}!find@{find}}
+\index{find@{find}!storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PAT, class VAT$>$ bool {\bf storage\_\-manager}$<$ PAT, VAT, {\bf memory\_\-storage} $>$::find (PAT $\ast$const \& {\em p}) const\hspace{0.3cm}{\tt  [inline]}}\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_a2}
+
+
+Return true if the pattern is found in the storage manager. \index{storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}!get_vat@{get\_\-vat}}
+\index{get_vat@{get\_\-vat}!storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PAT, class VAT$>$ VAT$\ast$ {\bf storage\_\-manager}$<$ PAT, VAT, {\bf memory\_\-storage} $>$::get\_\-vat (PAT $\ast$const \& {\em p}) const\hspace{0.3cm}{\tt  [inline]}}\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_a3}
+
+
+Return the vat corresponding to the pattern. \index{storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}!intersect@{intersect}}
+\index{intersect@{intersect}!storage_manager< PAT, VAT, memory_storage >@{storage\_\-manager$<$ PAT, VAT, memory\_\-storage $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PAT, class VAT$>$ VAT$\ast$$\ast$ {\bf storage\_\-manager}$<$ PAT, VAT, {\bf memory\_\-storage} $>$::intersect (PAT $\ast$const \& {\em p1}, PAT $\ast$const \& {\em p2}, {\bf PAT\_\-SUP} $\ast$$\ast$ {\em cand\_\-sups}, PAT $\ast$$\ast$ {\em cand\_\-pats}, bool {\em is\_\-l2})\hspace{0.3cm}{\tt  [inline]}}\label{classstorage__manager_3_01PAT_00_01VAT_00_01memory__storage_01_4_a6}
+
+
+Generate candidate VATs for the next level, from the provided patterns. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+mem\_\-storage\_\-manager.h\end{CompactItemize}

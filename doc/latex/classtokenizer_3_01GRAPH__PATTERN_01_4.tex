@@ -1,0 +1,55 @@
+\section{tokenizer$<$ GRAPH\_\-PATTERN $>$ Class Template Reference}
+\label{classtokenizer_3_01GRAPH__PATTERN_01_4}\index{tokenizer< GRAPH_PATTERN >@{tokenizer$<$ GRAPH\_\-PATTERN $>$}}
+Graph tokenizer class by partial specialization of the generic tokenizer class.  
+
+
+{\tt \#include $<$graph\_\-tokenizer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef {\bf vat}$<$ GRAPH\_\-PROP, V\_\-Fk1\_\-MINE\_\-PROP, std::vector $>$ {\bf VAT}\label{classtokenizer_3_01GRAPH__PATTERN_01_4_w0}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf tokenizer} (const  int \&max=200)
+\item 
+template$<$class SM\_\-T$>$ int {\bf parse\_\-next\_\-trans} (ifstream \&infile, {\bf pat\_\-fam}$<$ GRAPH\_\-PATTERN $>$ \&freq\_\-pats, {\bf storage\_\-manager}$<$ GRAPH\_\-PATTERN, {\bf VAT}, SM\_\-T $>$ \&vat\_\-hmap)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ class tokenizer$<$ GRAPH\_\-PATTERN $>$}
+
+Graph tokenizer class by partial specialization of the generic tokenizer class. 
+
+the template argument is instantiated with a pattern that has undirected pattern property(graph), MINING\_\-PROPS type of mining property, ST type of pattern storage and CC type of canocial code. 
+
+
+
+\subsection{Member Function Documentation}
+\index{tokenizer< GRAPH_PATTERN >@{tokenizer$<$ GRAPH\_\-PATTERN $>$}!parse_next_trans@{parse\_\-next\_\-trans}}
+\index{parse_next_trans@{parse\_\-next\_\-trans}!tokenizer< GRAPH_PATTERN >@{tokenizer$<$ GRAPH\_\-PATTERN $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ template$<$class SM\_\-T$>$ int {\bf tokenizer}$<$ GRAPH\_\-PATTERN $>$::parse\_\-next\_\-trans (ifstream \& {\em infile}, {\bf pat\_\-fam}$<$ GRAPH\_\-PATTERN $>$ \& {\em freq\_\-pats}, {\bf storage\_\-manager}$<$ GRAPH\_\-PATTERN, {\bf VAT}, SM\_\-T $>$ \& {\em vat\_\-hmap})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01GRAPH__PATTERN_01_4_a1}
+
+
+prepare pattern ///
+
+INPUT-FORMAT: if the datafile format is to append vertex labels with a letter (as is true for data files in /dmtl/ascii\_\-data on hd-01) then simply change the above line to: v\_\-lbl=el\_\-prsr.parse\_\-element(word+1);
+
+INPUT-FORMAT: if running for files in /dmtl/ascii\_\-data on hd-01 simply change the above line to: else if(word[0]=='u')
+
+INPUT-FORMAT: if the datafile format is to append edge labels with a letter (as is true for data files in /dmtl/ascii\_\-data on hd-01) then simply change the above line to: e\_\-lbl=el\_\-prsr.parse\_\-element(word+1);
+
+if g1's vat is present, check if this tid is also present. If yes, then insert pair of vids. If tid not present, create a new entry in vat and insert it \index{tokenizer< GRAPH_PATTERN >@{tokenizer$<$ GRAPH\_\-PATTERN $>$}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!tokenizer< GRAPH_PATTERN >@{tokenizer$<$ GRAPH\_\-PATTERN $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PP, typename MP, typename PAT\_\-ST, template$<$ typename, typename, typename $>$ class CC$>$ {\bf tokenizer}$<$ GRAPH\_\-PATTERN $>$::{\bf tokenizer} (const int \& {\em max} = 200)\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01GRAPH__PATTERN_01_4_a0}
+
+
+constructor for tokenizer 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+graph\_\-tokenizer.h\end{CompactItemize}

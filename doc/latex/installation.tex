@@ -1,0 +1,11 @@
+\section{Installation}\label{installation}
+\subsection{Download}\label{installation_download}
+\begin{itemize}
+\item Download {\tt DMTL} from {\tt here}.\item Unpack in some directory executing: {\tt tar} {\tt zfxv} {\tt dmtl.tgz} ,\item Change to {\tt dmtl/test} directory: {\tt cd} {\tt dmtl/test} ,\item To compile the test files:
+
+\footnotesize\begin{verbatim}make \end{verbatim}
+\normalsize
+ Note: All classes in {\tt DMTL} are templated, so entire source code is in the header files. To use the library, you just need to include the header files in your source code.\end{itemize}
+\subsection{existing test Programs}\label{installation_Running}
+Please read the {\tt README} file in the test directory.\subsection{Other Patterns}\label{installation_Mining}
+{\tt DMTL} is highly flexible for its generic pattern mining approach. We defined 'pattern' as an object that satisfies some relational properties. All our mining algorithms are also written considering this definition of pattern. This can be adapted to any new patterns, as long as user provides algorithm for candidate\_\-generation and isomorphism checking. for details, please read the files {\tt lcsd05.pdf}, {\tt icfca05.pdf} in {\tt doc} directory. 

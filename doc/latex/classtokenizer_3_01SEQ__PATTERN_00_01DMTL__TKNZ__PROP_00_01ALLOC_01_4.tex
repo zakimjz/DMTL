@@ -1,0 +1,62 @@
+\section{tokenizer$<$ SEQ\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$ Class Template Reference}
+\label{classtokenizer_3_01SEQ__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4}\index{tokenizer< SEQ_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ SEQ\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+Sequence tokenizer class by partial specialization of the generic tokenizer class.  
+
+
+{\tt \#include $<$seq\_\-tokenizer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{pattern\_\-support}$<$ V\_\-Fkk\_\-MINE\_\-PROP $>$ \textbf{PAT\_\-SUP}\label{classtokenizer_3_01SEQ__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_be01d57c7027c16dd683cbc1ce2a9ba7}
+
+\item 
+typedef \bf{vat}$<$ SEQ\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, std::vector $>$ \textbf{VAT}\label{classtokenizer_3_01SEQ__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_9267427291fe4c9558b35768d98a9821}
+
+\item 
+typedef \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-MINE\_\-PROP $>$ \textbf{INSTANCE}\label{classtokenizer_3_01SEQ__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_8391e505a03cb21791af07661c8f5033}
+
+\item 
+typedef SEQ\_\-PATTERN::VERTEX\_\-T \textbf{V\_\-T}\label{classtokenizer_3_01SEQ__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_41dcefc074e43d08a28048de5d9f7dc0}
+
+\item 
+typedef SEQ\_\-PATTERN::EDGE\_\-T \textbf{E\_\-T}\label{classtokenizer_3_01SEQ__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_efaadd631cba9514563ff8676cc79902}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{tokenizer} (int max=LINE\_\-SZ)
+\item 
+template$<$class SM\_\-T$>$ int \bf{parse\_\-next\_\-trans} (ifstream \&infile, \bf{pat\_\-fam}$<$ SEQ\_\-PATTERN $>$ \&freq\_\-pats, \bf{storage\_\-manager}$<$ SEQ\_\-PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \&vat\_\-hmap)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ typename, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ class tokenizer$<$ SEQ\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}
+
+Sequence tokenizer class by partial specialization of the generic tokenizer class. 
+
+the template argument is instantiated with a pattern that has directed, acyclic, indegree\_\-lte\_\-one, outdegree\_\-lte\_\-one pattern property(tree), MINING\_\-PROPS type of mining property, ST type of pattern storage and CC type of canocial code. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tokenizer< SEQ_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ SEQ\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!tokenizer< SEQ_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ SEQ\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ typename, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ \bf{tokenizer}$<$ SEQ\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$::\bf{tokenizer} (int {\em max} = {\tt LINE\_\-SZ})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01SEQ__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_9254a52c6bfb0c7aa2954e11f8ad7a49}
+
+
+default constructor 
+
+\subsection{Member Function Documentation}
+\index{tokenizer< SEQ_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ SEQ\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}!parse_next_trans@{parse\_\-next\_\-trans}}
+\index{parse_next_trans@{parse\_\-next\_\-trans}!tokenizer< SEQ_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ SEQ\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ typename, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ template$<$class SM\_\-T$>$ int \bf{tokenizer}$<$ SEQ\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$::parse\_\-next\_\-trans (ifstream \& {\em infile}, \bf{pat\_\-fam}$<$ SEQ\_\-PATTERN $>$ \& {\em freq\_\-pats}, \bf{storage\_\-manager}$<$ SEQ\_\-PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \& {\em vat\_\-hmap})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01SEQ__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_5bc220963689f3174937ababd4f8574a}
+
+
+returns the TID of transaction read; parses one transaction from input database, and collects VATS in vat\_\-hmap return value is -1 on end of stream 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+seq\_\-tokenizer.h\end{CompactItemize}

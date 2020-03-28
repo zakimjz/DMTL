@@ -1,0 +1,114 @@
+\section{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$ Class Template Reference}
+\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4}\index{storage_manager< PAT, VAT, ALLOC, file_storage >@{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}}
+Storage Manager class partially specialized to File-based Storage manager to stores VAT in predefined-size buffer and uses a binary file for swapping in/out vats.  
+
+
+{\tt \#include $<$file\_\-storage\_\-manager.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef int \textbf{key\_\-type}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_c29c81bf9c608dc1ab418c8a4333f5b3}
+
+\item 
+typedef VAT \textbf{data\_\-type}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_7ee5796fffb5a5e57b971811635cab4f}
+
+\item 
+typedef VAT \textbf{VATT}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_0d5874f148e07f91423f2ea177365b18}
+
+\item 
+typedef \bf{cache\_\-manager}$<$ key\_\-type, data\_\-type $>$ \textbf{cache\_\-type}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_f241838d0c9b0c5a5a1dc43fa0d8fe71}
+
+\item 
+typedef cache\_\-type::size\_\-type \textbf{size\_\-type}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_772e4ea6125d80333db3e439924635ce}
+
+\item 
+typedef \bf{pattern\_\-support}$<$ typename PAT::MINE\_\-PROPS $>$ \textbf{PAT\_\-SUP}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_8247dee15eb4993e3234bc39533503f4}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\textbf{storage\_\-manager} (typename cache\_\-type::size\_\-type C=1, const char $\ast$filename=FILENAME)\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_c11c1061cb1bf5e1b2f0066ecd6b9af2}
+
+\item 
+size\_\-type \bf{mem\_\-entries} () const 
+\item 
+size\_\-type \bf{file\_\-entries} () const 
+\item 
+void \textbf{print\_\-stats} () const \label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_d50c8fff9eb678168cb8ebdcc8940d3c}
+
+\item 
+bool \textbf{find} (PAT $\ast$const \&p) const \label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_8f319ac8f99221706ad35066010eb18f}
+
+\item 
+void \textbf{delete\_\-vat} (PAT $\ast$const \&p)\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_8d434650a47fdd7269ca5608e5663df8}
+
+\item 
+void \textbf{lock\_\-vat} (PAT $\ast$const \&p)\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_2dda6ec63f036a38021d9d0d6436d33b}
+
+\item 
+void \textbf{unlock\_\-vat} (PAT $\ast$const \&p)\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_5709479955550cc396cb07c958d68e76}
+
+\item 
+VAT $\ast$ \textbf{get\_\-vat} (PAT $\ast$const \&p) const \label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_abc0138265c7d2e4f7a4592ec06ef02b}
+
+\item 
+VAT $\ast$ \textbf{get\_\-vat} (const key\_\-type \&id) const \label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_0288b8c81f60f6a118f5ea3313466963}
+
+\item 
+VAT $\ast$$\ast$ \bf{intersect} (PAT $\ast$const \&p1, PAT $\ast$const \&p2, \bf{PAT\_\-SUP} $\ast$$\ast$cand\_\-sups, PAT $\ast$$\ast$cand\_\-pats, bool is\_\-l2)
+\item 
+bool \textbf{add\_\-vat} (const PAT $\ast$const \&p, VAT $\ast$v)\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_386897c425b503203e4290d820af6d7b}
+
+\item 
+void \textbf{write\_\-file} (const key\_\-type \&id, VAT $\ast$v)\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_8336dbfbeb805f29f7d5846a4f33658f}
+
+\item 
+bool \textbf{my\_\-add\_\-vat} (const key\_\-type \&id, VAT $\ast$v)\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_c7e0fc6c3129d46b3626c761aecf5fd6}
+
+\item 
+void \bf{initialize\_\-vat} (std::map$<$ int, int $>$ \&mapcount)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PAT, template$<$ typename $>$ class ALLOC, class VAT$>$ class storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}
+
+Storage Manager class partially specialized to File-based Storage manager to stores VAT in predefined-size buffer and uses a binary file for swapping in/out vats. 
+
+An object store. Specifically we want to store VATs and their associated patterns. It provides routines to find/access/store VATs with a pattern key. 
+
+
+
+\subsection{Member Function Documentation}
+\index{storage_manager< PAT, VAT, ALLOC, file_storage >@{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}!file_entries@{file\_\-entries}}
+\index{file_entries@{file\_\-entries}!storage_manager< PAT, VAT, ALLOC, file_storage >@{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PAT, template$<$ typename $>$ class ALLOC, class VAT$>$ size\_\-type \bf{storage\_\-manager}$<$ PAT, VAT, ALLOC, \bf{file\_\-storage} $>$::file\_\-entries () const\hspace{0.3cm}{\tt  [inline]}}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_b3b3bafb049675144492b7a6ad7e3f05}
+
+
+Returns number of the entries in the file \index{storage_manager< PAT, VAT, ALLOC, file_storage >@{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}!initialize_vat@{initialize\_\-vat}}
+\index{initialize_vat@{initialize\_\-vat}!storage_manager< PAT, VAT, ALLOC, file_storage >@{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PAT, template$<$ typename $>$ class ALLOC, class VAT$>$ void \bf{storage\_\-manager}$<$ PAT, VAT, ALLOC, \bf{file\_\-storage} $>$::initialize\_\-vat (std::map$<$ int, int $>$ \& {\em mapcount})\hspace{0.3cm}{\tt  [inline]}}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_55c1a321d084edaf8483689e6fc8836d}
+
+
+initialize\_\-vat(map$<$int, int$>$) \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em map(int,int),:}]a map data structure that contains the size of each level-1 patterns \end{description}
+\end{Desc}
+\index{storage_manager< PAT, VAT, ALLOC, file_storage >@{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}!intersect@{intersect}}
+\index{intersect@{intersect}!storage_manager< PAT, VAT, ALLOC, file_storage >@{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PAT, template$<$ typename $>$ class ALLOC, class VAT$>$ VAT$\ast$$\ast$ \bf{storage\_\-manager}$<$ PAT, VAT, ALLOC, \bf{file\_\-storage} $>$::intersect (PAT $\ast$const \& {\em p1}, PAT $\ast$const \& {\em p2}, \bf{PAT\_\-SUP} $\ast$$\ast$ {\em cand\_\-sups}, PAT $\ast$$\ast$ {\em cand\_\-pats}, bool {\em is\_\-l2})\hspace{0.3cm}{\tt  [inline]}}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_45108861ac9da5155a57713a1a87f01f}
+
+
+Generate candidate VATs for the next level, from the provided patterns. \index{storage_manager< PAT, VAT, ALLOC, file_storage >@{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}!mem_entries@{mem\_\-entries}}
+\index{mem_entries@{mem\_\-entries}!storage_manager< PAT, VAT, ALLOC, file_storage >@{storage\_\-manager$<$ PAT, VAT, ALLOC, file\_\-storage $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PAT, template$<$ typename $>$ class ALLOC, class VAT$>$ size\_\-type \bf{storage\_\-manager}$<$ PAT, VAT, ALLOC, \bf{file\_\-storage} $>$::mem\_\-entries () const\hspace{0.3cm}{\tt  [inline]}}\label{classstorage__manager_3_01PAT_00_01VAT_00_01ALLOC_00_01file__storage_01_4_5f46edcf9f6fe543d97cfd8a8507964a}
+
+
+Returns number of the entries in the cache. 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+file\_\-storage\_\-manager.h\end{CompactItemize}

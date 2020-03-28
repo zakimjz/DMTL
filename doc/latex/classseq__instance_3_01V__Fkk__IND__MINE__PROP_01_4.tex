@@ -1,0 +1,71 @@
+\section{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$ Class Template Reference}
+\label{classseq__instance_3_01V__Fkk__IND__MINE__PROP_01_4}\index{seq_instance< V_Fkk_IND_MINE_PROP >@{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}}
+Class represents precisely one instance i.e. occurrence of a sequence in the dataset. This class is for induced sequence mining.  
+
+
+{\tt \#include $<$seq\_\-instance.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{seq\_\-instance} (const int timestamp, const int position)
+\item 
+\bf{seq\_\-instance} (const int position, const bool ind)
+\item 
+int \textbf{get\_\-pos} () const \label{classseq__instance_3_01V__Fkk__IND__MINE__PROP_01_4_8b13d0ddf55f1f2058f3ca6d5d379054}
+
+\item 
+bool \textbf{get\_\-induced} () const \label{classseq__instance_3_01V__Fkk__IND__MINE__PROP_01_4_0c18eb4097f06dbcaa72df4b266b23c9}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$template$<$ typename, typename $>$ class ST, template$<$ typename $>$ class ALLOC$>$ static void \bf{seq\_\-join\_\-seq} (const ST$<$ \bf{seq\_\-instance}, ALLOC$<$ \bf{seq\_\-instance} $>$ $>$ \&i1, const ST$<$ \bf{seq\_\-instance}, ALLOC$<$ \bf{seq\_\-instance} $>$ $>$ \&i2, ST$<$ \bf{seq\_\-instance}, ALLOC$<$ \bf{seq\_\-instance} $>$ $>$ \&seqi\_\-inst, ST$<$ \bf{seq\_\-instance}, ALLOC$<$ \bf{seq\_\-instance} $>$ $>$ \&seqj\_\-inst, bool \&seqi\_\-ind, bool \&seqj\_\-ind, bool \&seqi\_\-emb, bool \&seqj\_\-emb, const bool self\_\-join\_\-only, const bool skip0=false)
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& \bf{operator$<$$<$} (ostream \&ostr, const \bf{seq\_\-instance} \&rhs)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class MP$>$ class seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}
+
+Class represents precisely one instance i.e. occurrence of a sequence in the dataset. This class is for induced sequence mining. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{seq_instance< V_Fkk_IND_MINE_PROP >@{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}!seq_instance@{seq\_\-instance}}
+\index{seq_instance@{seq\_\-instance}!seq_instance< V_Fkk_IND_MINE_PROP >@{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class MP$>$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$::\bf{seq\_\-instance} (const int {\em timestamp}, const int {\em position})\hspace{0.3cm}{\tt  [inline]}}\label{classseq__instance_3_01V__Fkk__IND__MINE__PROP_01_4_c10031e99f7ea94675a2acb37808b30f}
+
+
+parameterized constructor \index{seq_instance< V_Fkk_IND_MINE_PROP >@{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}!seq_instance@{seq\_\-instance}}
+\index{seq_instance@{seq\_\-instance}!seq_instance< V_Fkk_IND_MINE_PROP >@{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class MP$>$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$::\bf{seq\_\-instance} (const int {\em position}, const bool {\em ind})\hspace{0.3cm}{\tt  [inline]}}\label{classseq__instance_3_01V__Fkk__IND__MINE__PROP_01_4_9657a1d9da95318f26a425d489535d03}
+
+
+parameterized constructor 
+
+\subsection{Member Function Documentation}
+\index{seq_instance< V_Fkk_IND_MINE_PROP >@{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}!seq_join_seq@{seq\_\-join\_\-seq}}
+\index{seq_join_seq@{seq\_\-join\_\-seq}!seq_instance< V_Fkk_IND_MINE_PROP >@{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class MP$>$ template$<$template$<$ typename, typename $>$ class ST, template$<$ typename $>$ class ALLOC$>$ static void \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$::seq\_\-join\_\-seq (const ST$<$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$, ALLOC$<$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$ $>$ $>$ \& {\em i1}, const ST$<$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$, ALLOC$<$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$ $>$ $>$ \& {\em i2}, ST$<$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$, ALLOC$<$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$ $>$ $>$ \& {\em seqi\_\-inst}, ST$<$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$, ALLOC$<$ \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$ $>$ $>$ \& {\em seqj\_\-inst}, bool \& {\em seqi\_\-ind}, bool \& {\em seqj\_\-ind}, bool \& {\em seqi\_\-emb}, bool \& {\em seqj\_\-emb}, const bool {\em self\_\-join\_\-only}, const bool {\em skip0} = {\tt false})\hspace{0.3cm}{\tt  [inline, static]}}\label{classseq__instance_3_01V__Fkk__IND__MINE__PROP_01_4_3b27452c8cc82536496f73b204ab2d59}
+
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{seq_instance< V_Fkk_IND_MINE_PROP >@{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}!operator<<@{operator$<$$<$}}
+\index{operator<<@{operator$<$$<$}!seq_instance< V_Fkk_IND_MINE_PROP >@{seq\_\-instance$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class MP$>$ ostream\& operator$<$$<$ (ostream \& {\em ostr}, const \bf{seq\_\-instance}$<$ V\_\-Fkk\_\-IND\_\-MINE\_\-PROP $>$ \& {\em rhs})\hspace{0.3cm}{\tt  [friend]}}\label{classseq__instance_3_01V__Fkk__IND__MINE__PROP_01_4_49d2cbc2a815e4807ced2f9406c8c859}
+
+
+Friend extraction operator for output 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+seq\_\-instance.h\end{CompactItemize}

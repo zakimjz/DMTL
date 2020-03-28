@@ -1,0 +1,235 @@
+\section{pattern$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$ Class Template Reference}
+\label{classpattern}\index{pattern@{pattern}}
+The Pattern Class.  
+
+
+{\tt \#include $<$pattern.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef ST::VERTEX\_\-T \textbf{VERTEX\_\-T}\label{classpattern_79d0fa4194aa35d3e20728e5767b8be9}
+
+\item 
+typedef PATTERN\_\-PROPS \textbf{PAT\_\-PROPS}\label{classpattern_c4f3c0ad49bf3aaeb224acf7a57e47bf}
+
+\item 
+typedef MINING\_\-PROPS \textbf{MINE\_\-PROPS}\label{classpattern_1a2d83f1b54d9e8263650f54b27c860a}
+
+\item 
+typedef ST::EDGE\_\-T \textbf{EDGE\_\-T}\label{classpattern_e682ee55a6bcf28cb46a02d1ee87478d}
+
+\item 
+typedef \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$ \textbf{PATTERN}\label{classpattern_fcd65ca77eab7ba904db6ab9c45c4e43}
+
+\item 
+typedef ST::IT \textbf{IT}\label{classpattern_90fef547fece6c182e489ddb1eac33c9}
+
+\item 
+typedef ST::CONST\_\-IT \textbf{CONST\_\-IT}\label{classpattern_8c74d80d3160b889a9438a297efcffec}
+
+\item 
+typedef ST::EIT \textbf{EIT}\label{classpattern_de7f072768ac14cf78024f908b2eea19}
+
+\item 
+typedef ST::CONST\_\-EIT \textbf{CONST\_\-EIT}\label{classpattern_a2a3de65a7e3c13a4dba0b83701d7602}
+
+\item 
+typedef ST::EIT\_\-PAIR \textbf{EIT\_\-PAIR}\label{classpattern_e23177d0b12f0fe955e4351172e550c7}
+
+\item 
+typedef ST::CONST\_\-EIT\_\-PAIR \textbf{CONST\_\-EIT\_\-PAIR}\label{classpattern_649c857da9383c71d8924ae31073a656}
+
+\item 
+typedef CC$<$ PATTERN\_\-PROPS, VERTEX\_\-T, EDGE\_\-T, ALLOC $>$ \textbf{CAN\_\-CODE}\label{classpattern_b2af67e801f2b235e763a1201e410caf}
+
+\item 
+typedef std::vector$<$ int, ALLOC$<$ int $>$ $>$ \textbf{RMP\_\-T}\label{classpattern_00e1c20461a1f83f2445cbeb7d6fcb25}
+
+\item 
+typedef CAN\_\-CODE::STORAGE\_\-TYPE \textbf{CC\_\-STORAGE\_\-TYPE}\label{classpattern_8776bbbc886f99fce409497102d0e2c1}
+
+\item 
+typedef CAN\_\-CODE::INIT\_\-TYPE \textbf{CC\_\-INIT\_\-TYPE}\label{classpattern_9dfb4fa23491b5fd7c8b918987ce1621}
+
+\item 
+typedef CAN\_\-CODE::COMPARISON\_\-FUNC \textbf{CC\_\-COMPARISON\_\-FUNC}\label{classpattern_614baff33d4079356cd4584d9b6c432d}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void $\ast$ \textbf{operator new} (size\_\-t size)\label{classpattern_2d66c14f135d20f1cf3dc1c790dfa282}
+
+\item 
+void \textbf{operator delete} (void $\ast$p, size\_\-t size)\label{classpattern_eda8f56ab66a3c76b01bf733b84374ef}
+
+\item 
+IT \textbf{begin} ()\label{classpattern_9072ce0ada8743fe93472c2ec2a02023}
+
+\item 
+CONST\_\-IT \textbf{begin} () const \label{classpattern_95b5eba42633f1a123c05ebfbc545c46}
+
+\item 
+IT \textbf{end} ()\label{classpattern_fac2e2e661509dbe137735dfa9d708cb}
+
+\item 
+CONST\_\-IT \textbf{end} () const \label{classpattern_43f9193037debbb8e4396fdd67224668}
+
+\item 
+int \textbf{size} () const \label{classpattern_a562aa4444ab51addee33f9ab09f1221}
+
+\item 
+int \textbf{rmp\_\-size} () const \label{classpattern_36fd9acf2732122907294f274be176dd}
+
+\item 
+\bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$ $\ast$ \bf{clone} () const 
+\item 
+int \textbf{rmost\_\-vid} () const \label{classpattern_51983ced4ce254ee0035466b5f324533}
+
+\item 
+void \textbf{set\_\-rmost\_\-vid} (const int \&rvid)\label{classpattern_0d39b60313a86cbba054f85daab60227}
+
+\item 
+bool \textbf{is\_\-canonical} () const \label{classpattern_0c48a644f5cd2310cb0cee78fb0904f5}
+
+\item 
+const VERTEX\_\-T \& \textbf{rmost\_\-vertex} () const \label{classpattern_28c5967962a46cb6c7335a962584b562}
+
+\item 
+const VERTEX\_\-T \& \bf{label} (const int \&vid) const 
+\item 
+int \bf{add\_\-vertex} (const VERTEX\_\-T \&v)
+\item 
+void \bf{add\_\-out\_\-edge} (const int \&src, const int \&dest, const EDGE\_\-T \&e)
+\item 
+void \bf{add\_\-in\_\-edge} (const int \&dest, const int \&src, const EDGE\_\-T \&e)
+\item 
+EIT\_\-PAIR \bf{out\_\-edges} (const int \&idval)
+\item 
+CONST\_\-EIT\_\-PAIR \textbf{out\_\-edges} (const int \&idval) const \label{classpattern_e71593727bff769def2edfca95ccc633}
+
+\item 
+EIT\_\-PAIR \bf{in\_\-edges} (const int \&idval)
+\item 
+CONST\_\-EIT\_\-PAIR \textbf{in\_\-edges} (const int \&idval) const \label{classpattern_029ab839bd4fae751ac59f55a01baae3}
+
+\item 
+bool \textbf{get\_\-out\_\-edge} (const int \&src, const int \&dest, EDGE\_\-T \&e) const \label{classpattern_e481b675a03e883a05de4d5f2c4fa062}
+
+\item 
+bool \textbf{get\_\-in\_\-edge} (const int \&src, const int \&dest, const EDGE\_\-T \&e) const \label{classpattern_34b10d2c8a8f8f8342fd85020616577b}
+
+\item 
+CC\_\-STORAGE\_\-TYPE \textbf{pat\_\-id} () const \label{classpattern_f388cd3b1af1e2d6ee6eb28dd86c9f6c}
+
+\item 
+bool \textbf{operator$<$} (const \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$ rhs) const \label{classpattern_45e1bba8f536825bc7909b1a56b59199}
+
+\item 
+void \textbf{set\_\-support} (const \bf{pattern\_\-support}$<$ MINING\_\-PROPS $>$ $\ast$const \&pat\_\-sup)\label{classpattern_6b61effc66f5f6ec1313f8d77cac4103}
+
+\item 
+void \bf{set\_\-sup} (const pair$<$ int, int $>$ \&s)
+\begin{CompactList}\small\item\em Set the support for the pattern. Note: Should be only used for level-1 patterns. \item\end{CompactList}\item 
+bool \textbf{is\_\-freq} (int min\_\-sup)\label{classpattern_cb2d8590853bc6723d17e3d95045f735}
+
+\item 
+bool \textbf{is\_\-valid} (const int \&ms) const \label{classpattern_b06afad4aea2e0cd0e61d21afdf09937}
+
+\item 
+void \bf{init\_\-canonical\_\-code} (const CC\_\-INIT\_\-TYPE \&cc)
+\item 
+const RMP\_\-T \& \textbf{rmost\_\-path} () const \label{classpattern_ba6d3ce21d6e1e2ac8094b7994063f1a}
+
+\item 
+void \textbf{update\_\-rmpath} (int val)\label{classpattern_8abfc44c2c362bf8334b694e05391264}
+
+\item 
+const CAN\_\-CODE \& \textbf{canonical\_\-code} () const \label{classpattern_7204593774d3b8e3ccaf8937547288ea}
+
+\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\bf{pattern\_\-support}$<$ MINING\_\-PROPS $>$ \textbf{\_\-pat\_\-sup}\label{classpattern_d5eafd22562c013704eb561e4f865d7b}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& \textbf{operator$<$$<$} (ostream \&, const \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$ $\ast$)\label{classpattern_f7c96c02881cf620fd15246480f6b87f}
+
+\item 
+bool \textbf{check\_\-isomorphism} (\bf{PATTERN} $\ast$const \&pat)\label{classpattern_0bf9e59f3e984736f037032ae33f8e31}
+
+\item 
+void \textbf{update\_\-rmost\_\-path} (\bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$ $\ast$const \&)\label{classpattern_2930f255b49d4f31a98c3dff6cc6cefc}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ class pattern$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$}
+
+The Pattern Class. 
+
+Pattern Class takes 4 template arguments. PATTERN\_\-PROPS is the pattern property, MINING\_\-PROPS is the mining property, ST is the pattern storage data structure, CC is the canonical code class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pattern@{pattern}!add_in_edge@{add\_\-in\_\-edge}}
+\index{add_in_edge@{add\_\-in\_\-edge}!pattern@{pattern}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ void \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$::add\_\-in\_\-edge (const int \& {\em dest}, const int \& {\em src}, const EDGE\_\-T \& {\em e})\hspace{0.3cm}{\tt  [inline]}}\label{classpattern_40590cc9a4598df65983f7716aa3c7fa}
+
+
+Adds edge to in-edge list of dest Both vertices are required to be already part of the graph This function should be invoked for digraphs ONLY \index{pattern@{pattern}!add_out_edge@{add\_\-out\_\-edge}}
+\index{add_out_edge@{add\_\-out\_\-edge}!pattern@{pattern}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ void \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$::add\_\-out\_\-edge (const int \& {\em src}, const int \& {\em dest}, const EDGE\_\-T \& {\em e})\hspace{0.3cm}{\tt  [inline]}}\label{classpattern_ac5dd176b16659ebd9fc665a1a77eea2}
+
+
+Adds an edge to out-edge list of src Both vertices are required to be already part of the graph \index{pattern@{pattern}!add_vertex@{add\_\-vertex}}
+\index{add_vertex@{add\_\-vertex}!pattern@{pattern}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ int \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$::add\_\-vertex (const VERTEX\_\-T \& {\em v})\hspace{0.3cm}{\tt  [inline]}}\label{classpattern_a7a0c9e586643031469f44d15ead5d37}
+
+
+Adds vertex and makes it the right most vertex \index{pattern@{pattern}!clone@{clone}}
+\index{clone@{clone}!pattern@{pattern}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ \bf{pattern}$<$PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC$>$$\ast$ \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$::clone () const\hspace{0.3cm}{\tt  [inline]}}\label{classpattern_71d3931874255439f8467d3bb3ee2d40}
+
+
+Creates a deep copy of this object into rhs \index{pattern@{pattern}!in_edges@{in\_\-edges}}
+\index{in_edges@{in\_\-edges}!pattern@{pattern}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ EIT\_\-PAIR \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$::in\_\-edges (const int \& {\em idval})\hspace{0.3cm}{\tt  [inline]}}\label{classpattern_0493e9235ac66ab55141ad28a5884e11}
+
+
+Returns a pair of iterators, the first of the pair points to the first entity in the set of in-edges of idval, the second to the end of edges \index{pattern@{pattern}!init_canonical_code@{init\_\-canonical\_\-code}}
+\index{init_canonical_code@{init\_\-canonical\_\-code}!pattern@{pattern}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ void \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$::init\_\-canonical\_\-code (const CC\_\-INIT\_\-TYPE \& {\em cc})\hspace{0.3cm}{\tt  [inline]}}\label{classpattern_b7c9f6193c9eccef49f6ce8fcc837661}
+
+
+Initializes the canonical code for the pattern. \index{pattern@{pattern}!label@{label}}
+\index{label@{label}!pattern@{pattern}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ const VERTEX\_\-T\& \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$::label (const int \& {\em vid}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpattern_4e1adb7fbf83795c46cdedd9d5a0c923}
+
+
+Returns vertex object associated with given vid \index{pattern@{pattern}!out_edges@{out\_\-edges}}
+\index{out_edges@{out\_\-edges}!pattern@{pattern}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ EIT\_\-PAIR \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$::out\_\-edges (const int \& {\em idval})\hspace{0.3cm}{\tt  [inline]}}\label{classpattern_5a5426b0329b48ae69012d2a4acc890f}
+
+
+Returns a pair of iterators, the first of the pair points to the first entity in the set of out-edges of idval, the second to the end of edges \index{pattern@{pattern}!set_sup@{set\_\-sup}}
+\index{set_sup@{set\_\-sup}!pattern@{pattern}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PATTERN\_\-PROPS, class MINING\_\-PROPS, class ST, template$<$ class, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC = std::allocator$>$ void \bf{pattern}$<$ PATTERN\_\-PROPS, MINING\_\-PROPS, ST, CC, ALLOC $>$::set\_\-sup (const pair$<$ int, int $>$ \& {\em s})\hspace{0.3cm}{\tt  [inline]}}\label{classpattern_93f1532b84b16da807a4e1386b95dcbc}
+
+
+Set the support for the pattern. Note: Should be only used for level-1 patterns. 
+
+void set\_\-sup 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+pattern.h\item 
+iset\_\-operators.h\item 
+mset\_\-operators.h\end{CompactItemize}

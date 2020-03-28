@@ -1,0 +1,69 @@
+\section{tokenizer$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$ Class Template Reference}
+\label{classtokenizer_3_01MSET__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4}\index{tokenizer< MSET_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+Itemset tokenizer class by partial specialization of the generic tokenizer class.  
+
+
+{\tt \#include $<$mset\_\-tokenizer.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{pattern\_\-support}$<$ V\_\-Fkk\_\-MINE\_\-PROP $>$ \textbf{PAT\_\-SUP}\label{classtokenizer_3_01MSET__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_603073e1ce1264c2932ed852b6f91d1a}
+
+\item 
+typedef \bf{vat}$<$ MSET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ALLOC, std::vector $>$ \textbf{VAT}\label{classtokenizer_3_01MSET__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_57f7aad3e3046b761355c9e6988c5cfc}
+
+\item 
+typedef MSET\_\-PATTERN::VERTEX\_\-T \textbf{V\_\-T}\label{classtokenizer_3_01MSET__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_a6aeaa973d378bc358fc5136ba789349}
+
+\item 
+typedef MSET\_\-PATTERN::EDGE\_\-T \textbf{E\_\-T}\label{classtokenizer_3_01MSET__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_381f4f70f80361ff7e8b4dffe1f850b8}
+
+\item 
+typedef int \bf{VAT\_\-T}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{tokenizer} (int max=LINE\_\-SZ)
+\item 
+template$<$class SM\_\-T$>$ int \bf{parse\_\-next\_\-trans} (std::ifstream \&infile, \bf{pat\_\-fam}$<$ MSET\_\-PATTERN $>$ \&freq\_\-pats, \bf{storage\_\-manager}$<$ MSET\_\-PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \&vat\_\-hmap)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ typename, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ class tokenizer$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}
+
+Itemset tokenizer class by partial specialization of the generic tokenizer class. 
+
+the template argument is instantiated with a pattern that has no\_\-edge pattern property, Fk X Fk and vert\_\-mine mining property, PAT\_\-ST type of pattern storage and CC type of canocial code. 
+
+
+
+\subsection{Member Typedef Documentation}
+\index{tokenizer< MSET_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}!VAT_T@{VAT\_\-T}}
+\index{VAT_T@{VAT\_\-T}!tokenizer< MSET_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ typename, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ typedef int \bf{tokenizer}$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$::\bf{VAT\_\-T}}\label{classtokenizer_3_01MSET__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_6b23e5bd261d78a66610aa4b642b175b}
+
+
+VAT id-type for itemset 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{tokenizer< MSET_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!tokenizer< MSET_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ typename, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ \bf{tokenizer}$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$::\bf{tokenizer} (int {\em max} = {\tt LINE\_\-SZ})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01MSET__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_34a28f77388a57a5f724a24275ba0de6}
+
+
+default constructor 
+
+\subsection{Member Function Documentation}
+\index{tokenizer< MSET_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}!parse_next_trans@{parse\_\-next\_\-trans}}
+\index{parse_next_trans@{parse\_\-next\_\-trans}!tokenizer< MSET_PATTERN, DMTL_TKNZ_PROP, ALLOC >@{tokenizer$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, typename MP, typename TP, typename PAT\_\-ST, template$<$ typename, typename, typename, template$<$ typename $>$ class $>$ class CC, template$<$ typename $>$ class ALLOC$>$ template$<$class SM\_\-T$>$ int \bf{tokenizer}$<$ MSET\_\-PATTERN, DMTL\_\-TKNZ\_\-PROP, ALLOC $>$::parse\_\-next\_\-trans (std::ifstream \& {\em infile}, \bf{pat\_\-fam}$<$ MSET\_\-PATTERN $>$ \& {\em freq\_\-pats}, \bf{storage\_\-manager}$<$ MSET\_\-PATTERN, \bf{VAT}, ALLOC, SM\_\-T $>$ \& {\em vat\_\-hmap})\hspace{0.3cm}{\tt  [inline]}}\label{classtokenizer_3_01MSET__PATTERN_00_01DMTL__TKNZ__PROP_00_01ALLOC_01_4_c8904090f794055e42794835207bf180}
+
+
+Returns the TID of transaction read; parses one transaction from input database, and collects VATS in vat\_\-hmap return value is -1 on end of stream 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+mset\_\-tokenizer.h\end{CompactItemize}

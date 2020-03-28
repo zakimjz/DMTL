@@ -1,0 +1,133 @@
+\section{vat$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$ Class Template Reference}
+\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4}\index{vat< ISET_PROP, V_Fkk_MINE_PROP, ST >@{vat$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$}}
+Itemset VAT class by partial specialization of the generic VAT class.  
+
+
+{\tt \#include $<$iset\_\-vat.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef {\bf pattern\_\-support}$<$ V\_\-Fkk\_\-MINE\_\-PROP $>$ {\bf PAT\_\-SUP}\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_w0}
+
+\item 
+typedef {\bf vat}$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$ {\bf VAT}\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_w1}
+
+\item 
+typedef ST$<$ int $>$ {\bf IDLIST\_\-T}\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_w2}
+
+\item 
+typedef IDLIST\_\-T::const\_\-iterator {\bf CONST\_\-IT}\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_w3}
+
+\item 
+typedef IDLIST\_\-T::iterator {\bf IT}\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_w4}
+
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf vat} ()\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a0}
+
+\item 
+IT {\bf begin} ()\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a1}
+
+\item 
+CONST\_\-IT {\bf begin} () const \label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a2}
+
+\item 
+IT {\bf end} ()\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a3}
+
+\item 
+CONST\_\-IT {\bf end} () const \label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a4}
+
+\item 
+bool {\bf empty} () const \label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a5}
+
+\item 
+int {\bf size} ()\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a6}
+
+\item 
+bool {\bf make\_\-empty} ()\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a7}
+
+\item 
+void {\bf push\_\-back} (const  int \&val)
+\item 
+int \& {\bf operator[$\,$]} (int n)
+\item 
+void {\bf resize} (int x)\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a10}
+
+\item 
+void {\bf clear} ()\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a11}
+
+\item 
+unsigned long {\bf size} () const \label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a12}
+
+\begin{CompactList}\small\item\em Return Vat length. \item\end{CompactList}\item 
+{\bf vat} (const  {\bf VAT} \&orig)\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a13}
+
+\item 
+const  {\bf VAT} \& {\bf operator=} (const  {\bf VAT} \&right)\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a15}
+
+\item 
+unsigned long int {\bf byte\_\-size} () const \label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a16}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$class PAT$>$ {\bf VAT} $\ast$$\ast$ {\bf intersection} (const  {\bf VAT} $\ast$const \&vat\_\-i, const  {\bf VAT} $\ast$const \&vat\_\-j, {\bf PAT\_\-SUP} $\ast$$\ast$cand\_\-sups, PAT $\ast$$\ast$, bool \&is\_\-l2)
+\begin{CompactList}\small\item\em Vat Intersection for Itemset patterns. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+ostream \& {\bf operator$<$$<$} (ostream \&, const  {\bf VAT} \&)\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_n0}
+
+\item 
+istream \& {\bf operator$>$$>$} (istream \&, {\bf VAT} \&)\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_n1}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class PP, class MP, template$<$ typename $>$ class ST$>$ class vat$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$}
+
+Itemset VAT class by partial specialization of the generic VAT class. 
+
+In this partial specialization, PP is fixed to no\_\-edges (itemset property), MP is fixed to Fk X Fk and vert\_\-mine (vertical mining with Fk X Fk), ST is the storage type, what needs a base type information, here templatized with P 
+
+
+
+\subsection{Member Function Documentation}
+\index{vat< ISET_PROP, V_Fkk_MINE_PROP, ST >@{vat$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$}!intersection@{intersection}}
+\index{intersection@{intersection}!vat< ISET_PROP, V_Fkk_MINE_PROP, ST >@{vat$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ST$>$ template$<$class PAT$>$ {\bf VAT}$\ast$$\ast$ {\bf vat}$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$::intersection (const {\bf VAT} $\ast$const \& {\em vat\_\-i}, const {\bf VAT} $\ast$const \& {\em vat\_\-j}, {\bf PAT\_\-SUP} $\ast$$\ast$ {\em cand\_\-sups}, PAT $\ast$$\ast$, bool \& {\em is\_\-l2})\hspace{0.3cm}{\tt  [inline, static]}}\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_e0}
+
+
+Vat Intersection for Itemset patterns. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em in\mbox{]}}]vat\_\-i A pointer to the VAT corresponding to the first pattern. \item[{\em in\mbox{]}}]vat\_\-j A pointer to the VAT corresponding to the second pattern. \item[{\em out\mbox{]}}]cand\_\-sup An array of pointers to {\bf pattern\_\-support}{\rm (p.\,\pageref{classpattern__support})} class instances that is modified in this routine to hold actual support value. \item[{\em in\mbox{]}}]is\_\-l2 A boolean to designate whether current VAT intersection is a Level 2 vat\_\-join. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]A static array of VAT$\ast$ to hold the pointer to the new VATs generated through the intersection. \end{Desc}
+\begin{Desc}
+\item[Precondition:]cand\_\-sups array holds pointer to {\bf pattern\_\-support}{\rm (p.\,\pageref{classpattern__support})} instances with NO actual support value associated to it. \end{Desc}
+\begin{Desc}
+\item[Postcondition:]cand\_\-sups array holding {\bf pattern\_\-support}{\rm (p.\,\pageref{classpattern__support})} instances HAS acutal support value associated to it. \end{Desc}
+\index{vat< ISET_PROP, V_Fkk_MINE_PROP, ST >@{vat$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$}!operator[]@{operator[]}}
+\index{operator[]@{operator[]}!vat< ISET_PROP, V_Fkk_MINE_PROP, ST >@{vat$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ST$>$ int\& {\bf vat}$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$::operator[$\,$] (int {\em n})\hspace{0.3cm}{\tt  [inline]}}\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a9}
+
+
+Creating an array operator to work over VAT $\ast$ \index{vat< ISET_PROP, V_Fkk_MINE_PROP, ST >@{vat$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$}!push_back@{push\_\-back}}
+\index{push_back@{push\_\-back}!vat< ISET_PROP, V_Fkk_MINE_PROP, ST >@{vat$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$class PP, class MP, template$<$ typename $>$ class ST$>$ void {\bf vat}$<$ ISET\_\-PROP, V\_\-Fkk\_\-MINE\_\-PROP, ST $>$::push\_\-back (const int \& {\em val})\hspace{0.3cm}{\tt  [inline]}}\label{classvat_3_01ISET__PROP_00_01V__Fkk__MINE__PROP_00_01ST_01_4_a8}
+
+
+Appends new entry into vat 
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+iset\_\-vat.h\end{CompactItemize}
