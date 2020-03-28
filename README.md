@@ -1,5 +1,13 @@
 # DMTL
-Data Mining Template Library
+
+Data Mining Template Library (DMTL)
+
+DMTL is an open-source, high-performance, generic data mining toolkit, written in C++. It provides a collection of generic algorithms and data structures for mining increasingly complex and informative patterns types such as: Itemsets, Sequences, Trees and Graphs.
+
+DMTL utilizes a generic data mining approach, where all aspects of mining are controlled via a set of properties. The kind of pattern to be mined, the kind of mining approach to use, and the kind of data types and formats to mine over are all specified as a list of properties. This provides tremendous flexibility to customize the toolkit for various applications.
+
+DMTL implements all algorithms following the vertical data mining approach. For itemsets, the implementation follows the Eclat approach (without diffsets). For sequences it follows the Spade approach. For trees it implements the SLEUTH framework, which allows one to mine embedded/induced and ordered/unordered trees. Finally, the graph mining framework uses a novel vertical approach.
+
 
 BASIC INFORMAION
 ================
