@@ -1,0 +1,55 @@
+t # 0
+v 0 GLU
+v 1 GLU
+v 2 GLU
+v 3 GLU
+v 4 GLU
+v 5 GLU
+v 6 VAL
+v 7 VAL
+v 8 VAL
+v 9 VAL
+v 10 LEU
+v 11 GLU
+v 12 GLU
+v 13 LEU
+v 14 GLU
+v 15 GLU
+v 16 GLU
+v 17 GLU
+v 18 VAL
+v 19 VAL
+v 20 VAL
+v 21 PHE
+v 22 PHE
+v 23 SER
+v 24 HIS
+v 25 HIS
+e 0 1 3
+e 1 2 3
+e 2 3 3
+e 3 4 3
+e 4 5 3
+e 5 0 3
+e 0 6 0
+e 1 7 0
+e 4 8 0
+e 5 9 0
+e 2 10 0
+e 10 11 0
+e 11 12 3
+e 12 13 0
+e 13 3 0
+e 11 14 3
+e 14 15 3
+e 15 16 3
+e 16 17 3
+e 17 12 3
+e 14 18 0
+e 15 19 0
+e 17 20 0
+e 13 21 1
+e 10 22 1
+e 16 23 0
+e 23 24 0
+e 23 25 0
