@@ -10,6 +10,7 @@ itemset_test.cpp: Testing itemset mining over string dataset.
 sequence_test.cpp: Testing embedded/induced sequence mining over string dataset.
 tree_test.cpp: Testing embedded/induced and ordered/unordeded tree mining over string dataset.
 graph_test.cpp: Testing undirected graph mining over string dataset.
+graph_kedge_test.cpp: Testing undirected graph mining over string dataset with max k edges.
 multiset_test.cpp: Testing multiset mining over string dataset.
 
 EXECUTABLE: (How to Run the Programs)
@@ -35,6 +36,10 @@ choose -O if you want ordered tree mining, or -U for unordered tree mining
 
 To perform Graph Mining:
 $ ./graph_test -i <input_data_file> -s <support> [-p]
+
+To perform Graph Mining:
+$ ./graph_test -i <input_data_file> -s <support> -k <max_edges> [-p]
+
 
 To perform Multiset Mining:
 $ ./multiset_test -i <input_data_file> -s <support> [-p]

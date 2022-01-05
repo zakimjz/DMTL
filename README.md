@@ -9,7 +9,7 @@ DMTL utilizes a generic data mining approach, where all aspects of mining are co
 DMTL implements all algorithms following the vertical data mining approach. For itemsets, the implementation follows the Eclat approach (without diffsets). For sequences it follows the Spade approach. For trees it implements the SLEUTH framework, which allows one to mine embedded/induced and ordered/unordered trees. Finally, the graph mining framework uses a novel vertical approach.
 
 
-BASIC INFORMAION
+BASIC INFORMATION
 ================
 This software is an implementation of generic data mining algorithm. This particular implementation
 consists of frequent pattern mining algorithm for itemset, sequence, tree, graph and multiset. But, 
